@@ -1,0 +1,9 @@
+<map id="headers/file_operations.h" name="headers/file_operations.h">
+<area shape="rect" id="node2" href="$experiments_8h.html" title="Definitions of experiment settings. " alt="" coords="201,80,367,107"/>
+<area shape="rect" id="node4" href="$master__frames_8h.html" title="Header functions for the master_frames.cpp. " alt="" coords="5,80,176,107"/>
+<area shape="rect" id="node6" href="$sequence__processing_8h.html" title="Header functions for the sequence_processing.cpp. " alt="" coords="391,80,600,107"/>
+<area shape="rect" id="node8" href="$file__operations_8cpp.html" title="Functions to manipulate files. " alt="" coords="625,80,777,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Main file that contains the main.cpp. " alt="" coords="235,155,332,181"/>
+<area shape="rect" id="node5" href="$master__frames_8cpp.html" title="Functions to get the master frames from file or calculating it. " alt="" coords="13,155,168,181"/>
+<area shape="rect" id="node7" href="$sequence__processing_8cpp.html" title="Functions related with sequence processing, such as find intermediate homography, get transition weig..." alt="" coords="399,155,593,181"/>
+</map>

@@ -1,0 +1,466 @@
+\hypertarget{sequence__processing_8cpp}{}\section{src/sequence\+\_\+processing.cpp File Reference}
+\label{sequence__processing_8cpp}\index{src/sequence\+\_\+processing.\+cpp@{src/sequence\+\_\+processing.\+cpp}}
+
+
+Functions related with sequence processing, such as find intermediate homography, get transition weight, select new frame.  
+
+
+{\ttfamily \#include \char`\"{}definitions/experiment\+\_\+struct.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/sequence\+\_\+processing.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/homography.\+h\char`\"{}}\\*
+Include dependency graph for sequence\+\_\+processing.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sequence__processing_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{sequence__processing_8cpp_a31c3927c6071e5c6543de6934dac2731}{matrix\+Root} (cv\+::\+Mat \&matrix, int root, cv\+::\+Mat \&matrix\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Function that calculates the n-\/ith root of a matrix. \end{DoxyCompactList}\item 
+void \hyperlink{sequence__processing_8cpp_ad83b7c4de86f1a2ed3a79b37ea347890}{matrix\+Pow} (cv\+::\+Mat \&matrix, int pow, cv\+::\+Mat \&matrix\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Function that calculates the n-\/ith pow of a matrix. \end{DoxyCompactList}\item 
+bool \hyperlink{sequence__processing_8cpp_aad08ac53f56a97ead9e9e2a4e167e4d8}{find\+Intermediate\+Homography\+Matrix} (const int d, const int D, const int N, const cv\+::\+Mat \&frame\+\_\+i, const cv\+::\+Mat \&frame\+\_\+master\+\_\+pre, const cv\+::\+Mat \&frame\+\_\+master\+\_\+pos, cv\+::\+Mat \&homography\+\_\+matrix\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Function that calculates the homography matrix that leave the frame\+\_\+i to the intermediate plan between the plans of frame\+\_\+master\+\_\+pre and frame\+\_\+master\+\_\+pre with relation of the distance between them. \end{DoxyCompactList}\item 
+bool \hyperlink{sequence__processing_8cpp_a536d6b62274f62941d6cec32549d2543}{find\+Intermediate\+Homography\+Matrix} (const int d, const int D, const int N, const cv\+::\+Mat \&frame\+\_\+i, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, cv\+::\+Mat \&homography\+\_\+matrix\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Function that calculates the homography matrix that leave the frame\+\_\+i to the intermediate plan between the frames related to the previous and posterior master, with respect to the distance between them. \end{DoxyCompactList}\item 
+bool \hyperlink{sequence__processing_8cpp_aa692e8a44dcab5dc3c45c35c3f7ae6d2}{find\+Intermediate\+Homography\+Matrix} (const float s, const float S, const cv\+::\+Mat \&frame\+\_\+i, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, cv\+::\+Mat \&homography\+\_\+matrix\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Function that calculates the homography matrix that leave the frame\+\_\+i to the intermediate plan between the frames related to the previous and posterior master, with respect to the distance between them. \end{DoxyCompactList}\item 
+double \hyperlink{sequence__processing_8cpp_a23162fd5114a89b24c3c7da9abb3915b}{gaussian\+Value} (double index)
+\begin{DoxyCompactList}\small\item\em Function that calculates Gaussian value in the position index. \end{DoxyCompactList}\item 
+float \hyperlink{sequence__processing_8cpp_ab65613bc69028dc0a72f09caa37d37ee}{frame\+Weight} (const int ransac\+\_\+inliers\+\_\+previous, const int ransac\+\_\+inliers\+\_\+posterior, const double area\+\_\+ratio, const double \hyperlink{sequence__processing_8cpp_a8d56592b555a0cbab5ace1db16a3b29b}{semantic\+\_\+weight})
+\begin{DoxyCompactList}\small\item\em Function that calculates the frame weigth used to chose a new frame to compose the video. \end{DoxyCompactList}\item 
+double \hyperlink{sequence__processing_8cpp_a8d56592b555a0cbab5ace1db16a3b29b}{semantic\+\_\+weight} (const int index\+\_\+previous, const int index\+\_\+current, const int index\+\_\+posterior, const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings})
+\begin{DoxyCompactList}\small\item\em Function that get the semantic information of the transition from the frame\+\_\+src to the frame\+\_\+dst calculted by M\+A\+T\+L\+AB and saved in a C\+SV file. \end{DoxyCompactList}\item 
+int \hyperlink{sequence__processing_8cpp_a8374c98e95b78cc5027c494103e35348}{select\+New\+Frame} (const int d, const int D, const int N, const int index, const int index\+\_\+previous, const int index\+\_\+posterior, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, const cv\+::\+Rect \&crop\+\_\+area, const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, cv\+::\+Mat \&new\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Function that selects a new frame in the original video using the values of semantic information of the transition from the frame\+\_\+src to the frame\+\_\+dst calculted by M\+A\+T\+L\+AB and saved in a C\+SV file, the area ratio of the iamge after apply the homography transformation and the R\+A\+N\+S\+C\+AC inliers from the previous and posterior frames that compose the reduced video. \end{DoxyCompactList}\item 
+int \hyperlink{sequence__processing_8cpp_a029dc4caa330843be4ee108a5e7bb825}{select\+New\+Frame} (const float s, const float S, const int index, const int index\+\_\+previous, const int index\+\_\+posterior, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, const cv\+::\+Rect \&crop\+\_\+area, const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, cv\+::\+Mat \&new\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Function that selects a new frame in the original video using the values of semantic information of the transition from the frame\+\_\+src to the frame\+\_\+dst calculted by M\+A\+T\+L\+AB and saved in a C\+SV file, the area ratio of the iamge after apply the homography transformation and the R\+A\+N\+S\+C\+AC inliers from the previous and posterior frames that compose the reduced video. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions related with sequence processing, such as find intermediate homography, get transition weight, select new frame. 
+
+Calculate intermediate homography matrix. Calculate matrix operations root and pow. Calculate frame weight. Get transition weight. Select new frame from original video. 
+
+\subsection{Function Documentation}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!find\+Intermediate\+Homography\+Matrix@{find\+Intermediate\+Homography\+Matrix}}
+\index{find\+Intermediate\+Homography\+Matrix@{find\+Intermediate\+Homography\+Matrix}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Intermediate\+Homography\+Matrix(const int d, const int D, const int N, const cv\+::\+Mat \&frame\+\_\+i, const cv\+::\+Mat \&frame\+\_\+master\+\_\+pre, const cv\+::\+Mat \&frame\+\_\+master\+\_\+pos, cv\+::\+Mat \&homography\+\_\+matrix\+\_\+result)}{findIntermediateHomographyMatrix(const int d, const int D, const int N, const cv::Mat \&frame\_i, const cv::Mat \&frame\_master\_pre, const cv::Mat \&frame\_master\_pos, cv::Mat \&homography\_matrix\_result)}}]{\setlength{\rightskip}{0pt plus 5cm}bool find\+Intermediate\+Homography\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const int}]{d, }
+\item[{const int}]{D, }
+\item[{const int}]{N, }
+\item[{const cv\+::\+Mat \&}]{frame\+\_\+i, }
+\item[{const cv\+::\+Mat \&}]{frame\+\_\+master\+\_\+pre, }
+\item[{const cv\+::\+Mat \&}]{frame\+\_\+master\+\_\+pos, }
+\item[{cv\+::\+Mat \&}]{homography\+\_\+matrix\+\_\+result}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_aad08ac53f56a97ead9e9e2a4e167e4d8}{}\label{sequence__processing_8cpp_aad08ac53f56a97ead9e9e2a4e167e4d8}
+
+
+Function that calculates the homography matrix that leave the frame\+\_\+i to the intermediate plan between the plans of frame\+\_\+master\+\_\+pre and frame\+\_\+master\+\_\+pre with relation of the distance between them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & -\/ distance between the current frame and the previous master frame. \\
+\hline
+{\em D} & -\/ distance between previous master frame and the posterior master frame. \\
+\hline
+{\em N} & -\/ size of the segments. \\
+\hline
+{\em frame\+\_\+i} & -\/ current frame. \\
+\hline
+{\em frame\+\_\+master\+\_\+pre} & -\/ image of the previous master frame. \\
+\hline
+{\em frame\+\_\+master\+\_\+pos} & -\/ image of the posterior master frame. \\
+\hline
+{\em homography\+\_\+matrix\+\_\+result} & -\/ object to save the result homography matrix.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if there is enough points in both images and good matches between them to find a homography matrix. ~\newline
+ {\ttfamily bool} {\ttfamily false} -\/ if there is not enough points in both images or good matches between them to find a homography matrix.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/04/2016 
+\end{DoxyDate}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!find\+Intermediate\+Homography\+Matrix@{find\+Intermediate\+Homography\+Matrix}}
+\index{find\+Intermediate\+Homography\+Matrix@{find\+Intermediate\+Homography\+Matrix}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Intermediate\+Homography\+Matrix(const int d, const int D, const int N, const cv\+::\+Mat \&frame\+\_\+i, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, cv\+::\+Mat \&homography\+\_\+matrix\+\_\+result)}{findIntermediateHomographyMatrix(const int d, const int D, const int N, const cv::Mat \&frame\_i, const std::vector< cv::KeyPoint > \&keypoints\_master\_pre, const std::vector< cv::KeyPoint > \&keypoints\_master\_pos, const cv::Mat \&descriptors\_master\_pre, const cv::Mat \&descriptors\_master\_pos, cv::Mat \&homography\_matrix\_result)}}]{\setlength{\rightskip}{0pt plus 5cm}bool find\+Intermediate\+Homography\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const int}]{d, }
+\item[{const int}]{D, }
+\item[{const int}]{N, }
+\item[{const cv\+::\+Mat \&}]{frame\+\_\+i, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pre, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pos, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pre, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pos, }
+\item[{cv\+::\+Mat \&}]{homography\+\_\+matrix\+\_\+result}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_a536d6b62274f62941d6cec32549d2543}{}\label{sequence__processing_8cpp_a536d6b62274f62941d6cec32549d2543}
+
+
+Function that calculates the homography matrix that leave the frame\+\_\+i to the intermediate plan between the frames related to the previous and posterior master, with respect to the distance between them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & -\/ distance between the current frame and the previous master frame. \\
+\hline
+{\em D} & -\/ distance between previous master frame and the posterior master frame. \\
+\hline
+{\em N} & -\/ size of the segments. \\
+\hline
+{\em frame\+\_\+i} & -\/ current frame. \\
+\hline
+{\em keypoints\+\_\+master\+\_\+pre} & -\/ keypoints of the previous master. \\
+\hline
+{\em keypoints\+\_\+master\+\_\+pos} & -\/ keypoints of the posterior master. \\
+\hline
+{\em descriptors\+\_\+master\+\_\+pre} & -\/ descriptors of the previous master. \\
+\hline
+{\em descriptors\+\_\+master\+\_\+pos} & -\/ descriptors of the posterior master. \\
+\hline
+{\em homography\+\_\+matrix\+\_\+result} & -\/ object to save the result homography matrix.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if there is enough points in both images and good matches between them to find a homography matrix. ~\newline
+ {\ttfamily bool} {\ttfamily false} -\/ if there is not enough points in both images or good matches between them to find a homography matrix.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/08/2016 
+\end{DoxyDate}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!find\+Intermediate\+Homography\+Matrix@{find\+Intermediate\+Homography\+Matrix}}
+\index{find\+Intermediate\+Homography\+Matrix@{find\+Intermediate\+Homography\+Matrix}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Intermediate\+Homography\+Matrix(const float s, const float S, const cv\+::\+Mat \&frame\+\_\+i, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, cv\+::\+Mat \&homography\+\_\+matrix\+\_\+result)}{findIntermediateHomographyMatrix(const float s, const float S, const cv::Mat \&frame\_i, const std::vector< cv::KeyPoint > \&keypoints\_master\_pre, const std::vector< cv::KeyPoint > \&keypoints\_master\_pos, const cv::Mat \&descriptors\_master\_pre, const cv::Mat \&descriptors\_master\_pos, cv::Mat \&homography\_matrix\_result)}}]{\setlength{\rightskip}{0pt plus 5cm}bool find\+Intermediate\+Homography\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const float}]{s, }
+\item[{const float}]{S, }
+\item[{const cv\+::\+Mat \&}]{frame\+\_\+i, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pre, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pos, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pre, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pos, }
+\item[{cv\+::\+Mat \&}]{homography\+\_\+matrix\+\_\+result}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_aa692e8a44dcab5dc3c45c35c3f7ae6d2}{}\label{sequence__processing_8cpp_aa692e8a44dcab5dc3c45c35c3f7ae6d2}
+
+
+Function that calculates the homography matrix that leave the frame\+\_\+i to the intermediate plan between the frames related to the previous and posterior master, with respect to the distance between them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ frame shift value between the previous master frame and the current frame. \\
+\hline
+{\em S} & -\/ frame shift between previous master frame and the posterior master frame. \\
+\hline
+{\em frame\+\_\+i} & -\/ current frame. \\
+\hline
+{\em keypoints\+\_\+master\+\_\+pre} & -\/ keypoints of the previous master. \\
+\hline
+{\em keypoints\+\_\+master\+\_\+pos} & -\/ keypoints of the posterior master. \\
+\hline
+{\em descriptors\+\_\+master\+\_\+pre} & -\/ descriptors of the previous master. \\
+\hline
+{\em descriptors\+\_\+master\+\_\+pos} & -\/ descriptors of the posterior master. \\
+\hline
+{\em homography\+\_\+matrix\+\_\+result} & -\/ object to save the result homography matrix.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if there is enough points in both images and good matches between them to find a homography matrix. ~\newline
+ {\ttfamily bool} {\ttfamily false} -\/ if there is not enough points in both images or good matches between them to find a homography matrix.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/09/2016 
+\end{DoxyDate}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!frame\+Weight@{frame\+Weight}}
+\index{frame\+Weight@{frame\+Weight}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{frame\+Weight(const int ransac\+\_\+inliers\+\_\+previous, const int ransac\+\_\+inliers\+\_\+posterior, const double area\+\_\+ratio, const double semantic\+\_\+weight)}{frameWeight(const int ransac\_inliers\_previous, const int ransac\_inliers\_posterior, const double area\_ratio, const double semantic\_weight)}}]{\setlength{\rightskip}{0pt plus 5cm}float frame\+Weight (
+\begin{DoxyParamCaption}
+\item[{const int}]{ransac\+\_\+inliers\+\_\+previous, }
+\item[{const int}]{ransac\+\_\+inliers\+\_\+posterior, }
+\item[{const double}]{area\+\_\+ratio, }
+\item[{const double}]{semantic\+\_\+weight}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_ab65613bc69028dc0a72f09caa37d37ee}{}\label{sequence__processing_8cpp_ab65613bc69028dc0a72f09caa37d37ee}
+
+
+Function that calculates the frame weigth used to chose a new frame to compose the video. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ransac\+\_\+inliers\+\_\+previous} & -\/ R\+A\+N\+S\+AC inliers between the frame and the previous frame used. \\
+\hline
+{\em ransac\+\_\+inliers\+\_\+posterior} & -\/ R\+A\+N\+S\+AC inliers between the frame and the posterior frame used. \\
+\hline
+{\em area\+\_\+ratio} & -\/ percentage of area into the crop area that the frame occupy after apply the intermediate homography matrix. \\
+\hline
+{\em semantic\+\_\+weight} & -\/ semantic information contained in the transition from previous index, passing by index, up to posterior index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily double} -\/ value of the frame weight.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/04/2016 
+\end{DoxyDate}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!gaussian\+Value@{gaussian\+Value}}
+\index{gaussian\+Value@{gaussian\+Value}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{gaussian\+Value(double index)}{gaussianValue(double index)}}]{\setlength{\rightskip}{0pt plus 5cm}double gaussian\+Value (
+\begin{DoxyParamCaption}
+\item[{double}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_a23162fd5114a89b24c3c7da9abb3915b}{}\label{sequence__processing_8cpp_a23162fd5114a89b24c3c7da9abb3915b}
+
+
+Function that calculates Gaussian value in the position index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ index in the Gaussian function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily double} -\/ value of the Gaussian function int the position index.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/04/2016 
+\end{DoxyDate}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!matrix\+Pow@{matrix\+Pow}}
+\index{matrix\+Pow@{matrix\+Pow}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{matrix\+Pow(cv\+::\+Mat \&matrix, int pow, cv\+::\+Mat \&matrix\+\_\+result)}{matrixPow(cv::Mat \&matrix, int pow, cv::Mat \&matrix\_result)}}]{\setlength{\rightskip}{0pt plus 5cm}void matrix\+Pow (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat \&}]{matrix, }
+\item[{int}]{pow, }
+\item[{cv\+::\+Mat \&}]{matrix\+\_\+result}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_ad83b7c4de86f1a2ed3a79b37ea347890}{}\label{sequence__processing_8cpp_ad83b7c4de86f1a2ed3a79b37ea347890}
+
+
+Function that calculates the n-\/ith pow of a matrix. 
+
+Uses the Armadillo lib.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://arma.sourceforge.net/}{\tt http\+://arma.\+sourceforge.\+net/}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & -\/ matrix to calculate the {\ttfamily pow-\/th} pow. \\
+\hline
+{\em pow} & -\/ pow index. \\
+\hline
+{\em matrix\+\_\+result} & -\/ object to save the result of the matrix pow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily void} 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/04/2016 
+\end{DoxyDate}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!matrix\+Root@{matrix\+Root}}
+\index{matrix\+Root@{matrix\+Root}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{matrix\+Root(cv\+::\+Mat \&matrix, int root, cv\+::\+Mat \&matrix\+\_\+result)}{matrixRoot(cv::Mat \&matrix, int root, cv::Mat \&matrix\_result)}}]{\setlength{\rightskip}{0pt plus 5cm}bool matrix\+Root (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat \&}]{matrix, }
+\item[{int}]{root, }
+\item[{cv\+::\+Mat \&}]{matrix\+\_\+result}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_a31c3927c6071e5c6543de6934dac2731}{}\label{sequence__processing_8cpp_a31c3927c6071e5c6543de6934dac2731}
+
+
+Function that calculates the n-\/ith root of a matrix. 
+
+Uses the Armadillo lib.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://arma.sourceforge.net/}{\tt http\+://arma.\+sourceforge.\+net/}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & -\/ matrix to calculate the {\ttfamily root-\/th} root. \\
+\hline
+{\em root} & -\/ root index. \\
+\hline
+{\em matrix\+\_\+result} & -\/ object to save the result of the matrix root.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the root can be found. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the root can not be found.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+05/05/2016 
+\end{DoxyDate}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!select\+New\+Frame@{select\+New\+Frame}}
+\index{select\+New\+Frame@{select\+New\+Frame}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{select\+New\+Frame(const int d, const int D, const int N, const int index, const int index\+\_\+previous, const int index\+\_\+posterior, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, const cv\+::\+Rect \&crop\+\_\+area, const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings, cv\+::\+Mat \&new\+\_\+frame)}{selectNewFrame(const int d, const int D, const int N, const int index, const int index\_previous, const int index\_posterior, const std::vector< cv::KeyPoint > \&keypoints\_master\_pre, const std::vector< cv::KeyPoint > \&keypoints\_master\_pos, const cv::Mat \&descriptors\_master\_pre, const cv::Mat \&descriptors\_master\_pos, const cv::Rect \&crop\_area, const EXPERIMENT \&experiment\_settings, cv::Mat \&new\_frame)}}]{\setlength{\rightskip}{0pt plus 5cm}int select\+New\+Frame (
+\begin{DoxyParamCaption}
+\item[{const int}]{d, }
+\item[{const int}]{D, }
+\item[{const int}]{N, }
+\item[{const int}]{index, }
+\item[{const int}]{index\+\_\+previous, }
+\item[{const int}]{index\+\_\+posterior, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pre, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pos, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pre, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pos, }
+\item[{const cv\+::\+Rect \&}]{crop\+\_\+area, }
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings, }
+\item[{cv\+::\+Mat \&}]{new\+\_\+frame}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_a8374c98e95b78cc5027c494103e35348}{}\label{sequence__processing_8cpp_a8374c98e95b78cc5027c494103e35348}
+
+
+Function that selects a new frame in the original video using the values of semantic information of the transition from the frame\+\_\+src to the frame\+\_\+dst calculted by M\+A\+T\+L\+AB and saved in a C\+SV file, the area ratio of the iamge after apply the homography transformation and the R\+A\+N\+S\+C\+AC inliers from the previous and posterior frames that compose the reduced video. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & -\/ distance between the current frame and the previous master frame. \\
+\hline
+{\em D} & -\/ distance between previous master frame and the posterior master frame. \\
+\hline
+{\em N} & -\/ size of the segments. \\
+\hline
+{\em index} & -\/ index of the frame that will be replaced. \\
+\hline
+{\em index\+\_\+previous} & -\/ index of the last frame in the reduced video. \\
+\hline
+{\em index\+\_\+posterior} & -\/ index of the next frame in the reduced video. \\
+\hline
+{\em image\+\_\+master\+\_\+previous} & -\/ image with the master previous \\
+\hline
+{\em image\+\_\+master\+\_\+posterior} & -\/ image with the master posterior \\
+\hline
+{\em crop\+\_\+area} & -\/ crop area of the video. \\
+\hline
+{\em experiment\+\_\+settings} & -\/ experiment settings struct. \\
+\hline
+{\em new\+\_\+frame} & -\/ image that will receive the new selected frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily int} -\/ returns the index of the new selected frame.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/04/2016 
+\end{DoxyDate}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!select\+New\+Frame@{select\+New\+Frame}}
+\index{select\+New\+Frame@{select\+New\+Frame}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{select\+New\+Frame(const float s, const float S, const int index, const int index\+\_\+previous, const int index\+\_\+posterior, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, const cv\+::\+Rect \&crop\+\_\+area, const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings, cv\+::\+Mat \&new\+\_\+frame)}{selectNewFrame(const float s, const float S, const int index, const int index\_previous, const int index\_posterior, const std::vector< cv::KeyPoint > \&keypoints\_master\_pre, const std::vector< cv::KeyPoint > \&keypoints\_master\_pos, const cv::Mat \&descriptors\_master\_pre, const cv::Mat \&descriptors\_master\_pos, const cv::Rect \&crop\_area, const EXPERIMENT \&experiment\_settings, cv::Mat \&new\_frame)}}]{\setlength{\rightskip}{0pt plus 5cm}int select\+New\+Frame (
+\begin{DoxyParamCaption}
+\item[{const float}]{s, }
+\item[{const float}]{S, }
+\item[{const int}]{index, }
+\item[{const int}]{index\+\_\+previous, }
+\item[{const int}]{index\+\_\+posterior, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pre, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pos, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pre, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pos, }
+\item[{const cv\+::\+Rect \&}]{crop\+\_\+area, }
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings, }
+\item[{cv\+::\+Mat \&}]{new\+\_\+frame}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_a029dc4caa330843be4ee108a5e7bb825}{}\label{sequence__processing_8cpp_a029dc4caa330843be4ee108a5e7bb825}
+
+
+Function that selects a new frame in the original video using the values of semantic information of the transition from the frame\+\_\+src to the frame\+\_\+dst calculted by M\+A\+T\+L\+AB and saved in a C\+SV file, the area ratio of the iamge after apply the homography transformation and the R\+A\+N\+S\+C\+AC inliers from the previous and posterior frames that compose the reduced video. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ frame shift value between the previous master frame and the current frame. \\
+\hline
+{\em S} & -\/ frame shift between previous master frame and the posterior master frame. \\
+\hline
+{\em index} & -\/ index of the frame that will be replaced. \\
+\hline
+{\em index\+\_\+previous} & -\/ index of the last frame in the reduced video. \\
+\hline
+{\em index\+\_\+posterior} & -\/ index of the next frame in the reduced video. \\
+\hline
+{\em image\+\_\+master\+\_\+previous} & -\/ image with the master previous \\
+\hline
+{\em image\+\_\+master\+\_\+posterior} & -\/ image with the master posterior \\
+\hline
+{\em crop\+\_\+area} & -\/ crop area of the video. \\
+\hline
+{\em experiment\+\_\+settings} & -\/ experiment settings struct. \\
+\hline
+{\em new\+\_\+frame} & -\/ image that will receive the new selected frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily int} -\/ returns the index of the new selected frame.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/09/2016 
+\end{DoxyDate}
+\index{sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}!semantic\+\_\+weight@{semantic\+\_\+weight}}
+\index{semantic\+\_\+weight@{semantic\+\_\+weight}!sequence\+\_\+processing.\+cpp@{sequence\+\_\+processing.\+cpp}}
+\subsubsection[{\texorpdfstring{semantic\+\_\+weight(const int index\+\_\+previous, const int index\+\_\+current, const int index\+\_\+posterior, const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings)}{semantic\_weight(const int index\_previous, const int index\_current, const int index\_posterior, const EXPERIMENT \&experiment\_settings)}}]{\setlength{\rightskip}{0pt plus 5cm}double semantic\+\_\+weight (
+\begin{DoxyParamCaption}
+\item[{const int}]{index\+\_\+previous, }
+\item[{const int}]{index\+\_\+current, }
+\item[{const int}]{index\+\_\+posterior, }
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings}
+\end{DoxyParamCaption}
+)}\hypertarget{sequence__processing_8cpp_a8d56592b555a0cbab5ace1db16a3b29b}{}\label{sequence__processing_8cpp_a8d56592b555a0cbab5ace1db16a3b29b}
+
+
+Function that get the semantic information of the transition from the frame\+\_\+src to the frame\+\_\+dst calculted by M\+A\+T\+L\+AB and saved in a C\+SV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+\_\+previous} & -\/ index of the first frame of the first transition. \\
+\hline
+{\em index\+\_\+current} & -\/ index of the last frame of the first transition and first frame of the second transition. \\
+\hline
+{\em index\+\_\+posterior} & -\/ index of the second frame of the second transition. \\
+\hline
+{\em experiment\+\_\+settings} & -\/ struct with the experiment settings used to open the C\+SV file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily double} -\/ value of the semantic information about the transition.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/04/2016 
+\end{DoxyDate}

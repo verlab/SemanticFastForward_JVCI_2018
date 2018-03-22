@@ -1,0 +1,349 @@
+\hypertarget{file__operations_8h}{}\section{headers/file\+\_\+operations.h File Reference}
+\label{file__operations_8h}\index{headers/file\+\_\+operations.\+h@{headers/file\+\_\+operations.\+h}}
+
+
+Header functions for the \hyperlink{file__operations_8cpp}{file\+\_\+operations.\+cpp}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include $<$boost/tokenizer.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}definitions/experiment\+\_\+struct.\+h\char`\"{}}\\*
+Include dependency graph for file\+\_\+operations.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file__operations_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file__operations_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{file__operations_8h_ad65b52efdd81718726a7c020b2745231}{load\+Master\+Frames\+From\+File} (const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings})
+\begin{DoxyCompactList}\small\item\em Function to load the master frames from a file defined in the field read\+\_\+masterframes\+\_\+filename in the experiment\+\_\+settings. \end{DoxyCompactList}\item 
+bool \hyperlink{file__operations_8h_a8ee838aca4ec1d86b6da27d8d0c6c5a6}{save\+Master\+Frames\+To\+File} (const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, const std\+::vector$<$ int $>$ masters\+\_\+frames)
+\begin{DoxyCompactList}\small\item\em Function to save the calculated master frames into a file defined in the field save\+\_\+masterframes\+\_\+filename in the experiment\+\_\+settings. \end{DoxyCompactList}\item 
+void \hyperlink{file__operations_8h_a65c5cb4d2def7f9475ee950799649709}{read\+Selected\+Frames\+C\+SV} (std\+::string filename, std\+::vector$<$ int $>$ \&selected\+\_\+frames)
+\begin{DoxyCompactList}\small\item\em Function to read a C\+SV composed by frames selected by the selection algorithm. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{file__operations_8h_add54304682603740491ac7f2fa3e8909}{get\+Experiment\+Id} ()
+\begin{DoxyCompactList}\small\item\em Function that manages the experiments ID automatically. \end{DoxyCompactList}\item 
+double \hyperlink{file__operations_8h_a4389609d14f1f46754e68ced749e4736}{get\+Semantic\+Cost} (const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, const int frame\+\_\+src, const int frame\+\_\+dst)
+\begin{DoxyCompactList}\small\item\em Function that returns the semantic cost of the transiction from the frame\+\_\+src to the frame\+\_\+dst. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{file__operations_8h_a2995a8f3930a0b01a4e0ac1bfc5638e3}{load\+Instability\+Costs\+From\+File} (const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings})
+\begin{DoxyCompactList}\small\item\em load\+Instability\+Costs\+From\+File Loads the instability costs from a C\+SV file (matrix format). \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{file__operations_8h_af95138c7e9d6611e1ace10ec85b633eb}{load\+Optical\+Flow} (const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings})
+\begin{DoxyCompactList}\small\item\em load\+Optical\+Flow Loads the Optical Flow calculated by the Flow\+Net from a C\+SV file. \end{DoxyCompactList}\item 
+bool \hyperlink{file__operations_8h_a1e52e743807e450c3bdc8d8a179093ce}{str2bool} (std\+::string str)
+\begin{DoxyCompactList}\small\item\em str2bool convert a string to boolean. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{file__operations_8h_a6fee1fe59a7b7ffbfff04e8e9b9e6571}{filter\+\_\+string} (std\+::string str)
+\begin{DoxyCompactList}\small\item\em filter\+\_\+string filter a string to remove white spaces and line break. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header functions for the \hyperlink{file__operations_8cpp}{file\+\_\+operations.\+cpp}. 
+
+
+
+\subsection{Function Documentation}
+\index{file\+\_\+operations.\+h@{file\+\_\+operations.\+h}!filter\+\_\+string@{filter\+\_\+string}}
+\index{filter\+\_\+string@{filter\+\_\+string}!file\+\_\+operations.\+h@{file\+\_\+operations.\+h}}
+\subsubsection[{\texorpdfstring{filter\+\_\+string(std\+::string str)}{filter\_string(std::string str)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string filter\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{file__operations_8h_a6fee1fe59a7b7ffbfff04e8e9b9e6571}{}\label{file__operations_8h_a6fee1fe59a7b7ffbfff04e8e9b9e6571}
+
+
+filter\+\_\+string filter a string to remove white spaces and line break. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ string to be filtered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+str -\/ filtered string
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Felipe Cadar Chamone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/07/2017
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Felipe Cadar Chamone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/07/2017 
+\end{DoxyDate}
+\index{file\+\_\+operations.\+h@{file\+\_\+operations.\+h}!get\+Experiment\+Id@{get\+Experiment\+Id}}
+\index{get\+Experiment\+Id@{get\+Experiment\+Id}!file\+\_\+operations.\+h@{file\+\_\+operations.\+h}}
+\subsubsection[{\texorpdfstring{get\+Experiment\+Id()}{getExperimentId()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string get\+Experiment\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{file__operations_8h_add54304682603740491ac7f2fa3e8909}{}\label{file__operations_8h_add54304682603740491ac7f2fa3e8909}
+
+
+Function that manages the experiments ID automatically. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily std\+::string} -\/ The experiment id formatted by 4 digits
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19/04/2016 
+\end{DoxyDate}
+\index{file\+\_\+operations.\+h@{file\+\_\+operations.\+h}!get\+Semantic\+Cost@{get\+Semantic\+Cost}}
+\index{get\+Semantic\+Cost@{get\+Semantic\+Cost}!file\+\_\+operations.\+h@{file\+\_\+operations.\+h}}
+\subsubsection[{\texorpdfstring{get\+Semantic\+Cost(const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings, const int frame\+\_\+src, const int frame\+\_\+dst)}{getSemanticCost(const EXPERIMENT \&experiment\_settings, const int frame\_src, const int frame\_dst)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+Semantic\+Cost (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings, }
+\item[{const int}]{frame\+\_\+src, }
+\item[{const int}]{frame\+\_\+dst}
+\end{DoxyParamCaption}
+)}\hypertarget{file__operations_8h_a4389609d14f1f46754e68ced749e4736}{}\label{file__operations_8h_a4389609d14f1f46754e68ced749e4736}
+
+
+Function that returns the semantic cost of the transiction from the frame\+\_\+src to the frame\+\_\+dst. 
+
+The file where the semantic cost will be find is defined in the experiment\+\_\+settings
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & -\/ variable with the experiment setting. \\
+\hline
+{\em frame\+\_\+src} & -\/ first frame of the transition. \\
+\hline
+{\em frame\+\_\+dst} & -\/ last frame of the transition.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily double} -\/ The semantic cost of the transiction of the frame\+\_\+src to the frame\+\_\+dst. Returns the complementary value ( 1 -\/ x ).
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/04/2016
+\end{DoxyDate}
+Function that returns the semantic cost of the transiction from the frame\+\_\+src to the frame\+\_\+dst.
+
+The file where the semantic cost will be find is defined in the experiment\+\_\+settings
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & -\/ variable with the experiment setting. \\
+\hline
+{\em frame\+\_\+src} & -\/ first frame of the transition. \\
+\hline
+{\em frame\+\_\+dst} & -\/ last frame of the transition.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily double} -\/ The semantic cost of the transiction of the frame\+\_\+src to the frame\+\_\+dst. Returns the complementary value ( 1 -\/ x ).
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/04/2016 
+\end{DoxyDate}
+\index{file\+\_\+operations.\+h@{file\+\_\+operations.\+h}!load\+Instability\+Costs\+From\+File@{load\+Instability\+Costs\+From\+File}}
+\index{load\+Instability\+Costs\+From\+File@{load\+Instability\+Costs\+From\+File}!file\+\_\+operations.\+h@{file\+\_\+operations.\+h}}
+\subsubsection[{\texorpdfstring{load\+Instability\+Costs\+From\+File(const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings)}{loadInstabilityCostsFromFile(const EXPERIMENT \&experiment\_settings)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::vector$<$double$>$ $>$ load\+Instability\+Costs\+From\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings}
+\end{DoxyParamCaption}
+)}\hypertarget{file__operations_8h_a2995a8f3930a0b01a4e0ac1bfc5638e3}{}\label{file__operations_8h_a2995a8f3930a0b01a4e0ac1bfc5638e3}
+
+
+load\+Instability\+Costs\+From\+File Loads the instability costs from a C\+SV file (matrix format). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The matrix of instability costs
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/09/2016 
+\end{DoxyDate}
+\index{file\+\_\+operations.\+h@{file\+\_\+operations.\+h}!load\+Master\+Frames\+From\+File@{load\+Master\+Frames\+From\+File}}
+\index{load\+Master\+Frames\+From\+File@{load\+Master\+Frames\+From\+File}!file\+\_\+operations.\+h@{file\+\_\+operations.\+h}}
+\subsubsection[{\texorpdfstring{load\+Master\+Frames\+From\+File(const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings)}{loadMasterFramesFromFile(const EXPERIMENT \&experiment\_settings)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ load\+Master\+Frames\+From\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings}
+\end{DoxyParamCaption}
+)}\hypertarget{file__operations_8h_ad65b52efdd81718726a7c020b2745231}{}\label{file__operations_8h_ad65b52efdd81718726a7c020b2745231}
+
+
+Function to load the master frames from a file defined in the field read\+\_\+masterframes\+\_\+filename in the experiment\+\_\+settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & -\/ variable with the experiment setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily std\+::vector} -\/ vector of master frames loaded from file describle in the experiment settings.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/04/2016 
+\end{DoxyDate}
+\index{file\+\_\+operations.\+h@{file\+\_\+operations.\+h}!load\+Optical\+Flow@{load\+Optical\+Flow}}
+\index{load\+Optical\+Flow@{load\+Optical\+Flow}!file\+\_\+operations.\+h@{file\+\_\+operations.\+h}}
+\subsubsection[{\texorpdfstring{load\+Optical\+Flow(const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings)}{loadOpticalFlow(const EXPERIMENT \&experiment\_settings)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::vector$<$double$>$ $>$ load\+Optical\+Flow (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings}
+\end{DoxyParamCaption}
+)}\hypertarget{file__operations_8h_af95138c7e9d6611e1ace10ec85b633eb}{}\label{file__operations_8h_af95138c7e9d6611e1ace10ec85b633eb}
+
+
+load\+Optical\+Flow Loads the Optical Flow calculated by the Flow\+Net from a C\+SV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\mbox{[}j\mbox{]}\mbox{[}i\mbox{]} with the optical flow from the image j to j+1 (i=0 is dx and i=1 is dy).
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/01/2017 
+\end{DoxyDate}
+\index{file\+\_\+operations.\+h@{file\+\_\+operations.\+h}!read\+Selected\+Frames\+C\+SV@{read\+Selected\+Frames\+C\+SV}}
+\index{read\+Selected\+Frames\+C\+SV@{read\+Selected\+Frames\+C\+SV}!file\+\_\+operations.\+h@{file\+\_\+operations.\+h}}
+\subsubsection[{\texorpdfstring{read\+Selected\+Frames\+C\+S\+V(std\+::string filename, std\+::vector$<$ int $>$ \&selected\+\_\+frames)}{readSelectedFramesCSV(std::string filename, std::vector< int > \&selected\_frames)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Selected\+Frames\+C\+SV (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{filename, }
+\item[{std\+::vector$<$ int $>$ \&}]{selected\+\_\+frames}
+\end{DoxyParamCaption}
+)}\hypertarget{file__operations_8h_a65c5cb4d2def7f9475ee950799649709}{}\label{file__operations_8h_a65c5cb4d2def7f9475ee950799649709}
+
+
+Function to read a C\+SV composed by frames selected by the selection algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ std\+::string with the filename of the C\+SV file that contains the selected frames of the reduced video. \\
+\hline
+{\em selected\+\_\+frames} & -\/ vector to save the selected frames.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily void} 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/04/2016 
+\end{DoxyDate}
+\index{file\+\_\+operations.\+h@{file\+\_\+operations.\+h}!save\+Master\+Frames\+To\+File@{save\+Master\+Frames\+To\+File}}
+\index{save\+Master\+Frames\+To\+File@{save\+Master\+Frames\+To\+File}!file\+\_\+operations.\+h@{file\+\_\+operations.\+h}}
+\subsubsection[{\texorpdfstring{save\+Master\+Frames\+To\+File(const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings, const std\+::vector$<$ int $>$ masters\+\_\+frames)}{saveMasterFramesToFile(const EXPERIMENT \&experiment\_settings, const std::vector< int > masters\_frames)}}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+Master\+Frames\+To\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings, }
+\item[{const std\+::vector$<$ int $>$}]{masters\+\_\+frames}
+\end{DoxyParamCaption}
+)}\hypertarget{file__operations_8h_a8ee838aca4ec1d86b6da27d8d0c6c5a6}{}\label{file__operations_8h_a8ee838aca4ec1d86b6da27d8d0c6c5a6}
+
+
+Function to save the calculated master frames into a file defined in the field save\+\_\+masterframes\+\_\+filename in the experiment\+\_\+settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & -\/ variable with the experiment setting. \\
+\hline
+{\em masters\+\_\+frames} & -\/ vector of master frames to be saved in file describle in the experiment settings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the writer return sucess while writing the file. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the writer return fail while writing the file.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/04/2016 
+\end{DoxyDate}
+\index{file\+\_\+operations.\+h@{file\+\_\+operations.\+h}!str2bool@{str2bool}}
+\index{str2bool@{str2bool}!file\+\_\+operations.\+h@{file\+\_\+operations.\+h}}
+\subsubsection[{\texorpdfstring{str2bool(std\+::string str)}{str2bool(std::string str)}}]{\setlength{\rightskip}{0pt plus 5cm}bool str2bool (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{file__operations_8h_a1e52e743807e450c3bdc8d8a179093ce}{}\label{file__operations_8h_a1e52e743807e450c3bdc8d8a179093ce}
+
+
+str2bool convert a string to boolean. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ string to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Felipe Cadar Chamone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/07/2017
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Felipe Cadar Chamone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/07/2017 
+\end{DoxyDate}

@@ -1,0 +1,58 @@
+\hypertarget{index_project_sec}{}\section{Project}\label{index_project_sec}
+This code is based on the paper \href{http://www.verlab.dcc.ufmg.br/wp-content/uploads/2016/10/Final_Draft_ECCVW_2016_Towards_Semantic_Fast_Forward_and_Stabilied_Egocentric_Videos.pdf}{\tt Towards Semantic Fast-\/\+Forward and Stabilized Egocentric Video} on the {\bfseries First International Workshop on Egocentric Perception, Interaction and Computing} at {\bfseries European Conference on Computer Vision} (E\+P\+IC@E\+C\+CV 2016). The goal of the program is to stabilize a fast-\/forward version of a video, using the dropped frames to reconstruct distorted images during the processing.
+
+For more information, acess the link\+: \href{http://www.verlab.dcc.ufmg.br/fast-forward-video-based-on-semantic-extraction/}{\tt http\+://www.\+verlab.\+dcc.\+ufmg.\+br/fast-\/forward-\/video-\/based-\/on-\/semantic-\/extraction/}. ~\newline
+ \hypertarget{index_contact_sec}{}\section{Contact}\label{index_contact_sec}
+\hypertarget{index_authors_sec}{}\subsection{Authors\+:}\label{index_authors_sec}
+\begin{DoxyItemize}
+\item Michel Melo da Silva -\/ PhD student -\/ U\+F\+MG -\/ \href{mailto:michelms@dcc.ufmg.com}{\tt michelms@dcc.\+ufmg.\+com} \item Washington Luis de Souza Ramos -\/ M\+Sc student -\/ U\+F\+MG -\/ \href{mailto:washington.ramos@outlook.com}{\tt washington.\+ramos@outlook.\+com} \item João Pedro Klock Ferreira -\/ Undergraduate Student -\/ U\+F\+MG -\/ \href{mailto:jpklock@dcc.ufmg.br}{\tt jpklock@dcc.\+ufmg.\+br} \item Mario Fernando Montenegro Campos -\/ Advisor -\/ U\+F\+MG -\/ \href{mailto:mario@dcc.ufmg.br}{\tt mario@dcc.\+ufmg.\+br} \item Erickson Rangel do Nascimento -\/ Advisor -\/ U\+F\+MG -\/ \href{mailto:erickson@dcc.ufmg.br}{\tt erickson@dcc.\+ufmg.\+br}\end{DoxyItemize}
+\hypertarget{index_institution_sec}{}\subsection{Institution}\label{index_institution_sec}
+Federal University of Minas Gerais (U\+F\+MG) ~\newline
+Computer Science Department ~\newline
+Belo Horizonte -\/ Minas Gerais -\/\+Brazil\hypertarget{index_laboratory_subsec}{}\subsection{Laboratory}\label{index_laboratory_subsec}
+{\bfseries Ve\+R\+Lab\+:} Vison and Robotic Laboratory ~\newline
+\href{http://www.verlab.dcc.ufmg.br}{\tt http\+://www.\+verlab.\+dcc.\+ufmg.\+br}\hypertarget{index_program_sec}{}\section{Program}\label{index_program_sec}
+\hypertarget{index_dependencies_sec}{}\subsection{Dependencies}\label{index_dependencies_sec}
+\begin{DoxyItemize}
+\item Open\+CV 2.\+4.\+X {\itshape (Tested with 2.\+4.\+9 and 2.\+4.\+13)} \item Armadillo 6.\+X {\itshape (Tested with 6.\+600.\+5 -- Catabolic Amalgamator)} \item Boost 1.\+X {\itshape (Tested with 1.\+54.\+0)}\end{DoxyItemize}
+\hypertarget{index_compiling_sec}{}\subsection{Compiling}\label{index_compiling_sec}
+The program can be compiled using either {\ttfamily cmake} or {\ttfamily qmake} tools. Into the project directory, run the following commands\+:
+
+{\ttfamily  {\bfseries user@computer\+:$<$project\+\_\+path$>$\+:} mkdir build ~\newline
+{\bfseries user@computer\+:$<$project\+\_\+path$>$\+:} cd build ~\newline
+{\bfseries user@computer\+:$<$project\+\_\+path$>$\+:} cmake .. ~\newline
+{\bfseries user@computer\+:$<$project\+\_\+path$>$\+:} make ~\newline
+{\bfseries user@computer\+:$<$project\+\_\+path$>$\+:} ./\+Video\+Stabilization $<$ Settings\+\_\+file $>$ \mbox{[}-\/h\mbox{]} \mbox{[}Range\+\_\+min\mbox{]} \mbox{[}Range\+\_\+max\mbox{]}~\newline
+}\hypertarget{index_execution_sec}{}\subsection{Exemples of usage}\label{index_execution_sec}
+{\ttfamily  $<$ Program\+\_\+name $>$ $<$ Settings\+\_\+file $>$ \mbox{[}-\/h\mbox{]} \mbox{[}Range\+\_\+min = 0 \mbox{]} \mbox{[}Range\+\_\+max = num\+\_\+frames \mbox{]} } ~\newline
+~\newline
+Example 1\+: Run Video\+Stabilization using Help option. ~\newline
+{\ttfamily  -\/$>$ Video\+Stabilization -\/h } ~\newline
+~\newline
+Example 2\+: Run Video\+Stabilization in the Experiment\+\_\+1 processing the whole video. ~\newline
+{\ttfamily  -\/$>$ Video\+Stabilization Experiment\+\_\+1.\+xml } ~\newline
+~\newline
+Example 3\+: Run Video\+Stabilization in the Experiment\+\_\+1 processing from the 150 frame until the last one. ~\newline
+{\ttfamily  -\/$>$ Video\+Stabilization Experiment\+\_\+1.\+xml {\ttfamily 150} } ~\newline
+~\newline
+Example 4\+: Run Video\+Stabilization in the Experiment\+\_\+1 processing from the 150 frame until the frame 490. ~\newline
+{\ttfamily  -\/$>$ Video\+Stabilization Experiment\+\_\+1.\+xml 150 490 } ~\newline
+~\newline
+ \hypertarget{index_citation_sec}{}\section{Citation}\label{index_citation_sec}
+If you are using it to academic purpose, please cite\+: ~\newline
+ M. M. Silva, W. L. S. Ramos, J. P. K. Ferreira, M. F. M. Campos, E. R. Nascimento, {\bfseries Towards semantic fast-\/forward and stabilized egocentric videos}, in\+: European Conference on Computer Vision Workshops, Springer International Publishing, Amsterdam, NL, 2016, pp. 557–571. doi\+:10.\+1007/978-\/3-\/319-\/46604-\/0\+\_\+40.\hypertarget{index_bibtex_subsec}{}\subsection{Bibtex entry}\label{index_bibtex_subsec}
+{\ttfamily  @In\+Book\{Silva2016, ~\newline
+ Title = \{Towards Semantic Fast-\/\+Forward and Stabilized Egocentric Videos\}, ~\newline
+ Author = \{Silva, Michel Melo and Ramos, Washington Luis Souza and Ferreira, ~\newline
+ Joao Pedro Klock and Campos, Mario Fernando Montenegro and Nascimento, Erickson Rangel\}, ~\newline
+ Editor = \{Hua, Gang and J\{\textbackslash{}\textquotesingle{}e\}gou, Herv\{\textbackslash{}\textquotesingle{}e\}\}, ~\newline
+ Pages = \{557--571\}, ~\newline
+ Publisher = \{Springer International Publishing\}, ~\newline
+ Year = \{2016\}, ~\newline
+ Address = \{Cham\}, ~\newline
+ Booktitle = \{Computer Vision -- E\+C\+CV 2016 Workshops\+: Amsterdam, The Netherlands, ~\newline
+ October 8-\/10 and 15-\/16, 2016, Proceedings, Part I\}, ~\newline
+ Doi = \{10.\+1007/978-\/3-\/319-\/46604-\/0\+\_\+40\}, ~\newline
+ I\+S\+BN = \{978-\/3-\/319-\/46604-\/0\}, ~\newline
+ Url = \{\href{http://dx.doi.org/10.1007/978-3-319-46604-0_40}{\tt http\+://dx.\+doi.\+org/10.\+1007/978-\/3-\/319-\/46604-\/0\+\_\+40}\} ~\newline
+\} } 

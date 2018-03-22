@@ -1,0 +1,32 @@
+======================================================================================
+====   This file is part of SemanticFastForward_EPIC@ECCVW.
+==
+==    SemanticFastForward_EPIC@ECCVW is free software: you can redistribute it and/or modify
+==    it under the terms of the GNU General Public License as published by
+==    the Free Software Foundation, either version 3 of the License, or
+==    (at your option) any later version.
+==
+==    SemanticFastForward_JVCI is distributed in the hope that it will be useful,
+==    but WITHOUT ANY WARRANTY; without even the implied warranty of
+==    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+==    GNU General Public License for more details.
+==
+==    You should have received a copy of the GNU General Public License
+==    along with SemanticFastForward_EPIC@ECCVW.  If not, see <http:==www.gnu.org/licenses/>.
+==
+======================================================================================
+
+Output Erros description:
+
+(  -1 ) -> Wrong number of input parameters.
+(  -2 ) -> Program call using Help option.
+(  -3 ) -> Can not open the video accelerated video.
+(  -4 ) -> Can not create file to save the output video.
+(  -5 ) -> Can not open the video original video.
+(  -6 ) -> Can not open the CSV file with the selected frame numbers of the accelerated video.
+(  -7 ) -> Can not create directory to save the output data.
+(  -8 ) -> Can not create log text file.
+(  -9 ) -> Range limits is not well defined.
+( -10 ) -> Can not open the CSV file with the semantic costs of the original video.
+( -11 ) -> Transiction from frame_src to frame_dst larger than number of transictions describle int the file the semantic costs
+( -12 ) -> Can not open the CSV file with the optical Flow of the original video

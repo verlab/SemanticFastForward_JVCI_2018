@@ -1,0 +1,154 @@
+\hypertarget{image__reconstruction_8h}{}\section{headers/image\+\_\+reconstruction.h File Reference}
+\label{image__reconstruction_8h}\index{headers/image\+\_\+reconstruction.\+h@{headers/image\+\_\+reconstruction.\+h}}
+
+
+Header functions for the \hyperlink{image__reconstruction_8cpp}{image\+\_\+reconstruction.\+cpp}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/features2d/features2d.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/nonfree/nonfree.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/calib3d/calib3d.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/photo/photo.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}definitions/define.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}definitions/experiment\+\_\+struct.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}executables/execute\+\_\+commands.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}homography.\+h\char`\"{}}\\*
+Include dependency graph for image\+\_\+reconstruction.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{image__reconstruction_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{image__reconstruction_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15}{Reconstruction\+Type} \{ \hyperlink{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15a24c4f661ea927ff88a09e2d2c44cfc0f}{P\+R\+E\+\_\+\+A\+N\+D\+\_\+\+P\+OS}, 
+\hyperlink{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15a7b2b01785df1bdd40fec44c53d0011f8}{O\+N\+L\+Y\+\_\+\+P\+RE}, 
+\hyperlink{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15a54c8830522aa455e2a777ccd97b0cecc}{O\+N\+L\+Y\+\_\+\+P\+OS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{image__reconstruction_8h_aa59aa1053c00066ff2e977650615393d}{image\+Reconstruction} (const cv\+::\+Mat \&image, const int index, const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, const cv\+::\+Rect \&frame\+\_\+boundaries, cv\+::\+Mat \&reconstructed\+Image)
+\begin{DoxyCompactList}\small\item\em Function that reconstructs an image using panorama based on homography in a image sequence. \end{DoxyCompactList}\item 
+bool \hyperlink{image__reconstruction_8h_ad6b2680d1178aa193da11f5173c40c3c}{reconstruct\+Image} (const cv\+::\+Mat \&image, const cv\+::\+Mat \&homography\+\_\+matrix, const int index, const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, const cv\+::\+Rect \&drop\+\_\+boundaries, const cv\+::\+Rect \&frame\+\_\+boundaries, cv\+::\+Mat \&reconstructed\+\_\+image)
+\begin{DoxyCompactList}\small\item\em Function that reconstructs an image using panorama based on homography in a image sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header functions for the \hyperlink{image__reconstruction_8cpp}{image\+\_\+reconstruction.\+cpp}. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}!Reconstruction\+Type@{Reconstruction\+Type}}
+\index{Reconstruction\+Type@{Reconstruction\+Type}!image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}}
+\subsubsection[{\texorpdfstring{Reconstruction\+Type}{ReconstructionType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Reconstruction\+Type}}\hypertarget{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15}{}\label{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+R\+E\+\_\+\+A\+N\+D\+\_\+\+P\+OS@{P\+R\+E\+\_\+\+A\+N\+D\+\_\+\+P\+OS}!image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}}\index{image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}!P\+R\+E\+\_\+\+A\+N\+D\+\_\+\+P\+OS@{P\+R\+E\+\_\+\+A\+N\+D\+\_\+\+P\+OS}}\item[{\em 
+P\+R\+E\+\_\+\+A\+N\+D\+\_\+\+P\+OS\hypertarget{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15a24c4f661ea927ff88a09e2d2c44cfc0f}{}\label{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15a24c4f661ea927ff88a09e2d2c44cfc0f}
+}]\index{O\+N\+L\+Y\+\_\+\+P\+RE@{O\+N\+L\+Y\+\_\+\+P\+RE}!image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}}\index{image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}!O\+N\+L\+Y\+\_\+\+P\+RE@{O\+N\+L\+Y\+\_\+\+P\+RE}}\item[{\em 
+O\+N\+L\+Y\+\_\+\+P\+RE\hypertarget{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15a7b2b01785df1bdd40fec44c53d0011f8}{}\label{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15a7b2b01785df1bdd40fec44c53d0011f8}
+}]\index{O\+N\+L\+Y\+\_\+\+P\+OS@{O\+N\+L\+Y\+\_\+\+P\+OS}!image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}}\index{image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}!O\+N\+L\+Y\+\_\+\+P\+OS@{O\+N\+L\+Y\+\_\+\+P\+OS}}\item[{\em 
+O\+N\+L\+Y\+\_\+\+P\+OS\hypertarget{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15a54c8830522aa455e2a777ccd97b0cecc}{}\label{image__reconstruction_8h_ad5c30c75ffcd2ccec3fad8a118addb15a54c8830522aa455e2a777ccd97b0cecc}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}!image\+Reconstruction@{image\+Reconstruction}}
+\index{image\+Reconstruction@{image\+Reconstruction}!image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}}
+\subsubsection[{\texorpdfstring{image\+Reconstruction(const cv\+::\+Mat \&image, const int index, const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings, const cv\+::\+Rect \&frame\+\_\+boundaries, cv\+::\+Mat \&reconstructed\+Image)}{imageReconstruction(const cv::Mat \&image, const int index, const EXPERIMENT \&experiment\_settings, const cv::Rect \&frame\_boundaries, cv::Mat \&reconstructedImage)}}]{\setlength{\rightskip}{0pt plus 5cm}bool image\+Reconstruction (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image, }
+\item[{const int}]{index, }
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings, }
+\item[{const cv\+::\+Rect \&}]{frame\+\_\+boundaries, }
+\item[{cv\+::\+Mat \&}]{reconstructed\+\_\+image}
+\end{DoxyParamCaption}
+)}\hypertarget{image__reconstruction_8h_aa59aa1053c00066ff2e977650615393d}{}\label{image__reconstruction_8h_aa59aa1053c00066ff2e977650615393d}
+
+
+Function that reconstructs an image using panorama based on homography in a image sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & -\/ image initial with homography transformation. \\
+\hline
+{\em index} & -\/ index of the initial image in the original video. \\
+\hline
+{\em experiment\+\_\+settings} & -\/ object with the experiment settings. \\
+\hline
+{\em frame\+\_\+boundaries} & -\/ limits of the frame that needs to be filled by the reconstructed image. \\
+\hline
+{\em reconstructed\+\_\+image} & -\/ object to save the final reconstructed image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the frame was successful reconstructed filling all the frame limit. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the frame was not successful reconstructed filling all the frame limit.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/04/2016 
+\end{DoxyDate}
+\index{image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}!reconstruct\+Image@{reconstruct\+Image}}
+\index{reconstruct\+Image@{reconstruct\+Image}!image\+\_\+reconstruction.\+h@{image\+\_\+reconstruction.\+h}}
+\subsubsection[{\texorpdfstring{reconstruct\+Image(const cv\+::\+Mat \&image, const cv\+::\+Mat \&homography\+\_\+matrix, const int index, const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings, const cv\+::\+Rect \&drop\+\_\+boundaries, const cv\+::\+Rect \&frame\+\_\+boundaries, cv\+::\+Mat \&reconstructed\+\_\+image)}{reconstructImage(const cv::Mat \&image, const cv::Mat \&homography\_matrix, const int index, const EXPERIMENT \&experiment\_settings, const cv::Rect \&drop\_boundaries, const cv::Rect \&frame\_boundaries, cv::Mat \&reconstructed\_image)}}]{\setlength{\rightskip}{0pt plus 5cm}bool reconstruct\+Image (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image, }
+\item[{const cv\+::\+Mat \&}]{homography\+\_\+matrix, }
+\item[{const int}]{index, }
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings, }
+\item[{const cv\+::\+Rect \&}]{drop\+\_\+boundaries, }
+\item[{const cv\+::\+Rect \&}]{frame\+\_\+boundaries, }
+\item[{cv\+::\+Mat \&}]{reconstructed\+\_\+image}
+\end{DoxyParamCaption}
+)}\hypertarget{image__reconstruction_8h_ad6b2680d1178aa193da11f5173c40c3c}{}\label{image__reconstruction_8h_ad6b2680d1178aa193da11f5173c40c3c}
+
+
+Function that reconstructs an image using panorama based on homography in a image sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & -\/ image initial without homography transformation. \\
+\hline
+{\em homography\+\_\+matrix} & -\/ homography matrix that will be applied to the original image where the reconstruct will start. \\
+\hline
+{\em index} & -\/ index of the initial image in the original video. \\
+\hline
+{\em experiment\+\_\+settings} & -\/ object with the experiment settings. \\
+\hline
+{\em frame\+\_\+boundaries} & -\/ limits of the frame that needs to be filled by the reconstructed image. \\
+\hline
+{\em reconstructed\+\_\+image} & -\/ object to save the final reconstructed image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the frame was successful reconstructed filling all the frame limit. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the frame was not successful reconstructed filling all the frame limit.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/04/2016 
+\end{DoxyDate}

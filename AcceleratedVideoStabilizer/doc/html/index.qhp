@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+  <namespace>org.doxygen.VideoStabilization</namespace>
+  <virtualFolder>qch</virtualFolder>
+  <filterSection>
+    <filterAttribute>doxygen</filterAttribute>
+    <toc>
+      <section title="EgoVideoStabilizer 1.0.0" ref="index.html">
+        <section title="General Information" ref="index.html">
+          <section title="Project" ref="index.html#project_sec" />
+          <section title="Contact" ref="index.html#contact_sec">
+            <section title="Authors:" ref="index.html#authors_sec" />
+            <section title="Institution" ref="index.html#institution_sec" />
+            <section title="Laboratory" ref="index.html#laboratory_subsec" />
+          </section>
+          <section title="Program" ref="index.html#program_sec">
+            <section title="Dependencies" ref="index.html#dependencies_sec" />
+            <section title="Compiling" ref="index.html#compiling_sec" />
+            <section title="Exemples of usage" ref="index.html#execution_sec" />
+          </section>
+          <section title="Citation" ref="index.html#citation_sec">
+            <section title="Bibtex entry" ref="index.html#bibtex_subsec" />
+          </section>
+        </section>
+        <section title="doc_mainpage" ref="md_doc_doc_mainpage.html" />
+        <section title="Project" ref="md_README.html" />
+        <section title="Classes" ref="annotated.html">
+          <section title="Class List" ref="annotated.html">
+            <section title="EXPERIMENT" ref="structEXPERIMENT.html">
+              <section title="exist" ref="structEXPERIMENT.html#aa8613784c631982322461aff04a6e838" />
+              <section title="id" ref="structEXPERIMENT.html#af59b6805fe0851b89d1300849db794e4" />
+              <section title="instability_costs_filename" ref="structEXPERIMENT.html#a74bd001a4012183b8dacec4e79315a13" />
+              <section title="log_file_name" ref="structEXPERIMENT.html#ac3568164588c0366d26fc9cd69b98fe3" />
+              <section title="optical_flow_filename" ref="structEXPERIMENT.html#a8b5ca464e785c2b80c16c9e022b7c31a" />
+              <section title="original_video_filename" ref="structEXPERIMENT.html#a3ce2700a31e4c1b808caceab4626ff06" />
+              <section title="output_path" ref="structEXPERIMENT.html#a05ae2a5fbc8660bdb535937d4a446698" />
+              <section title="read_master_frames_filename" ref="structEXPERIMENT.html#a3412818ed24d2c956b01e1d6561d7b50" />
+              <section title="running_parallel" ref="structEXPERIMENT.html#a74a95ad0fdb8e786e1555bcb4053af2e" />
+              <section title="save_master_frames_filename" ref="structEXPERIMENT.html#af3623d64105d92bec8a761c5318ec534" />
+              <section title="save_master_frames_in_disk" ref="structEXPERIMENT.html#a665b9063cc9475513a16db5b1c7f10a1" />
+              <section title="save_video_filename" ref="structEXPERIMENT.html#a867146c43457a82a6b2346d8621d70b6" />
+              <section title="save_video_in_disk" ref="structEXPERIMENT.html#aa392d503b8f79c0d0ee6168226245dd1" />
+              <section title="segment_size" ref="structEXPERIMENT.html#a004195c9cb30dde7a5cac231381503da" />
+              <section title="selected_frames_filename" ref="structEXPERIMENT.html#aef88dd45b0ad1db5f6b68b0801f6f630" />
+              <section title="semantic_costs_filename" ref="structEXPERIMENT.html#ab71731194cb1680b25dd9ed253e455aa" />
+              <section title="video_filename" ref="structEXPERIMENT.html#a7095f959a6d88f3a5997bcd0f4579609" />
+            </section>
+            <section title="MessageHandler" ref="classMessageHandler.html">
+              <section title="MessageHandler" ref="classMessageHandler.html#a5a8ca5b0e6fa1e9293bfc0d972177881" />
+              <section title="~MessageHandler" ref="classMessageHandler.html#a6bee5eb7f64fe5360cada61353516a8b" />
+              <section title="reportError" ref="classMessageHandler.html#a10772170f398c739220681f6efbc577b" />
+              <section title="reportError" ref="classMessageHandler.html#a6b28b6a3515af4531583d35bb6bf5a9f" />
+              <section title="reportStatus" ref="classMessageHandler.html#a3c896ccad36637cb0423a5e11ccfe6a5" />
+            </section>
+          </section>
+          <section title="Class Index" ref="classes.html" />
+          <section title="Class Members" ref="functions.html">
+            <section title="All" ref="functions.html" />
+            <section title="Functions" ref="functions_func.html" />
+            <section title="Variables" ref="functions_vars.html" />
+          </section>
+        </section>
+        <section title="Files">
+          <section title="File List" ref="files.html">
+            <section title="definitions" ref="dir_bc1e4162ee83d3b96e351e029d62c4b5.html">
+              <section title="define.h" ref="define_8h.html">
+                <section title="CROP_PORTION" ref="define_8h.html#aa3058a26bcaae9fc46b648e30e2031a0" />
+                <section title="DEBUG_FRAME_STATUS" ref="define_8h.html#a9b1ee3f8ba0f8b2838f1cf24c44519f4" />
+                <section title="DEBUG_HOMOGRAPHY" ref="define_8h.html#a9f0d78e00ea067275e3a1e8a0b2a1baa" />
+                <section title="DEBUG_INTERMEDIATE_FRAME" ref="define_8h.html#a2c78c39688292c571d5953d7e9804ec5" />
+                <section title="DEBUG_RECONSTRUCTION" ref="define_8h.html#ad9ad2864f6a3064acd18b4aac440108d" />
+                <section title="DROP_PORTION" ref="define_8h.html#ad0321d6454b40d9bff133bb1069e2a75" />
+                <section title="FRAME_NUMBER_RESULT" ref="define_8h.html#a4e7a6f58664fd0a43e3076399b98f08c" />
+                <section title="MATCHES_THRESHOLD_FACTOR" ref="define_8h.html#a72de703228ed5e9def19a41d75583717" />
+                <section title="MAX_DROP_ATTEMPTS" ref="define_8h.html#a4a206f0b77a48c47af486acc3d3cf1be" />
+                <section title="MAX_SKIP" ref="define_8h.html#aa9342e72f75f6fb967145d9ac545a040" />
+                <section title="MAXIMUM_AREA_ALLOWED" ref="define_8h.html#a249638630837bda97ebb266001f43181" />
+                <section title="MIN_HESSIAN" ref="define_8h.html#aa3f3943af5fdd5551c55e5ae7e9a6abc" />
+                <section title="MIN_NUMBER_OF_GOOD_MATCHES" ref="define_8h.html#aa55124c9e7cbfdf5b234e4f8128618e8" />
+                <section title="NUM_MAX_IMAGES_TO_RECONSTRUCT" ref="define_8h.html#afacb15ef807794c331301421eabbf6c9" />
+                <section title="VIEW" ref="define_8h.html#a13198beec126efc77778680220fb4a15" />
+                <section title="VIEW_DELAY" ref="define_8h.html#a8290919fd7f022a7671a9c8ab642514b" />
+              </section>
+              <section title="experiment_struct.h" ref="experiment__struct_8h.html">
+                <section title="EXPERIMENT" ref="structEXPERIMENT.html">
+                  <section title="exist" ref="structEXPERIMENT.html#aa8613784c631982322461aff04a6e838" />
+                  <section title="id" ref="structEXPERIMENT.html#af59b6805fe0851b89d1300849db794e4" />
+                  <section title="instability_costs_filename" ref="structEXPERIMENT.html#a74bd001a4012183b8dacec4e79315a13" />
+                  <section title="log_file_name" ref="structEXPERIMENT.html#ac3568164588c0366d26fc9cd69b98fe3" />
+                  <section title="optical_flow_filename" ref="structEXPERIMENT.html#a8b5ca464e785c2b80c16c9e022b7c31a" />
+                  <section title="original_video_filename" ref="structEXPERIMENT.html#a3ce2700a31e4c1b808caceab4626ff06" />
+                  <section title="output_path" ref="structEXPERIMENT.html#a05ae2a5fbc8660bdb535937d4a446698" />
+                  <section title="read_master_frames_filename" ref="structEXPERIMENT.html#a3412818ed24d2c956b01e1d6561d7b50" />
+                  <section title="running_parallel" ref="structEXPERIMENT.html#a74a95ad0fdb8e786e1555bcb4053af2e" />
+                  <section title="save_master_frames_filename" ref="structEXPERIMENT.html#af3623d64105d92bec8a761c5318ec534" />
+                  <section title="save_master_frames_in_disk" ref="structEXPERIMENT.html#a665b9063cc9475513a16db5b1c7f10a1" />
+                  <section title="save_video_filename" ref="structEXPERIMENT.html#a867146c43457a82a6b2346d8621d70b6" />
+                  <section title="save_video_in_disk" ref="structEXPERIMENT.html#aa392d503b8f79c0d0ee6168226245dd1" />
+                  <section title="segment_size" ref="structEXPERIMENT.html#a004195c9cb30dde7a5cac231381503da" />
+                  <section title="selected_frames_filename" ref="structEXPERIMENT.html#aef88dd45b0ad1db5f6b68b0801f6f630" />
+                  <section title="semantic_costs_filename" ref="structEXPERIMENT.html#ab71731194cb1680b25dd9ed253e455aa" />
+                  <section title="video_filename" ref="structEXPERIMENT.html#a7095f959a6d88f3a5997bcd0f4579609" />
+                </section>
+              </section>
+              <section title="experiments.h" ref="experiments_8h.html">
+                <section title="load_experiments_settings" ref="experiments_8h.html#ab209a6fbc3cd78cd0cbc131d71243709" />
+              </section>
+            </section>
+            <section title="executables" ref="dir_2bce6d959c893b1ebd07dd3debff4b1c.html">
+              <section title="execute_commands.h" ref="execute__commands_8h.html">
+                <section title="EXECUTE_EXPERIMENT_ID" ref="execute__commands_8h.html#ab0b8db66688c5a311dc396f1104a563a" />
+                <section title="EXECUTE_IMAGE_CONDITIONAL_ACTIONS" ref="execute__commands_8h.html#a44bd5e86ab21468210dbb71424eda082" />
+                <section title="EXECUTE_IMAGE_RECONSTRUCTION" ref="execute__commands_8h.html#a815c984330fd59b9a693211960320727" />
+                <section title="EXECUTE_IMAGE_STUFFS" ref="execute__commands_8h.html#a633ebeb13695e1b87a2c65f53df0c836" />
+                <section title="EXECUTE_INFO" ref="execute__commands_8h.html#a53f1ccb877151aca373061692ce50bf8" />
+                <section title="EXECUTE_VIEW" ref="execute__commands_8h.html#a860f56fe1fc9e103945671f4b7cca16a" />
+                <section title="SSTR" ref="execute__commands_8h.html#a0d2f37137ee1fd6ff4a0ef803849dd63" />
+              </section>
+            </section>
+            <section title="headers" ref="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">
+              <section title="error_messages.h" ref="error__messages_8h.html">
+                <section title="ErrorMessage" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395">
+                  <section title="WRONG_INPUT" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a5c6be9c004324dc877df6f45fd574cea" />
+                  <section title="CANT_OPEN_ACC_VIDEO" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a33b1e659fa6fb3a75626cf6888a3ef9f" />
+                  <section title="CANT_CREATE_OUT_VIDEO" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395af629692d52b9e3690257895b6fe2e697" />
+                  <section title="CANT_OPEN_ORI_VIDEO" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395ad4fb339e5527d5a42c9d09446c76b0db" />
+                  <section title="CANT_OPEN_CSV" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395ad90647fa1d72f0b6c173469d786559ed" />
+                  <section title="CANT_CREATE_DIR" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a7c06dc9631fd1b5b72c53b99f014e853" />
+                  <section title="CANT_CREATE_LOG" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a67f3d791eb0d7c3aa28a9aae2cc24deb" />
+                  <section title="RANGE_WRONGLY_DEFINED" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395aeb11722c84f450400e3b7c4bbeb89ef1" />
+                  <section title="CANT_OPEN_SEMANTIC_CSV" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a3a1fec2c96b2446726a842e86aa26893" />
+                  <section title="LARGE_TRANSITION" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a6d275ef4daeafe84ea9bdfeda944ff8c" />
+                </section>
+              </section>
+              <section title="file_operations.h" ref="file__operations_8h.html">
+                <section title="filter_string" ref="file__operations_8h.html#a6fee1fe59a7b7ffbfff04e8e9b9e6571" />
+                <section title="getExperimentId" ref="file__operations_8h.html#add54304682603740491ac7f2fa3e8909" />
+                <section title="getSemanticCost" ref="file__operations_8h.html#a4389609d14f1f46754e68ced749e4736" />
+                <section title="loadInstabilityCostsFromFile" ref="file__operations_8h.html#a2995a8f3930a0b01a4e0ac1bfc5638e3" />
+                <section title="loadMasterFramesFromFile" ref="file__operations_8h.html#ad65b52efdd81718726a7c020b2745231" />
+                <section title="loadOpticalFlow" ref="file__operations_8h.html#af95138c7e9d6611e1ace10ec85b633eb" />
+                <section title="readSelectedFramesCSV" ref="file__operations_8h.html#a65c5cb4d2def7f9475ee950799649709" />
+                <section title="saveMasterFramesToFile" ref="file__operations_8h.html#a8ee838aca4ec1d86b6da27d8d0c6c5a6" />
+                <section title="str2bool" ref="file__operations_8h.html#a1e52e743807e450c3bdc8d8a179093ce" />
+              </section>
+              <section title="homography.h" ref="homography_8h.html">
+                <section title="HomogCoverage" ref="homography_8h.html#a340f89166e818e04b9c370262c161789">
+                  <section title="NO_AREA" ref="homography_8h.html#a340f89166e818e04b9c370262c161789a552c25e928b15d492ee2e030f7645da6" />
+                  <section title="DROP_AREA" ref="homography_8h.html#a340f89166e818e04b9c370262c161789abe0b247460cf88426ab746417bd8cd3c" />
+                  <section title="CROP_AREA" ref="homography_8h.html#a340f89166e818e04b9c370262c161789a474302634cad5c69847b64b5f3160fef" />
+                </section>
+                <section title="applyHomographyMatrix" ref="homography_8h.html#af396adc4b5a19e8194e5ff96640f16de" />
+                <section title="checkHomographyConsistency" ref="homography_8h.html#a67a02c0cff3e126daece706c97c9ba2c" />
+                <section title="checkHomographyConsistency" ref="homography_8h.html#a3c17440ceb61568f04b508a4336c3402" />
+                <section title="findHomographyMatrix" ref="homography_8h.html#a1d3798a81d0d3b5e8b24087a7bc60683" />
+                <section title="findHomographyMatrix" ref="homography_8h.html#a1bf28b8d881beac4a6deee5cbe7ae4da" />
+                <section title="findHomographyMatrix" ref="homography_8h.html#a3800765da624f694682f5f1fab7f4c63" />
+                <section title="findHomographyMatrix" ref="homography_8h.html#ae3833c553b4d2ea9817440dfc6f9b441" />
+                <section title="getAreaRatio" ref="homography_8h.html#a94196b6d4321a287adf2b3051a5fad83" />
+                <section title="getHomogCoverage" ref="homography_8h.html#a8007547c4ef0394a46a61a21b6eab88c" />
+                <section title="getKeypointsAndDescriptors" ref="homography_8h.html#af766393f5eb33e81f7f77f8ddc17cf03" />
+              </section>
+              <section title="image_reconstruction.h" ref="image__reconstruction_8h.html">
+                <section title="ReconstructionType" ref="image__reconstruction_8h.html#ad5c30c75ffcd2ccec3fad8a118addb15">
+                  <section title="PRE_AND_POS" ref="image__reconstruction_8h.html#ad5c30c75ffcd2ccec3fad8a118addb15a24c4f661ea927ff88a09e2d2c44cfc0f" />
+                  <section title="ONLY_PRE" ref="image__reconstruction_8h.html#ad5c30c75ffcd2ccec3fad8a118addb15a7b2b01785df1bdd40fec44c53d0011f8" />
+                  <section title="ONLY_POS" ref="image__reconstruction_8h.html#ad5c30c75ffcd2ccec3fad8a118addb15a54c8830522aa455e2a777ccd97b0cecc" />
+                </section>
+                <section title="imageReconstruction" ref="image__reconstruction_8h.html#aa59aa1053c00066ff2e977650615393d" />
+                <section title="reconstructImage" ref="image__reconstruction_8h.html#ad6b2680d1178aa193da11f5173c40c3c" />
+              </section>
+              <section title="line_and_point_operations.h" ref="line__and__point__operations_8h.html">
+                <section title="EPSILON" ref="line__and__point__operations_8h.html#a002b2f4894492820fe708b1b7e7c5e70" />
+                <section title="computeAnglesAndMags" ref="line__and__point__operations_8h.html#ae4a4317f4956ee9fa08d3e6445917f4f" />
+                <section title="lineSegmentIntersection" ref="line__and__point__operations_8h.html#a6263aa9bb1b8d1a66ab24e33b3649668" />
+                <section title="lineSegmentIntersection" ref="line__and__point__operations_8h.html#aa6722cd85e8b9ffbbeb447c179fd0bae" />
+              </section>
+              <section title="master_frames.h" ref="master__frames_8h.html">
+                <section title="getMasterFrames" ref="master__frames_8h.html#af399de8fc7e31d60cccdf90efa80541c" />
+                <section title="length" ref="master__frames_8h.html#add63ac6145fd4d298e34df91185136b1" />
+              </section>
+              <section title="message_handler.h" ref="message__handler_8h.html">
+                <section title="MessageHandler" ref="classMessageHandler.html">
+                  <section title="MessageHandler" ref="classMessageHandler.html#a5a8ca5b0e6fa1e9293bfc0d972177881" />
+                  <section title="~MessageHandler" ref="classMessageHandler.html#a6bee5eb7f64fe5360cada61353516a8b" />
+                  <section title="reportError" ref="classMessageHandler.html#a10772170f398c739220681f6efbc577b" />
+                  <section title="reportError" ref="classMessageHandler.html#a6b28b6a3515af4531583d35bb6bf5a9f" />
+                  <section title="reportStatus" ref="classMessageHandler.html#a3c896ccad36637cb0423a5e11ccfe6a5" />
+                </section>
+                <section title="Stream" ref="message__handler_8h.html#a0b8b584f5fb32277059bc4e6b9bcd6f0">
+                  <section title="LOG_FILE" ref="message__handler_8h.html#a0b8b584f5fb32277059bc4e6b9bcd6f0a05a425919d86aebc82762bd79990df56" />
+                  <section title="SCREEN" ref="message__handler_8h.html#a0b8b584f5fb32277059bc4e6b9bcd6f0af2a9da294a4a62d55f04725d7efbb6ac" />
+                  <section title="BOTH" ref="message__handler_8h.html#a0b8b584f5fb32277059bc4e6b9bcd6f0a627abe5a430420baf29ebe1940a7f2fb" />
+                </section>
+              </section>
+              <section title="sequence_processing.h" ref="sequence__processing_8h.html">
+                <section title="findIntermediateHomographyMatrix" ref="sequence__processing_8h.html#aad08ac53f56a97ead9e9e2a4e167e4d8" />
+                <section title="findIntermediateHomographyMatrix" ref="sequence__processing_8h.html#a536d6b62274f62941d6cec32549d2543" />
+                <section title="findIntermediateHomographyMatrix" ref="sequence__processing_8h.html#aa692e8a44dcab5dc3c45c35c3f7ae6d2" />
+                <section title="selectNewFrame" ref="sequence__processing_8h.html#a8374c98e95b78cc5027c494103e35348" />
+                <section title="selectNewFrame" ref="sequence__processing_8h.html#a029dc4caa330843be4ee108a5e7bb825" />
+              </section>
+            </section>
+            <section title="src" ref="dir_68267d1309a1af8e8297ef4c3efbcdba.html">
+              <section title="file_operations.cpp" ref="file__operations_8cpp.html">
+                <section title="filter_string" ref="file__operations_8cpp.html#a6fee1fe59a7b7ffbfff04e8e9b9e6571" />
+                <section title="getExperimentId" ref="file__operations_8cpp.html#add54304682603740491ac7f2fa3e8909" />
+                <section title="getSemanticCost" ref="file__operations_8cpp.html#a4389609d14f1f46754e68ced749e4736" />
+                <section title="goToLine" ref="file__operations_8cpp.html#a67b6429613828d45a354bdbe54c98492" />
+                <section title="loadInstabilityCostsFromFile" ref="file__operations_8cpp.html#a2995a8f3930a0b01a4e0ac1bfc5638e3" />
+                <section title="loadMasterFramesFromFile" ref="file__operations_8cpp.html#ad65b52efdd81718726a7c020b2745231" />
+                <section title="loadOpticalFlow" ref="file__operations_8cpp.html#af95138c7e9d6611e1ace10ec85b633eb" />
+                <section title="readSelectedFramesCSV" ref="file__operations_8cpp.html#a65c5cb4d2def7f9475ee950799649709" />
+                <section title="saveMasterFramesToFile" ref="file__operations_8cpp.html#a8ee838aca4ec1d86b6da27d8d0c6c5a6" />
+                <section title="str2bool" ref="file__operations_8cpp.html#a1e52e743807e450c3bdc8d8a179093ce" />
+              </section>
+              <section title="homography.cpp" ref="homography_8cpp.html">
+                <section title="applyHomographyMatrix" ref="homography_8cpp.html#af396adc4b5a19e8194e5ff96640f16de" />
+                <section title="checkHomographyConsistency" ref="homography_8cpp.html#a67a02c0cff3e126daece706c97c9ba2c" />
+                <section title="checkHomographyConsistency" ref="homography_8cpp.html#a3c17440ceb61568f04b508a4336c3402" />
+                <section title="findHomographyMatrix" ref="homography_8cpp.html#a1d3798a81d0d3b5e8b24087a7bc60683" />
+                <section title="findHomographyMatrix" ref="homography_8cpp.html#a1bf28b8d881beac4a6deee5cbe7ae4da" />
+                <section title="findHomographyMatrix" ref="homography_8cpp.html#a3800765da624f694682f5f1fab7f4c63" />
+                <section title="findHomographyMatrix" ref="homography_8cpp.html#ae3833c553b4d2ea9817440dfc6f9b441" />
+                <section title="getAreaRatio" ref="homography_8cpp.html#a94196b6d4321a287adf2b3051a5fad83" />
+                <section title="getHomogCoverage" ref="homography_8cpp.html#a8007547c4ef0394a46a61a21b6eab88c" />
+                <section title="getKeypointsAndDescriptors" ref="homography_8cpp.html#af766393f5eb33e81f7f77f8ddc17cf03" />
+              </section>
+              <section title="image_reconstruction.cpp" ref="image__reconstruction_8cpp.html">
+                <section title="checkImageBoundaries" ref="image__reconstruction_8cpp.html#a2fc13976a9f1af8bb9040db7de417721" />
+                <section title="checkImageBoundariesMask" ref="image__reconstruction_8cpp.html#a95b3fdabdd4482acec2a7f72e82eb58f" />
+                <section title="imageReconstruction" ref="image__reconstruction_8cpp.html#a9e97c5996e454dcb23c2c4be119cbe31" />
+                <section title="reconstructImage" ref="image__reconstruction_8cpp.html#ad6b2680d1178aa193da11f5173c40c3c" />
+                <section title="warp" ref="image__reconstruction_8cpp.html#a5ac0e0833abd3cb52b702e15ec99a9c2" />
+                <section title="warpMask" ref="image__reconstruction_8cpp.html#a81ebac71847f40916c2bb033ad2069be" />
+                <section title="warpMaskCrop" ref="image__reconstruction_8cpp.html#a3808c00f0f1deb7c9669f0d30ffd63ac" />
+              </section>
+              <section title="line_and_point_operations.cpp" ref="line__and__point__operations_8cpp.html">
+                <section title="computeAnglesAndMags" ref="line__and__point__operations_8cpp.html#ae4a4317f4956ee9fa08d3e6445917f4f" />
+                <section title="lineSegmentIntersection" ref="line__and__point__operations_8cpp.html#a6263aa9bb1b8d1a66ab24e33b3649668" />
+                <section title="lineSegmentIntersection" ref="line__and__point__operations_8cpp.html#aa6722cd85e8b9ffbbeb447c179fd0bae" />
+              </section>
+              <section title="line_and_points_operations.cpp" ref="line__and__points__operations_8cpp.html">
+                <section title="computeAnglesAndMags" ref="line__and__points__operations_8cpp.html#ae4a4317f4956ee9fa08d3e6445917f4f" />
+                <section title="lineSegmentIntersection" ref="line__and__points__operations_8cpp.html#a6263aa9bb1b8d1a66ab24e33b3649668" />
+                <section title="lineSegmentIntersection" ref="line__and__points__operations_8cpp.html#aa6722cd85e8b9ffbbeb447c179fd0bae" />
+              </section>
+              <section title="main.cpp" ref="main_8cpp.html">
+                <section title="currentDateTime" ref="main_8cpp.html#aa46369f3c8adbff876c82270346fffa2" />
+                <section title="getItFormatted" ref="main_8cpp.html#a96093b0a34cef38f0f27b7a636e637b0" />
+                <section title="getStableFrameSpatially" ref="main_8cpp.html#a12d6b6af5ae5297df5b19bb00f173df3" />
+                <section title="getStableFrameTemporally" ref="main_8cpp.html#ac701177e76d26612e87cbab9a0ee5218" />
+                <section title="main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
+                <section title="writeToOutput" ref="main_8cpp.html#aa20feaa0f15d8966a051a6e4754234ab" />
+                <section title="experiment_settings" ref="main_8cpp.html#a9f5a81402e170475690f371d55cbe623" />
+                <section title="log_number_length" ref="main_8cpp.html#a6725a70b6f47b0c88de524c592b70856" />
+                <section title="num_of_dropped_frames" ref="main_8cpp.html#a40076974a0da2dbd3504b79979865d26" />
+                <section title="num_of_fails_in_homography" ref="main_8cpp.html#a99a2ec99e6407a223577226b9715b73b" />
+                <section title="num_of_good_frames" ref="main_8cpp.html#a2daaa9229b3fb806f774d4bcd6a08af5" />
+                <section title="num_of_reconstructed_frames" ref="main_8cpp.html#a856a15ce171c3df67abaecb8cee8b78e" />
+                <section title="saved_frames" ref="main_8cpp.html#aad35f04e5303062bc8efbfdcc53cd604" />
+              </section>
+              <section title="master_frames.cpp" ref="master__frames_8cpp.html">
+                <section title="findMasterFrames" ref="master__frames_8cpp.html#a28e2c72651b4fe01415691078fd3061c" />
+                <section title="findMasterFramesParallel" ref="master__frames_8cpp.html#a30ead0e7bdbe71513f65101a29913d70" />
+                <section title="getMasterFrames" ref="master__frames_8cpp.html#af399de8fc7e31d60cccdf90efa80541c" />
+                <section title="length" ref="master__frames_8cpp.html#add63ac6145fd4d298e34df91185136b1" />
+              </section>
+              <section title="message_handler.cpp" ref="message__handler_8cpp.html" />
+              <section title="sequence_processing.cpp" ref="sequence__processing_8cpp.html">
+                <section title="findIntermediateHomographyMatrix" ref="sequence__processing_8cpp.html#aad08ac53f56a97ead9e9e2a4e167e4d8" />
+                <section title="findIntermediateHomographyMatrix" ref="sequence__processing_8cpp.html#a536d6b62274f62941d6cec32549d2543" />
+                <section title="findIntermediateHomographyMatrix" ref="sequence__processing_8cpp.html#aa692e8a44dcab5dc3c45c35c3f7ae6d2" />
+                <section title="frameWeight" ref="sequence__processing_8cpp.html#ab65613bc69028dc0a72f09caa37d37ee" />
+                <section title="gaussianValue" ref="sequence__processing_8cpp.html#a23162fd5114a89b24c3c7da9abb3915b" />
+                <section title="matrixPow" ref="sequence__processing_8cpp.html#ad83b7c4de86f1a2ed3a79b37ea347890" />
+                <section title="matrixRoot" ref="sequence__processing_8cpp.html#a31c3927c6071e5c6543de6934dac2731" />
+                <section title="selectNewFrame" ref="sequence__processing_8cpp.html#a8374c98e95b78cc5027c494103e35348" />
+                <section title="selectNewFrame" ref="sequence__processing_8cpp.html#a029dc4caa330843be4ee108a5e7bb825" />
+                <section title="semantic_weight" ref="sequence__processing_8cpp.html#a8d56592b555a0cbab5ace1db16a3b29b" />
+              </section>
+            </section>
+          </section>
+          <section title="File Members" ref="globals.html">
+            <section title="All" ref="globals.html" />
+            <section title="Functions" ref="globals_func.html" />
+            <section title="Variables" ref="globals_vars.html" />
+            <section title="Enumerations" ref="globals_enum.html" />
+            <section title="Enumerator" ref="globals_eval.html" />
+            <section title="Macros" ref="globals_defs.html" />
+          </section>
+        </section>
+      </section>
+    </toc>
+    <keywords>
+      <keyword name="VIEW" id="define.h::VIEW" ref="define_8h.html#a13198beec126efc77778680220fb4a15" />
+      <keyword name="VIEW_DELAY" id="define.h::VIEW_DELAY" ref="define_8h.html#a8290919fd7f022a7671a9c8ab642514b" />
+      <keyword name="FRAME_NUMBER_RESULT" id="define.h::FRAME_NUMBER_RESULT" ref="define_8h.html#a4e7a6f58664fd0a43e3076399b98f08c" />
+      <keyword name="DEBUG_INTERMEDIATE_FRAME" id="define.h::DEBUG_INTERMEDIATE_FRAME" ref="define_8h.html#a2c78c39688292c571d5953d7e9804ec5" />
+      <keyword name="DEBUG_FRAME_STATUS" id="define.h::DEBUG_FRAME_STATUS" ref="define_8h.html#a9b1ee3f8ba0f8b2838f1cf24c44519f4" />
+      <keyword name="DEBUG_HOMOGRAPHY" id="define.h::DEBUG_HOMOGRAPHY" ref="define_8h.html#a9f0d78e00ea067275e3a1e8a0b2a1baa" />
+      <keyword name="DEBUG_RECONSTRUCTION" id="define.h::DEBUG_RECONSTRUCTION" ref="define_8h.html#ad9ad2864f6a3064acd18b4aac440108d" />
+      <keyword name="MIN_NUMBER_OF_GOOD_MATCHES" id="define.h::MIN_NUMBER_OF_GOOD_MATCHES" ref="define_8h.html#aa55124c9e7cbfdf5b234e4f8128618e8" />
+      <keyword name="MAXIMUM_AREA_ALLOWED" id="define.h::MAXIMUM_AREA_ALLOWED" ref="define_8h.html#a249638630837bda97ebb266001f43181" />
+      <keyword name="NUM_MAX_IMAGES_TO_RECONSTRUCT" id="define.h::NUM_MAX_IMAGES_TO_RECONSTRUCT" ref="define_8h.html#afacb15ef807794c331301421eabbf6c9" />
+      <keyword name="MIN_HESSIAN" id="define.h::MIN_HESSIAN" ref="define_8h.html#aa3f3943af5fdd5551c55e5ae7e9a6abc" />
+      <keyword name="MATCHES_THRESHOLD_FACTOR" id="define.h::MATCHES_THRESHOLD_FACTOR" ref="define_8h.html#a72de703228ed5e9def19a41d75583717" />
+      <keyword name="CROP_PORTION" id="define.h::CROP_PORTION" ref="define_8h.html#aa3058a26bcaae9fc46b648e30e2031a0" />
+      <keyword name="DROP_PORTION" id="define.h::DROP_PORTION" ref="define_8h.html#ad0321d6454b40d9bff133bb1069e2a75" />
+      <keyword name="MAX_DROP_ATTEMPTS" id="define.h::MAX_DROP_ATTEMPTS" ref="define_8h.html#a4a206f0b77a48c47af486acc3d3cf1be" />
+      <keyword name="MAX_SKIP" id="define.h::MAX_SKIP" ref="define_8h.html#aa9342e72f75f6fb967145d9ac545a040" />
+      <keyword name="load_experiments_settings" id="experiments.h::load_experiments_settings" ref="experiments_8h.html#ab209a6fbc3cd78cd0cbc131d71243709" />
+      <keyword name="EXECUTE_INFO" id="execute_commands.h::EXECUTE_INFO" ref="execute__commands_8h.html#a53f1ccb877151aca373061692ce50bf8" />
+      <keyword name="EXECUTE_EXPERIMENT_ID" id="execute_commands.h::EXECUTE_EXPERIMENT_ID" ref="execute__commands_8h.html#ab0b8db66688c5a311dc396f1104a563a" />
+      <keyword name="EXECUTE_VIEW" id="execute_commands.h::EXECUTE_VIEW" ref="execute__commands_8h.html#a860f56fe1fc9e103945671f4b7cca16a" />
+      <keyword name="EXECUTE_IMAGE_STUFFS" id="execute_commands.h::EXECUTE_IMAGE_STUFFS" ref="execute__commands_8h.html#a633ebeb13695e1b87a2c65f53df0c836" />
+      <keyword name="EXECUTE_IMAGE_RECONSTRUCTION" id="execute_commands.h::EXECUTE_IMAGE_RECONSTRUCTION" ref="execute__commands_8h.html#a815c984330fd59b9a693211960320727" />
+      <keyword name="EXECUTE_IMAGE_CONDITIONAL_ACTIONS" id="execute_commands.h::EXECUTE_IMAGE_CONDITIONAL_ACTIONS" ref="execute__commands_8h.html#a44bd5e86ab21468210dbb71424eda082" />
+      <keyword name="SSTR" id="execute_commands.h::SSTR" ref="execute__commands_8h.html#a0d2f37137ee1fd6ff4a0ef803849dd63" />
+      <keyword name="WRONG_INPUT" id="error_messages.h::WRONG_INPUT" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a5c6be9c004324dc877df6f45fd574cea" />
+      <keyword name="CANT_OPEN_ACC_VIDEO" id="error_messages.h::CANT_OPEN_ACC_VIDEO" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a33b1e659fa6fb3a75626cf6888a3ef9f" />
+      <keyword name="CANT_CREATE_OUT_VIDEO" id="error_messages.h::CANT_CREATE_OUT_VIDEO" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395af629692d52b9e3690257895b6fe2e697" />
+      <keyword name="CANT_OPEN_ORI_VIDEO" id="error_messages.h::CANT_OPEN_ORI_VIDEO" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395ad4fb339e5527d5a42c9d09446c76b0db" />
+      <keyword name="CANT_OPEN_CSV" id="error_messages.h::CANT_OPEN_CSV" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395ad90647fa1d72f0b6c173469d786559ed" />
+      <keyword name="CANT_CREATE_DIR" id="error_messages.h::CANT_CREATE_DIR" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a7c06dc9631fd1b5b72c53b99f014e853" />
+      <keyword name="CANT_CREATE_LOG" id="error_messages.h::CANT_CREATE_LOG" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a67f3d791eb0d7c3aa28a9aae2cc24deb" />
+      <keyword name="RANGE_WRONGLY_DEFINED" id="error_messages.h::RANGE_WRONGLY_DEFINED" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395aeb11722c84f450400e3b7c4bbeb89ef1" />
+      <keyword name="CANT_OPEN_SEMANTIC_CSV" id="error_messages.h::CANT_OPEN_SEMANTIC_CSV" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a3a1fec2c96b2446726a842e86aa26893" />
+      <keyword name="LARGE_TRANSITION" id="error_messages.h::LARGE_TRANSITION" ref="error__messages_8h.html#af8d1d72c71dcf239d1bf17fe2a760395a6d275ef4daeafe84ea9bdfeda944ff8c" />
+      <keyword name="loadMasterFramesFromFile" id="file_operations.h::loadMasterFramesFromFile" ref="file__operations_8h.html#ad65b52efdd81718726a7c020b2745231" />
+      <keyword name="saveMasterFramesToFile" id="file_operations.h::saveMasterFramesToFile" ref="file__operations_8h.html#a8ee838aca4ec1d86b6da27d8d0c6c5a6" />
+      <keyword name="readSelectedFramesCSV" id="file_operations.h::readSelectedFramesCSV" ref="file__operations_8h.html#a65c5cb4d2def7f9475ee950799649709" />
+      <keyword name="getExperimentId" id="file_operations.h::getExperimentId" ref="file__operations_8h.html#add54304682603740491ac7f2fa3e8909" />
+      <keyword name="getSemanticCost" id="file_operations.h::getSemanticCost" ref="file__operations_8h.html#a4389609d14f1f46754e68ced749e4736" />
+      <keyword name="loadInstabilityCostsFromFile" id="file_operations.h::loadInstabilityCostsFromFile" ref="file__operations_8h.html#a2995a8f3930a0b01a4e0ac1bfc5638e3" />
+      <keyword name="loadOpticalFlow" id="file_operations.h::loadOpticalFlow" ref="file__operations_8h.html#af95138c7e9d6611e1ace10ec85b633eb" />
+      <keyword name="str2bool" id="file_operations.h::str2bool" ref="file__operations_8h.html#a1e52e743807e450c3bdc8d8a179093ce" />
+      <keyword name="filter_string" id="file_operations.h::filter_string" ref="file__operations_8h.html#a6fee1fe59a7b7ffbfff04e8e9b9e6571" />
+      <keyword name="findHomographyMatrix" id="homography.h::findHomographyMatrix" ref="homography_8h.html#a1d3798a81d0d3b5e8b24087a7bc60683" />
+      <keyword name="findHomographyMatrix" id="homography.h::findHomographyMatrix" ref="homography_8h.html#a1bf28b8d881beac4a6deee5cbe7ae4da" />
+      <keyword name="findHomographyMatrix" id="homography.h::findHomographyMatrix" ref="homography_8h.html#a3800765da624f694682f5f1fab7f4c63" />
+      <keyword name="findHomographyMatrix" id="homography.h::findHomographyMatrix" ref="homography_8h.html#ae3833c553b4d2ea9817440dfc6f9b441" />
+      <keyword name="applyHomographyMatrix" id="homography.h::applyHomographyMatrix" ref="homography_8h.html#af396adc4b5a19e8194e5ff96640f16de" />
+      <keyword name="checkHomographyConsistency" id="homography.h::checkHomographyConsistency" ref="homography_8h.html#a67a02c0cff3e126daece706c97c9ba2c" />
+      <keyword name="checkHomographyConsistency" id="homography.h::checkHomographyConsistency" ref="homography_8h.html#a3c17440ceb61568f04b508a4336c3402" />
+      <keyword name="getAreaRatio" id="homography.h::getAreaRatio" ref="homography_8h.html#a94196b6d4321a287adf2b3051a5fad83" />
+      <keyword name="getHomogCoverage" id="homography.h::getHomogCoverage" ref="homography_8h.html#a8007547c4ef0394a46a61a21b6eab88c" />
+      <keyword name="getKeypointsAndDescriptors" id="homography.h::getKeypointsAndDescriptors" ref="homography_8h.html#af766393f5eb33e81f7f77f8ddc17cf03" />
+      <keyword name="NO_AREA" id="homography.h::NO_AREA" ref="homography_8h.html#a340f89166e818e04b9c370262c161789a552c25e928b15d492ee2e030f7645da6" />
+      <keyword name="DROP_AREA" id="homography.h::DROP_AREA" ref="homography_8h.html#a340f89166e818e04b9c370262c161789abe0b247460cf88426ab746417bd8cd3c" />
+      <keyword name="CROP_AREA" id="homography.h::CROP_AREA" ref="homography_8h.html#a340f89166e818e04b9c370262c161789a474302634cad5c69847b64b5f3160fef" />
+      <keyword name="imageReconstruction" id="image_reconstruction.h::imageReconstruction" ref="image__reconstruction_8h.html#aa59aa1053c00066ff2e977650615393d" />
+      <keyword name="reconstructImage" id="image_reconstruction.h::reconstructImage" ref="image__reconstruction_8h.html#ad6b2680d1178aa193da11f5173c40c3c" />
+      <keyword name="PRE_AND_POS" id="image_reconstruction.h::PRE_AND_POS" ref="image__reconstruction_8h.html#ad5c30c75ffcd2ccec3fad8a118addb15a24c4f661ea927ff88a09e2d2c44cfc0f" />
+      <keyword name="ONLY_PRE" id="image_reconstruction.h::ONLY_PRE" ref="image__reconstruction_8h.html#ad5c30c75ffcd2ccec3fad8a118addb15a7b2b01785df1bdd40fec44c53d0011f8" />
+      <keyword name="ONLY_POS" id="image_reconstruction.h::ONLY_POS" ref="image__reconstruction_8h.html#ad5c30c75ffcd2ccec3fad8a118addb15a54c8830522aa455e2a777ccd97b0cecc" />
+      <keyword name="EPSILON" id="line_and_point_operations.h::EPSILON" ref="line__and__point__operations_8h.html#a002b2f4894492820fe708b1b7e7c5e70" />
+      <keyword name="lineSegmentIntersection" id="line_and_point_operations.h::lineSegmentIntersection" ref="line__and__point__operations_8h.html#a6263aa9bb1b8d1a66ab24e33b3649668" />
+      <keyword name="lineSegmentIntersection" id="line_and_point_operations.h::lineSegmentIntersection" ref="line__and__point__operations_8h.html#aa6722cd85e8b9ffbbeb447c179fd0bae" />
+      <keyword name="computeAnglesAndMags" id="line_and_point_operations.h::computeAnglesAndMags" ref="line__and__point__operations_8h.html#ae4a4317f4956ee9fa08d3e6445917f4f" />
+      <keyword name="getMasterFrames" id="master_frames.h::getMasterFrames" ref="master__frames_8h.html#af399de8fc7e31d60cccdf90efa80541c" />
+      <keyword name="length" id="master_frames.h::length" ref="master__frames_8h.html#add63ac6145fd4d298e34df91185136b1" />
+      <keyword name="LOG_FILE" id="message_handler.h::LOG_FILE" ref="message__handler_8h.html#a0b8b584f5fb32277059bc4e6b9bcd6f0a05a425919d86aebc82762bd79990df56" />
+      <keyword name="SCREEN" id="message_handler.h::SCREEN" ref="message__handler_8h.html#a0b8b584f5fb32277059bc4e6b9bcd6f0af2a9da294a4a62d55f04725d7efbb6ac" />
+      <keyword name="BOTH" id="message_handler.h::BOTH" ref="message__handler_8h.html#a0b8b584f5fb32277059bc4e6b9bcd6f0a627abe5a430420baf29ebe1940a7f2fb" />
+      <keyword name="findIntermediateHomographyMatrix" id="sequence_processing.h::findIntermediateHomographyMatrix" ref="sequence__processing_8h.html#aad08ac53f56a97ead9e9e2a4e167e4d8" />
+      <keyword name="findIntermediateHomographyMatrix" id="sequence_processing.h::findIntermediateHomographyMatrix" ref="sequence__processing_8h.html#a536d6b62274f62941d6cec32549d2543" />
+      <keyword name="findIntermediateHomographyMatrix" id="sequence_processing.h::findIntermediateHomographyMatrix" ref="sequence__processing_8h.html#aa692e8a44dcab5dc3c45c35c3f7ae6d2" />
+      <keyword name="selectNewFrame" id="sequence_processing.h::selectNewFrame" ref="sequence__processing_8h.html#a8374c98e95b78cc5027c494103e35348" />
+      <keyword name="selectNewFrame" id="sequence_processing.h::selectNewFrame" ref="sequence__processing_8h.html#a029dc4caa330843be4ee108a5e7bb825" />
+      <keyword name="loadMasterFramesFromFile" id="file_operations.cpp::loadMasterFramesFromFile" ref="file__operations_8cpp.html#ad65b52efdd81718726a7c020b2745231" />
+      <keyword name="saveMasterFramesToFile" id="file_operations.cpp::saveMasterFramesToFile" ref="file__operations_8cpp.html#a8ee838aca4ec1d86b6da27d8d0c6c5a6" />
+      <keyword name="readSelectedFramesCSV" id="file_operations.cpp::readSelectedFramesCSV" ref="file__operations_8cpp.html#a65c5cb4d2def7f9475ee950799649709" />
+      <keyword name="getExperimentId" id="file_operations.cpp::getExperimentId" ref="file__operations_8cpp.html#add54304682603740491ac7f2fa3e8909" />
+      <keyword name="goToLine" id="file_operations.cpp::goToLine" ref="file__operations_8cpp.html#a67b6429613828d45a354bdbe54c98492" />
+      <keyword name="getSemanticCost" id="file_operations.cpp::getSemanticCost" ref="file__operations_8cpp.html#a4389609d14f1f46754e68ced749e4736" />
+      <keyword name="loadInstabilityCostsFromFile" id="file_operations.cpp::loadInstabilityCostsFromFile" ref="file__operations_8cpp.html#a2995a8f3930a0b01a4e0ac1bfc5638e3" />
+      <keyword name="loadOpticalFlow" id="file_operations.cpp::loadOpticalFlow" ref="file__operations_8cpp.html#af95138c7e9d6611e1ace10ec85b633eb" />
+      <keyword name="str2bool" id="file_operations.cpp::str2bool" ref="file__operations_8cpp.html#a1e52e743807e450c3bdc8d8a179093ce" />
+      <keyword name="filter_string" id="file_operations.cpp::filter_string" ref="file__operations_8cpp.html#a6fee1fe59a7b7ffbfff04e8e9b9e6571" />
+      <keyword name="findHomographyMatrix" id="homography.cpp::findHomographyMatrix" ref="homography_8cpp.html#a1d3798a81d0d3b5e8b24087a7bc60683" />
+      <keyword name="findHomographyMatrix" id="homography.cpp::findHomographyMatrix" ref="homography_8cpp.html#a1bf28b8d881beac4a6deee5cbe7ae4da" />
+      <keyword name="findHomographyMatrix" id="homography.cpp::findHomographyMatrix" ref="homography_8cpp.html#a3800765da624f694682f5f1fab7f4c63" />
+      <keyword name="findHomographyMatrix" id="homography.cpp::findHomographyMatrix" ref="homography_8cpp.html#ae3833c553b4d2ea9817440dfc6f9b441" />
+      <keyword name="applyHomographyMatrix" id="homography.cpp::applyHomographyMatrix" ref="homography_8cpp.html#af396adc4b5a19e8194e5ff96640f16de" />
+      <keyword name="checkHomographyConsistency" id="homography.cpp::checkHomographyConsistency" ref="homography_8cpp.html#a67a02c0cff3e126daece706c97c9ba2c" />
+      <keyword name="checkHomographyConsistency" id="homography.cpp::checkHomographyConsistency" ref="homography_8cpp.html#a3c17440ceb61568f04b508a4336c3402" />
+      <keyword name="getAreaRatio" id="homography.cpp::getAreaRatio" ref="homography_8cpp.html#a94196b6d4321a287adf2b3051a5fad83" />
+      <keyword name="getHomogCoverage" id="homography.cpp::getHomogCoverage" ref="homography_8cpp.html#a8007547c4ef0394a46a61a21b6eab88c" />
+      <keyword name="getKeypointsAndDescriptors" id="homography.cpp::getKeypointsAndDescriptors" ref="homography_8cpp.html#af766393f5eb33e81f7f77f8ddc17cf03" />
+      <keyword name="checkImageBoundaries" id="image_reconstruction.cpp::checkImageBoundaries" ref="image__reconstruction_8cpp.html#a2fc13976a9f1af8bb9040db7de417721" />
+      <keyword name="checkImageBoundariesMask" id="image_reconstruction.cpp::checkImageBoundariesMask" ref="image__reconstruction_8cpp.html#a95b3fdabdd4482acec2a7f72e82eb58f" />
+      <keyword name="warpMaskCrop" id="image_reconstruction.cpp::warpMaskCrop" ref="image__reconstruction_8cpp.html#a3808c00f0f1deb7c9669f0d30ffd63ac" />
+      <keyword name="warpMask" id="image_reconstruction.cpp::warpMask" ref="image__reconstruction_8cpp.html#a81ebac71847f40916c2bb033ad2069be" />
+      <keyword name="warp" id="image_reconstruction.cpp::warp" ref="image__reconstruction_8cpp.html#a5ac0e0833abd3cb52b702e15ec99a9c2" />
+      <keyword name="imageReconstruction" id="image_reconstruction.cpp::imageReconstruction" ref="image__reconstruction_8cpp.html#a9e97c5996e454dcb23c2c4be119cbe31" />
+      <keyword name="reconstructImage" id="image_reconstruction.cpp::reconstructImage" ref="image__reconstruction_8cpp.html#ad6b2680d1178aa193da11f5173c40c3c" />
+      <keyword name="lineSegmentIntersection" id="line_and_point_operations.cpp::lineSegmentIntersection" ref="line__and__point__operations_8cpp.html#a6263aa9bb1b8d1a66ab24e33b3649668" />
+      <keyword name="lineSegmentIntersection" id="line_and_point_operations.cpp::lineSegmentIntersection" ref="line__and__point__operations_8cpp.html#aa6722cd85e8b9ffbbeb447c179fd0bae" />
+      <keyword name="computeAnglesAndMags" id="line_and_point_operations.cpp::computeAnglesAndMags" ref="line__and__point__operations_8cpp.html#ae4a4317f4956ee9fa08d3e6445917f4f" />
+      <keyword name="lineSegmentIntersection" id="line_and_points_operations.cpp::lineSegmentIntersection" ref="line__and__points__operations_8cpp.html#a6263aa9bb1b8d1a66ab24e33b3649668" />
+      <keyword name="lineSegmentIntersection" id="line_and_points_operations.cpp::lineSegmentIntersection" ref="line__and__points__operations_8cpp.html#aa6722cd85e8b9ffbbeb447c179fd0bae" />
+      <keyword name="computeAnglesAndMags" id="line_and_points_operations.cpp::computeAnglesAndMags" ref="line__and__points__operations_8cpp.html#ae4a4317f4956ee9fa08d3e6445917f4f" />
+      <keyword name="getItFormatted" id="main.cpp::getItFormatted" ref="main_8cpp.html#a96093b0a34cef38f0f27b7a636e637b0" />
+      <keyword name="writeToOutput" id="main.cpp::writeToOutput" ref="main_8cpp.html#aa20feaa0f15d8966a051a6e4754234ab" />
+      <keyword name="getStableFrameTemporally" id="main.cpp::getStableFrameTemporally" ref="main_8cpp.html#ac701177e76d26612e87cbab9a0ee5218" />
+      <keyword name="getStableFrameSpatially" id="main.cpp::getStableFrameSpatially" ref="main_8cpp.html#a12d6b6af5ae5297df5b19bb00f173df3" />
+      <keyword name="currentDateTime" id="main.cpp::currentDateTime" ref="main_8cpp.html#aa46369f3c8adbff876c82270346fffa2" />
+      <keyword name="main" id="main.cpp::main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
+      <keyword name="log_number_length" id="main.cpp::log_number_length" ref="main_8cpp.html#a6725a70b6f47b0c88de524c592b70856" />
+      <keyword name="num_of_reconstructed_frames" id="main.cpp::num_of_reconstructed_frames" ref="main_8cpp.html#a856a15ce171c3df67abaecb8cee8b78e" />
+      <keyword name="num_of_dropped_frames" id="main.cpp::num_of_dropped_frames" ref="main_8cpp.html#a40076974a0da2dbd3504b79979865d26" />
+      <keyword name="num_of_good_frames" id="main.cpp::num_of_good_frames" ref="main_8cpp.html#a2daaa9229b3fb806f774d4bcd6a08af5" />
+      <keyword name="num_of_fails_in_homography" id="main.cpp::num_of_fails_in_homography" ref="main_8cpp.html#a99a2ec99e6407a223577226b9715b73b" />
+      <keyword name="saved_frames" id="main.cpp::saved_frames" ref="main_8cpp.html#aad35f04e5303062bc8efbfdcc53cd604" />
+      <keyword name="experiment_settings" id="main.cpp::experiment_settings" ref="main_8cpp.html#a9f5a81402e170475690f371d55cbe623" />
+      <keyword name="length" id="master_frames.cpp::length" ref="master__frames_8cpp.html#add63ac6145fd4d298e34df91185136b1" />
+      <keyword name="findMasterFrames" id="master_frames.cpp::findMasterFrames" ref="master__frames_8cpp.html#a28e2c72651b4fe01415691078fd3061c" />
+      <keyword name="findMasterFramesParallel" id="master_frames.cpp::findMasterFramesParallel" ref="master__frames_8cpp.html#a30ead0e7bdbe71513f65101a29913d70" />
+      <keyword name="getMasterFrames" id="master_frames.cpp::getMasterFrames" ref="master__frames_8cpp.html#af399de8fc7e31d60cccdf90efa80541c" />
+      <keyword name="matrixRoot" id="sequence_processing.cpp::matrixRoot" ref="sequence__processing_8cpp.html#a31c3927c6071e5c6543de6934dac2731" />
+      <keyword name="matrixPow" id="sequence_processing.cpp::matrixPow" ref="sequence__processing_8cpp.html#ad83b7c4de86f1a2ed3a79b37ea347890" />
+      <keyword name="findIntermediateHomographyMatrix" id="sequence_processing.cpp::findIntermediateHomographyMatrix" ref="sequence__processing_8cpp.html#aad08ac53f56a97ead9e9e2a4e167e4d8" />
+      <keyword name="findIntermediateHomographyMatrix" id="sequence_processing.cpp::findIntermediateHomographyMatrix" ref="sequence__processing_8cpp.html#a536d6b62274f62941d6cec32549d2543" />
+      <keyword name="findIntermediateHomographyMatrix" id="sequence_processing.cpp::findIntermediateHomographyMatrix" ref="sequence__processing_8cpp.html#aa692e8a44dcab5dc3c45c35c3f7ae6d2" />
+      <keyword name="gaussianValue" id="sequence_processing.cpp::gaussianValue" ref="sequence__processing_8cpp.html#a23162fd5114a89b24c3c7da9abb3915b" />
+      <keyword name="frameWeight" id="sequence_processing.cpp::frameWeight" ref="sequence__processing_8cpp.html#ab65613bc69028dc0a72f09caa37d37ee" />
+      <keyword name="semantic_weight" id="sequence_processing.cpp::semantic_weight" ref="sequence__processing_8cpp.html#a8d56592b555a0cbab5ace1db16a3b29b" />
+      <keyword name="selectNewFrame" id="sequence_processing.cpp::selectNewFrame" ref="sequence__processing_8cpp.html#a8374c98e95b78cc5027c494103e35348" />
+      <keyword name="selectNewFrame" id="sequence_processing.cpp::selectNewFrame" ref="sequence__processing_8cpp.html#a029dc4caa330843be4ee108a5e7bb825" />
+      <keyword name="doc_mainpage" id="doc_mainpage" ref="md_doc_doc_mainpage.html" />
+      <keyword name="Project" id="Project" ref="md_README.html" />
+      <keyword name="EXPERIMENT" id="EXPERIMENT" ref="structEXPERIMENT.html" />
+      <keyword name="id" id="EXPERIMENT::id" ref="structEXPERIMENT.html#af59b6805fe0851b89d1300849db794e4" />
+      <keyword name="video_filename" id="EXPERIMENT::video_filename" ref="structEXPERIMENT.html#a7095f959a6d88f3a5997bcd0f4579609" />
+      <keyword name="output_path" id="EXPERIMENT::output_path" ref="structEXPERIMENT.html#a05ae2a5fbc8660bdb535937d4a446698" />
+      <keyword name="original_video_filename" id="EXPERIMENT::original_video_filename" ref="structEXPERIMENT.html#a3ce2700a31e4c1b808caceab4626ff06" />
+      <keyword name="read_master_frames_filename" id="EXPERIMENT::read_master_frames_filename" ref="structEXPERIMENT.html#a3412818ed24d2c956b01e1d6561d7b50" />
+      <keyword name="save_master_frames_filename" id="EXPERIMENT::save_master_frames_filename" ref="structEXPERIMENT.html#af3623d64105d92bec8a761c5318ec534" />
+      <keyword name="save_video_filename" id="EXPERIMENT::save_video_filename" ref="structEXPERIMENT.html#a867146c43457a82a6b2346d8621d70b6" />
+      <keyword name="selected_frames_filename" id="EXPERIMENT::selected_frames_filename" ref="structEXPERIMENT.html#aef88dd45b0ad1db5f6b68b0801f6f630" />
+      <keyword name="semantic_costs_filename" id="EXPERIMENT::semantic_costs_filename" ref="structEXPERIMENT.html#ab71731194cb1680b25dd9ed253e455aa" />
+      <keyword name="instability_costs_filename" id="EXPERIMENT::instability_costs_filename" ref="structEXPERIMENT.html#a74bd001a4012183b8dacec4e79315a13" />
+      <keyword name="optical_flow_filename" id="EXPERIMENT::optical_flow_filename" ref="structEXPERIMENT.html#a8b5ca464e785c2b80c16c9e022b7c31a" />
+      <keyword name="log_file_name" id="EXPERIMENT::log_file_name" ref="structEXPERIMENT.html#ac3568164588c0366d26fc9cd69b98fe3" />
+      <keyword name="segment_size" id="EXPERIMENT::segment_size" ref="structEXPERIMENT.html#a004195c9cb30dde7a5cac231381503da" />
+      <keyword name="save_master_frames_in_disk" id="EXPERIMENT::save_master_frames_in_disk" ref="structEXPERIMENT.html#a665b9063cc9475513a16db5b1c7f10a1" />
+      <keyword name="save_video_in_disk" id="EXPERIMENT::save_video_in_disk" ref="structEXPERIMENT.html#aa392d503b8f79c0d0ee6168226245dd1" />
+      <keyword name="running_parallel" id="EXPERIMENT::running_parallel" ref="structEXPERIMENT.html#a74a95ad0fdb8e786e1555bcb4053af2e" />
+      <keyword name="exist" id="EXPERIMENT::exist" ref="structEXPERIMENT.html#aa8613784c631982322461aff04a6e838" />
+      <keyword name="MessageHandler" id="MessageHandler" ref="classMessageHandler.html" />
+      <keyword name="MessageHandler" id="MessageHandler::MessageHandler" ref="classMessageHandler.html#a5a8ca5b0e6fa1e9293bfc0d972177881" />
+      <keyword name="~MessageHandler" id="MessageHandler::~MessageHandler" ref="classMessageHandler.html#a6bee5eb7f64fe5360cada61353516a8b" />
+      <keyword name="reportError" id="MessageHandler::reportError" ref="classMessageHandler.html#a10772170f398c739220681f6efbc577b" />
+      <keyword name="reportError" id="MessageHandler::reportError" ref="classMessageHandler.html#a6b28b6a3515af4531583d35bb6bf5a9f" />
+      <keyword name="reportStatus" id="MessageHandler::reportStatus" ref="classMessageHandler.html#a3c896ccad36637cb0423a5e11ccfe6a5" />
+    </keywords>
+    <files>
+      <file>tabs.css</file>
+      <file>tab_a.png</file>
+      <file>tab_b.png</file>
+      <file>tab_h.png</file>
+      <file>tab_s.png</file>
+      <file>nav_h.png</file>
+      <file>nav_f.png</file>
+      <file>bc_s.png</file>
+      <file>doxygen.png</file>
+      <file>closed.png</file>
+      <file>open.png</file>
+      <file>bdwn.png</file>
+      <file>sync_on.png</file>
+      <file>sync_off.png</file>
+      <file>doxygen.css</file>
+      <file>search/search_l.png</file>
+      <file>search/search_m.png</file>
+      <file>search/search_r.png</file>
+      <file>search/close.png</file>
+      <file>search/mag_sel.png</file>
+      <file>search/search.css</file>
+      <file>search/search.js</file>
+      <file>define_8h_source.html</file>
+      <file>experiment__struct_8h_source.html</file>
+      <file>experiments_8h_source.html</file>
+      <file>execute__commands_8h_source.html</file>
+      <file>error__messages_8h_source.html</file>
+      <file>file__operations_8h_source.html</file>
+      <file>homography_8h_source.html</file>
+      <file>image__reconstruction_8h_source.html</file>
+      <file>line__and__point__operations_8h_source.html</file>
+      <file>master__frames_8h_source.html</file>
+      <file>message__handler_8h_source.html</file>
+      <file>sequence__processing_8h_source.html</file>
+      <file>define_8h.html</file>
+      <file>define_8h__dep__incl.png</file>
+      <file>define_8h__dep__incl.png</file>
+      <file>experiment__struct_8h.html</file>
+      <file>experiment__struct_8h__incl.png</file>
+      <file>experiment__struct_8h__incl.png</file>
+      <file>experiment__struct_8h__dep__incl.png</file>
+      <file>experiment__struct_8h__dep__incl.png</file>
+      <file>experiments_8h.html</file>
+      <file>experiments_8h__incl.png</file>
+      <file>experiments_8h__incl.png</file>
+      <file>experiments_8h__dep__incl.png</file>
+      <file>experiments_8h__dep__incl.png</file>
+      <file>doc__mainpage_8md.html</file>
+      <file>execute__commands_8h.html</file>
+      <file>execute__commands_8h__incl.png</file>
+      <file>execute__commands_8h__incl.png</file>
+      <file>execute__commands_8h__dep__incl.png</file>
+      <file>execute__commands_8h__dep__incl.png</file>
+      <file>error__messages_8h.html</file>
+      <file>error__messages_8h__dep__incl.png</file>
+      <file>error__messages_8h__dep__incl.png</file>
+      <file>file__operations_8h.html</file>
+      <file>file__operations_8h__incl.png</file>
+      <file>file__operations_8h__incl.png</file>
+      <file>file__operations_8h__dep__incl.png</file>
+      <file>file__operations_8h__dep__incl.png</file>
+      <file>homography_8h.html</file>
+      <file>homography_8h__incl.png</file>
+      <file>homography_8h__incl.png</file>
+      <file>homography_8h__dep__incl.png</file>
+      <file>homography_8h__dep__incl.png</file>
+      <file>image__reconstruction_8h.html</file>
+      <file>image__reconstruction_8h__incl.png</file>
+      <file>image__reconstruction_8h__incl.png</file>
+      <file>image__reconstruction_8h__dep__incl.png</file>
+      <file>image__reconstruction_8h__dep__incl.png</file>
+      <file>line__and__point__operations_8h.html</file>
+      <file>line__and__point__operations_8h__incl.png</file>
+      <file>line__and__point__operations_8h__incl.png</file>
+      <file>line__and__point__operations_8h__dep__incl.png</file>
+      <file>line__and__point__operations_8h__dep__incl.png</file>
+      <file>master__frames_8h.html</file>
+      <file>master__frames_8h__incl.png</file>
+      <file>master__frames_8h__incl.png</file>
+      <file>master__frames_8h__dep__incl.png</file>
+      <file>master__frames_8h__dep__incl.png</file>
+      <file>message__handler_8h.html</file>
+      <file>message__handler_8h__incl.png</file>
+      <file>message__handler_8h__incl.png</file>
+      <file>message__handler_8h__dep__incl.png</file>
+      <file>message__handler_8h__dep__incl.png</file>
+      <file>sequence__processing_8h.html</file>
+      <file>sequence__processing_8h__incl.png</file>
+      <file>sequence__processing_8h__incl.png</file>
+      <file>sequence__processing_8h__dep__incl.png</file>
+      <file>sequence__processing_8h__dep__incl.png</file>
+      <file>README_8md.html</file>
+      <file>file__operations_8cpp.html</file>
+      <file>file__operations_8cpp__incl.png</file>
+      <file>file__operations_8cpp__incl.png</file>
+      <file>homography_8cpp.html</file>
+      <file>homography_8cpp__incl.png</file>
+      <file>homography_8cpp__incl.png</file>
+      <file>image__reconstruction_8cpp.html</file>
+      <file>image__reconstruction_8cpp__incl.png</file>
+      <file>image__reconstruction_8cpp__incl.png</file>
+      <file>line__and__point__operations_8cpp.html</file>
+      <file>line__and__point__operations_8cpp__incl.png</file>
+      <file>line__and__point__operations_8cpp__incl.png</file>
+      <file>line__and__points__operations_8cpp.html</file>
+      <file>line__and__points__operations_8cpp__incl.png</file>
+      <file>line__and__points__operations_8cpp__incl.png</file>
+      <file>main_8cpp.html</file>
+      <file>main_8cpp__incl.png</file>
+      <file>main_8cpp__incl.png</file>
+      <file>master__frames_8cpp.html</file>
+      <file>master__frames_8cpp__incl.png</file>
+      <file>master__frames_8cpp__incl.png</file>
+      <file>message__handler_8cpp.html</file>
+      <file>message__handler_8cpp__incl.png</file>
+      <file>message__handler_8cpp__incl.png</file>
+      <file>sequence__processing_8cpp.html</file>
+      <file>sequence__processing_8cpp__incl.png</file>
+      <file>sequence__processing_8cpp__incl.png</file>
+      <file>md_doc_doc_mainpage.html</file>
+      <file>md_README.html</file>
+      <file>structEXPERIMENT.html</file>
+      <file>structEXPERIMENT-members.html</file>
+      <file>classMessageHandler.html</file>
+      <file>classMessageHandler-members.html</file>
+      <file>graph_legend.png</file>
+      <file>graph_legend.html</file>
+      <file>dir_bc1e4162ee83d3b96e351e029d62c4b5.html</file>
+      <file>dir_bc1e4162ee83d3b96e351e029d62c4b5_dep.png</file>
+      <file>dir_bc1e4162ee83d3b96e351e029d62c4b5_dep.png</file>
+      <file>dir_2bce6d959c893b1ebd07dd3debff4b1c.html</file>
+      <file>dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html</file>
+      <file>dir_7f57b1e41c5acd0e859ae5f3a2b075a9_dep.png</file>
+      <file>dir_7f57b1e41c5acd0e859ae5f3a2b075a9_dep.png</file>
+      <file>dir_68267d1309a1af8e8297ef4c3efbcdba.html</file>
+      <file>dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png</file>
+      <file>dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png</file>
+      <file>dir_000002_000000.html</file>
+      <file>dir_000002_000001.html</file>
+      <file>dir_000000_000002.html</file>
+      <file>dir_000000_000001.html</file>
+      <file>dir_000003_000002.html</file>
+      <file>dir_000003_000000.html</file>
+      <file>dir_000003_000001.html</file>
+      <file>index.html</file>
+      <file>pages.html</file>
+      <file>annotated.html</file>
+      <file>classes.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>files.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_vars.html</file>
+      <file>globals_vars.html</file>
+      <file>globals_vars.html</file>
+      <file>globals_vars.html</file>
+      <file>globals_enum.html</file>
+      <file>globals_enum.html</file>
+      <file>globals_enum.html</file>
+      <file>globals_enum.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_eval.html</file>
+      <file>globals_defs.html</file>
+      <file>globals_defs.html</file>
+      <file>globals_defs.html</file>
+      <file>globals_defs.html</file>
+      <file>globals_defs.html</file>
+      <file>globals_defs.html</file>
+      <file>globals_defs.html</file>
+      <file>globals_defs.html</file>
+    </files>
+  </filterSection>
+</QtHelpProject>

@@ -1,0 +1,138 @@
+\hypertarget{master__frames_8cpp}{}\section{src/master\+\_\+frames.cpp File Reference}
+\label{master__frames_8cpp}\index{src/master\+\_\+frames.\+cpp@{src/master\+\_\+frames.\+cpp}}
+
+
+Functions to get the master frames from file or calculating it.  
+
+
+{\ttfamily \#include \char`\"{}executables/execute\+\_\+commands.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/master\+\_\+frames.\+h\char`\"{}}\\*
+Include dependency graph for master\+\_\+frames.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{master__frames_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{master__frames_8cpp_add63ac6145fd4d298e34df91185136b1}{length} (int number)
+\begin{DoxyCompactList}\small\item\em Function that counts the digits of the number. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{master__frames_8cpp_a28e2c72651b4fe01415691078fd3061c}{find\+Master\+Frames} (const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings})
+\begin{DoxyCompactList}\small\item\em Function that calculates the master frames in a sequence given a N in the field segment\+Size in the experiment\+\_\+settings in a non-\/parallel (sequential) way. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{master__frames_8cpp_a30ead0e7bdbe71513f65101a29913d70}{find\+Master\+Frames\+Parallel} (const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings})
+\begin{DoxyCompactList}\small\item\em Function that calculates the master frames in a sequence given a N in the field segment\+Size in the experiment\+\_\+settings in a parallel way. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{master__frames_8cpp_af399de8fc7e31d60cccdf90efa80541c}{get\+Master\+Frames} (const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, const int num\+\_\+frames)
+\begin{DoxyCompactList}\small\item\em Function that return the master frames in a sequence according with experiment settings, by load from a file or calculating them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to get the master frames from file or calculating it. 
+
+Calculate master frames. Calculate master frames in a parallel way. Call \hyperlink{file__operations_8cpp}{file\+\_\+operations.\+cpp} methods to get read master frames from file. 
+
+\subsection{Function Documentation}
+\index{master\+\_\+frames.\+cpp@{master\+\_\+frames.\+cpp}!find\+Master\+Frames@{find\+Master\+Frames}}
+\index{find\+Master\+Frames@{find\+Master\+Frames}!master\+\_\+frames.\+cpp@{master\+\_\+frames.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Master\+Frames(const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings)}{findMasterFrames(const EXPERIMENT \&experiment\_settings)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ find\+Master\+Frames (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings}
+\end{DoxyParamCaption}
+)}\hypertarget{master__frames_8cpp_a28e2c72651b4fe01415691078fd3061c}{}\label{master__frames_8cpp_a28e2c72651b4fe01415691078fd3061c}
+
+
+Function that calculates the master frames in a sequence given a N in the field segment\+Size in the experiment\+\_\+settings in a non-\/parallel (sequential) way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & -\/ object with the experiment settings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily std\+::vector$<$int$>$} -\/ vector with the master frames found in the sequence.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/04/2016 
+\end{DoxyDate}
+\index{master\+\_\+frames.\+cpp@{master\+\_\+frames.\+cpp}!find\+Master\+Frames\+Parallel@{find\+Master\+Frames\+Parallel}}
+\index{find\+Master\+Frames\+Parallel@{find\+Master\+Frames\+Parallel}!master\+\_\+frames.\+cpp@{master\+\_\+frames.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Master\+Frames\+Parallel(const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings)}{findMasterFramesParallel(const EXPERIMENT \&experiment\_settings)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ find\+Master\+Frames\+Parallel (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings}
+\end{DoxyParamCaption}
+)}\hypertarget{master__frames_8cpp_a30ead0e7bdbe71513f65101a29913d70}{}\label{master__frames_8cpp_a30ead0e7bdbe71513f65101a29913d70}
+
+
+Function that calculates the master frames in a sequence given a N in the field segment\+Size in the experiment\+\_\+settings in a parallel way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & -\/ object with the experiment settings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily std\+::vector$<$int$>$} -\/ vector with the master frames found in the sequence.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03/04/2016 
+\end{DoxyDate}
+\index{master\+\_\+frames.\+cpp@{master\+\_\+frames.\+cpp}!get\+Master\+Frames@{get\+Master\+Frames}}
+\index{get\+Master\+Frames@{get\+Master\+Frames}!master\+\_\+frames.\+cpp@{master\+\_\+frames.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Master\+Frames(const E\+X\+P\+E\+R\+I\+M\+E\+N\+T experiment\+\_\+settings, const int num\+\_\+frames)}{getMasterFrames(const EXPERIMENT experiment\_settings, const int num\_frames)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ get\+Master\+Frames (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT}}]{experiment\+\_\+settings, }
+\item[{const int}]{num\+\_\+frames}
+\end{DoxyParamCaption}
+)}\hypertarget{master__frames_8cpp_af399de8fc7e31d60cccdf90efa80541c}{}\label{master__frames_8cpp_af399de8fc7e31d60cccdf90efa80541c}
+
+
+Function that return the master frames in a sequence according with experiment settings, by load from a file or calculating them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & -\/ object with the experiment settings. \\
+\hline
+{\em num\+\_\+frames} & -\/ number of frames of the reduced video.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily std\+::vector$<$int$>$} -\/ vector with the master frames found in the sequence.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/04/2016 
+\end{DoxyDate}
+\index{master\+\_\+frames.\+cpp@{master\+\_\+frames.\+cpp}!length@{length}}
+\index{length@{length}!master\+\_\+frames.\+cpp@{master\+\_\+frames.\+cpp}}
+\subsubsection[{\texorpdfstring{length(int number)}{length(int number)}}]{\setlength{\rightskip}{0pt plus 5cm}int length (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}\hypertarget{master__frames_8cpp_add63ac6145fd4d298e34df91185136b1}{}\label{master__frames_8cpp_add63ac6145fd4d298e34df91185136b1}
+
+
+Function that counts the digits of the number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & -\/ number to calculate the number of digits.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily int} -\/ number of digits of the input number.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/04/2016 
+\end{DoxyDate}

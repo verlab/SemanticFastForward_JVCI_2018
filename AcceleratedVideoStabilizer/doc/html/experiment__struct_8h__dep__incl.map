@@ -1,0 +1,12 @@
+<map id="definitions/experiment_struct.h" name="definitions/experiment_struct.h">
+<area shape="rect" id="node2" href="$experiments_8h.html" title="Definitions of experiment settings. " alt="" coords="201,171,367,197"/>
+<area shape="rect" id="node4" href="$file__operations_8h.html" title="Header functions for the file_operations.cpp. " alt="" coords="385,96,551,123"/>
+<area shape="rect" id="node5" href="$master__frames_8h.html" title="Header functions for the master_frames.cpp. " alt="" coords="5,171,176,197"/>
+<area shape="rect" id="node7" href="$sequence__processing_8h.html" title="Header functions for the sequence_processing.cpp. " alt="" coords="569,171,777,197"/>
+<area shape="rect" id="node8" href="$sequence__processing_8cpp.html" title="Functions related with sequence processing, such as find intermediate homography, get transition weig..." alt="" coords="781,245,976,272"/>
+<area shape="rect" id="node10" href="$image__reconstruction_8h.html" title="Header functions for the image_reconstruction.cpp. " alt="" coords="713,96,919,123"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Main file that contains the main.cpp. " alt="" coords="430,245,527,272"/>
+<area shape="rect" id="node9" href="$file__operations_8cpp.html" title="Functions to manipulate files. " alt="" coords="391,171,544,197"/>
+<area shape="rect" id="node6" href="$master__frames_8cpp.html" title="Functions to get the master frames from file or calculating it. " alt="" coords="13,245,168,272"/>
+<area shape="rect" id="node11" href="$image__reconstruction_8cpp.html" title="Functions related with reconstruction of the image after application of the homography matrix to fill..." alt="" coords="854,171,1047,197"/>
+</map>

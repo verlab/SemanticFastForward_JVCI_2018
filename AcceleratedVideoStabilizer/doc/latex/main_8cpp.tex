@@ -1,0 +1,380 @@
+\hypertarget{main_8cpp}{}\section{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+
+
+Main file that contains the \hyperlink{main_8cpp}{main.\+cpp}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$armadillo$>$}\\*
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\\*
+{\ttfamily \#include $<$cv.\+h$>$}\\*
+{\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/stitching/stitcher.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}definitions/experiments.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}definitions/define.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}executables/execute\+\_\+commands.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/homography.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/sequence\+\_\+processing.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/master\+\_\+frames.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/line\+\_\+and\+\_\+point\+\_\+operations.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/image\+\_\+reconstruction.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/message\+\_\+handler.\+h\char`\"{}}\\*
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{main_8cpp_a96093b0a34cef38f0f27b7a636e637b0}{get\+It\+Formatted} (int frame\+\_\+number)
+\begin{DoxyCompactList}\small\item\em get\+It\+Formatted -\/ Formats the number with padding. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_aa20feaa0f15d8966a051a6e4754234ab}{write\+To\+Output} (cv\+::\+Video\+Writer \&save\+\_\+video, cv\+::\+Mat \&image, uint frame\+\_\+number)
+\begin{DoxyCompactList}\small\item\em write\+To\+Output -\/ Writes the given image to the output (save\+\_\+video and/or screen) \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_ac701177e76d26612e87cbab9a0ee5218}{get\+Stable\+Frame\+Temporally} (cv\+::\+Mat \&input\+\_\+frame, cv\+::\+Mat \&homography\+\_\+matrix, const cv\+::\+Rect \&drop\+\_\+area, const cv\+::\+Rect \&crop\+\_\+area, int frame\+\_\+number, int d, int D, cv\+::vector$<$ int $>$ \&selected\+\_\+frames, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, int attempt, \hyperlink{classMessageHandler}{Message\+Handler} \&msg\+\_\+handler, cv\+::\+Mat \&stable\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em get\+Stable\+Frame -\/ Returns a frame stabilized given the parameters. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a12d6b6af5ae5297df5b19bb00f173df3}{get\+Stable\+Frame\+Spatially} (cv\+::\+Mat \&input\+\_\+frame, cv\+::\+Mat \&homography\+\_\+matrix, const cv\+::\+Rect \&drop\+\_\+area, const cv\+::\+Rect \&crop\+\_\+area, int frame\+\_\+number, float s, float S, cv\+::vector$<$ int $>$ \&selected\+\_\+frames, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, int attempt, \hyperlink{classMessageHandler}{Message\+Handler} \&msg\+\_\+handler, cv\+::\+Mat \&stable\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em get\+Stable\+Frame\+Temporally -\/ Returns a frame stabilized given the parameters. \end{DoxyCompactList}\item 
+const std\+::string \hyperlink{main_8cpp_aa46369f3c8adbff876c82270346fffa2}{current\+Date\+Time} ()
+\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \hyperlink{main_8cpp}{main.\+cpp} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_a6725a70b6f47b0c88de524c592b70856}{log\+\_\+number\+\_\+length}
+\item 
+int \hyperlink{main_8cpp_a856a15ce171c3df67abaecb8cee8b78e}{num\+\_\+of\+\_\+reconstructed\+\_\+frames} = 0
+\item 
+int \hyperlink{main_8cpp_a40076974a0da2dbd3504b79979865d26}{num\+\_\+of\+\_\+dropped\+\_\+frames} = 0
+\item 
+int \hyperlink{main_8cpp_a2daaa9229b3fb806f774d4bcd6a08af5}{num\+\_\+of\+\_\+good\+\_\+frames} = 0
+\item 
+int \hyperlink{main_8cpp_a99a2ec99e6407a223577226b9715b73b}{num\+\_\+of\+\_\+fails\+\_\+in\+\_\+homography} = 0
+\item 
+int \hyperlink{main_8cpp_aad35f04e5303062bc8efbfdcc53cd604}{saved\+\_\+frames} = 0
+\item 
+\hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main file that contains the \hyperlink{main_8cpp}{main.\+cpp}. 
+
+
+
+\subsection{Function Documentation}
+\index{main.\+cpp@{main.\+cpp}!current\+Date\+Time@{current\+Date\+Time}}
+\index{current\+Date\+Time@{current\+Date\+Time}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{current\+Date\+Time()}{currentDateTime()}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string current\+Date\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_aa46369f3c8adbff876c82270346fffa2}{}\label{main_8cpp_aa46369f3c8adbff876c82270346fffa2}
+\index{main.\+cpp@{main.\+cpp}!get\+It\+Formatted@{get\+It\+Formatted}}
+\index{get\+It\+Formatted@{get\+It\+Formatted}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+It\+Formatted(int frame\+\_\+number)}{getItFormatted(int frame\_number)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string get\+It\+Formatted (
+\begin{DoxyParamCaption}
+\item[{int}]{frame\+\_\+number}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a96093b0a34cef38f0f27b7a636e637b0}{}\label{main_8cpp_a96093b0a34cef38f0f27b7a636e637b0}
+
+
+get\+It\+Formatted -\/ Formats the number with padding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/09/2016 
+\end{DoxyDate}
+\index{main.\+cpp@{main.\+cpp}!get\+Stable\+Frame\+Spatially@{get\+Stable\+Frame\+Spatially}}
+\index{get\+Stable\+Frame\+Spatially@{get\+Stable\+Frame\+Spatially}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Stable\+Frame\+Spatially(cv\+::\+Mat \&input\+\_\+frame, cv\+::\+Mat \&homography\+\_\+matrix, const cv\+::\+Rect \&drop\+\_\+area, const cv\+::\+Rect \&crop\+\_\+area, int frame\+\_\+number, float s, float S, cv\+::vector$<$ int $>$ \&selected\+\_\+frames, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, int attempt, Message\+Handler \&msg\+\_\+handler, cv\+::\+Mat \&stable\+\_\+frame)}{getStableFrameSpatially(cv::Mat \&input\_frame, cv::Mat \&homography\_matrix, const cv::Rect \&drop\_area, const cv::Rect \&crop\_area, int frame\_number, float s, float S, cv::vector< int > \&selected\_frames, const std::vector< cv::KeyPoint > \&keypoints\_master\_pre, const std::vector< cv::KeyPoint > \&keypoints\_master\_pos, const cv::Mat \&descriptors\_master\_pre, const cv::Mat \&descriptors\_master\_pos, int attempt, MessageHandler \&msg\_handler, cv::Mat \&stable\_frame)}}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Stable\+Frame\+Spatially (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat \&}]{input\+\_\+frame, }
+\item[{cv\+::\+Mat \&}]{homography\+\_\+matrix, }
+\item[{const cv\+::\+Rect \&}]{drop\+\_\+area, }
+\item[{const cv\+::\+Rect \&}]{crop\+\_\+area, }
+\item[{int}]{frame\+\_\+number, }
+\item[{float}]{s, }
+\item[{float}]{S, }
+\item[{cv\+::vector$<$ int $>$ \&}]{selected\+\_\+frames, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pre, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pos, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pre, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pos, }
+\item[{int}]{attempt, }
+\item[{{\bf Message\+Handler} \&}]{msg\+\_\+handler, }
+\item[{cv\+::\+Mat \&}]{stable\+\_\+frame}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a12d6b6af5ae5297df5b19bb00f173df3}{}\label{main_8cpp_a12d6b6af5ae5297df5b19bb00f173df3}
+
+
+get\+Stable\+Frame\+Temporally -\/ Returns a frame stabilized given the parameters. 
+
+get\+Stable\+Frame\+Spatially -\/ Returns a frame stabilized given the parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+frame} & \\
+\hline
+{\em homography\+\_\+matrix} & \\
+\hline
+{\em drop\+\_\+area} & \\
+\hline
+{\em crop\+\_\+area} & \\
+\hline
+{\em frame\+\_\+number} & \\
+\hline
+{\em s} & -\/ Spatial distance to the previous master (using the instability costs) \\
+\hline
+{\em S} & -\/ Spatial distance between the masters (using the instability costs) \\
+\hline
+{\em selected\+\_\+frames} & \\
+\hline
+{\em image\+\_\+master\+\_\+pre} & \\
+\hline
+{\em image\+\_\+master\+\_\+pos} & \\
+\hline
+{\em trial} & -\/ The number of the current attempt \\
+\hline
+{\em msg\+\_\+handler} & -\/ The message handler \\
+\hline
+{\em stable\+\_\+frame} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/09/2016 
+\end{DoxyDate}
+C\+A\+SE 1\+: Homography makes it good, frame is kept.
+
+C\+A\+SE 2\+: Homography makes it regular, frame needs to be reconstructed
+
+C\+A\+SE 2.\+1\+: Homography makes it awful, a new frame needs to be selected
+
+C\+A\+SE 3\+: Homography makes it awful, a new frame needs to be selected \index{main.\+cpp@{main.\+cpp}!get\+Stable\+Frame\+Temporally@{get\+Stable\+Frame\+Temporally}}
+\index{get\+Stable\+Frame\+Temporally@{get\+Stable\+Frame\+Temporally}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Stable\+Frame\+Temporally(cv\+::\+Mat \&input\+\_\+frame, cv\+::\+Mat \&homography\+\_\+matrix, const cv\+::\+Rect \&drop\+\_\+area, const cv\+::\+Rect \&crop\+\_\+area, int frame\+\_\+number, int d, int D, cv\+::vector$<$ int $>$ \&selected\+\_\+frames, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pre, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+master\+\_\+pos, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pre, const cv\+::\+Mat \&descriptors\+\_\+master\+\_\+pos, int attempt, Message\+Handler \&msg\+\_\+handler, cv\+::\+Mat \&stable\+\_\+frame)}{getStableFrameTemporally(cv::Mat \&input\_frame, cv::Mat \&homography\_matrix, const cv::Rect \&drop\_area, const cv::Rect \&crop\_area, int frame\_number, int d, int D, cv::vector< int > \&selected\_frames, const std::vector< cv::KeyPoint > \&keypoints\_master\_pre, const std::vector< cv::KeyPoint > \&keypoints\_master\_pos, const cv::Mat \&descriptors\_master\_pre, const cv::Mat \&descriptors\_master\_pos, int attempt, MessageHandler \&msg\_handler, cv::Mat \&stable\_frame)}}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Stable\+Frame\+Temporally (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat \&}]{input\+\_\+frame, }
+\item[{cv\+::\+Mat \&}]{homography\+\_\+matrix, }
+\item[{const cv\+::\+Rect \&}]{drop\+\_\+area, }
+\item[{const cv\+::\+Rect \&}]{crop\+\_\+area, }
+\item[{int}]{frame\+\_\+number, }
+\item[{int}]{d, }
+\item[{int}]{D, }
+\item[{cv\+::vector$<$ int $>$ \&}]{selected\+\_\+frames, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pre, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+master\+\_\+pos, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pre, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+master\+\_\+pos, }
+\item[{int}]{attempt, }
+\item[{{\bf Message\+Handler} \&}]{msg\+\_\+handler, }
+\item[{cv\+::\+Mat \&}]{stable\+\_\+frame}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_ac701177e76d26612e87cbab9a0ee5218}{}\label{main_8cpp_ac701177e76d26612e87cbab9a0ee5218}
+
+
+get\+Stable\+Frame -\/ Returns a frame stabilized given the parameters. 
+
+get\+Stable\+Frame\+Temporally -\/ Returns a frame stabilized given the parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+frame} & \\
+\hline
+{\em homography\+\_\+matrix} & \\
+\hline
+{\em drop\+\_\+area} & \\
+\hline
+{\em crop\+\_\+area} & \\
+\hline
+{\em frame\+\_\+number} & \\
+\hline
+{\em d} & \\
+\hline
+{\em D} & \\
+\hline
+{\em selected\+\_\+frames} & \\
+\hline
+{\em image\+\_\+master\+\_\+pre} & \\
+\hline
+{\em image\+\_\+master\+\_\+pos} & \\
+\hline
+{\em trial} & -\/ The number of the current attempt \\
+\hline
+{\em stable\+\_\+frame} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/09/2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+frame} & \\
+\hline
+{\em homography\+\_\+matrix} & \\
+\hline
+{\em drop\+\_\+area} & \\
+\hline
+{\em crop\+\_\+area} & \\
+\hline
+{\em frame\+\_\+number} & \\
+\hline
+{\em d} & -\/ Temporal distance to the previous master \\
+\hline
+{\em D} & -\/ Temporal distance between the masters \\
+\hline
+{\em selected\+\_\+frames} & \\
+\hline
+{\em image\+\_\+master\+\_\+pre} & \\
+\hline
+{\em image\+\_\+master\+\_\+pos} & \\
+\hline
+{\em trial} & -\/ The number of the current attempt \\
+\hline
+{\em msg\+\_\+handler} & -\/ The message handler \\
+\hline
+{\em stable\+\_\+frame} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/09/2016 
+\end{DoxyDate}
+C\+A\+SE 1\+: Homography makes it good, frame is kept.
+
+C\+A\+SE 2\+: Homography makes it regular, frame needs to be reconstructed
+
+C\+A\+SE 2.\+1\+: Homography makes it awful, a new frame needs to be selected
+
+C\+A\+SE 3\+: Homography makes it awful, a new frame needs to be selected \index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+\hyperlink{main_8cpp}{main.\+cpp} 
+
+{\bfseries Usage\+:} ~\newline
+$<$ Program\+\_\+name $>$ $<$ Settings\+\_\+file $>$ \mbox{[} Range\+\_\+min = 0 \mbox{]} \mbox{[} Range\+\_\+max = num\+\_\+frames \mbox{]} ~\newline
+~\newline
+Example 1\+: Run Video\+Stabilization in the Experiment\+\_\+1 processing the whole video. ~\newline
+-\/$>$ Video\+Stabilization Experiment\+\_\+1.\+xml ~\newline
+Example 2\+: Run Video\+Stabilization in the Experiment\+\_\+1 processing from the 150 frame until the last one. ~\newline
+-\/$>$ Video\+Stabilization Experiment\+\_\+1.\+xml 150 ~\newline
+Example 2\+: Run Video\+Stabilization in the Experiment\+\_\+1 processing from the 150 frame until the frame 490. ~\newline
+-\/$>$ Video\+Stabilization Experiment\+\_\+1.\+xml 150 490 ~\newline
+~\newline
+ The program can {\bfseries exit} with following codes\+: ~\newline
+{\bfseries -\/1} -\/ Wrong number of input parameters. ~\newline
+{\bfseries -\/2} -\/ Experiment id does not exist. ~\newline
+{\bfseries -\/3} -\/ Can not open the accelerated video. ~\newline
+{\bfseries -\/4} -\/ Can not create file to save the output video. ~\newline
+{\bfseries -\/5} -\/ Can not open the video original video. ~\newline
+{\bfseries -\/6} -\/ Can not open the C\+SV file with the selected frame numbers of the accelerated video. ~\newline
+{\bfseries -\/7} -\/ Can not create directory to save the output data. ~\newline
+{\bfseries -\/8} -\/ Can not create log text file. ~\newline
+{\bfseries -\/9} -\/ Range limits is not well defined. ~\newline
+{\bfseries -\/10} -\/ Can not open the C\+SV file with the semantic costs of the original video. ~\newline
+{\bfseries -\/11} -\/ transition from frame\+\_\+src to frame\+\_\+dst larger than number of transitions describle int the file the semantic costs
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & -\/ number of parameters in argv. \\
+\hline
+{\em argv} & -\/ $<$ Settings\+\_\+file $>$ \mbox{[} Range\+\_\+min = 0 \mbox{]} \mbox{[} Range\+\_\+max = num\+\_\+frames \mbox{]} \\
+\hline
+\end{DoxyParams}
+W\+R\+I\+T\+I\+NG T\+HE R\+E\+S\+U\+LT TO T\+HE O\+U\+T\+P\+UT ///
+
+W\+R\+I\+T\+I\+NG T\+HE R\+E\+S\+U\+LT TO T\+HE O\+U\+T\+P\+UT ///
+
+T\+H\+IS IS N\+OT A M\+A\+S\+T\+ER F\+R\+A\+ME ///
+
+T\+H\+IS IS A M\+A\+S\+T\+ER F\+R\+A\+ME ///
+
+W\+R\+I\+T\+I\+NG T\+HE R\+E\+S\+U\+LT TO T\+HE O\+U\+T\+P\+UT ///
+
+W\+R\+I\+T\+I\+NG T\+HE R\+E\+S\+U\+LT TO T\+HE O\+U\+T\+P\+UT ///
+
+W\+R\+I\+T\+I\+NG T\+HE R\+E\+S\+U\+LT TO T\+HE O\+U\+T\+P\+UT ///\index{main.\+cpp@{main.\+cpp}!write\+To\+Output@{write\+To\+Output}}
+\index{write\+To\+Output@{write\+To\+Output}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{write\+To\+Output(cv\+::\+Video\+Writer \&save\+\_\+video, cv\+::\+Mat \&image, uint frame\+\_\+number)}{writeToOutput(cv::VideoWriter \&save\_video, cv::Mat \&image, uint frame\_number)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+To\+Output (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Video\+Writer \&}]{save\+\_\+video, }
+\item[{cv\+::\+Mat \&}]{image, }
+\item[{uint}]{frame\+\_\+number}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_aa20feaa0f15d8966a051a6e4754234ab}{}\label{main_8cpp_aa20feaa0f15d8966a051a6e4754234ab}
+
+
+write\+To\+Output -\/ Writes the given image to the output (save\+\_\+video and/or screen) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em save\+\_\+video} & \\
+\hline
+{\em image} & \\
+\hline
+{\em frame\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/09/2016 
+\end{DoxyDate}
+
+
+\subsection{Variable Documentation}
+\index{main.\+cpp@{main.\+cpp}!experiment\+\_\+settings@{experiment\+\_\+settings}}
+\index{experiment\+\_\+settings@{experiment\+\_\+settings}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{experiment\+\_\+settings}{experiment\_settings}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} experiment\+\_\+settings}\hypertarget{main_8cpp_a9f5a81402e170475690f371d55cbe623}{}\label{main_8cpp_a9f5a81402e170475690f371d55cbe623}
+\index{main.\+cpp@{main.\+cpp}!log\+\_\+number\+\_\+length@{log\+\_\+number\+\_\+length}}
+\index{log\+\_\+number\+\_\+length@{log\+\_\+number\+\_\+length}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{log\+\_\+number\+\_\+length}{log\_number\_length}}]{\setlength{\rightskip}{0pt plus 5cm}int log\+\_\+number\+\_\+length}\hypertarget{main_8cpp_a6725a70b6f47b0c88de524c592b70856}{}\label{main_8cpp_a6725a70b6f47b0c88de524c592b70856}
+\index{main.\+cpp@{main.\+cpp}!num\+\_\+of\+\_\+dropped\+\_\+frames@{num\+\_\+of\+\_\+dropped\+\_\+frames}}
+\index{num\+\_\+of\+\_\+dropped\+\_\+frames@{num\+\_\+of\+\_\+dropped\+\_\+frames}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{num\+\_\+of\+\_\+dropped\+\_\+frames}{num\_of\_dropped\_frames}}]{\setlength{\rightskip}{0pt plus 5cm}int num\+\_\+of\+\_\+dropped\+\_\+frames = 0}\hypertarget{main_8cpp_a40076974a0da2dbd3504b79979865d26}{}\label{main_8cpp_a40076974a0da2dbd3504b79979865d26}
+\index{main.\+cpp@{main.\+cpp}!num\+\_\+of\+\_\+fails\+\_\+in\+\_\+homography@{num\+\_\+of\+\_\+fails\+\_\+in\+\_\+homography}}
+\index{num\+\_\+of\+\_\+fails\+\_\+in\+\_\+homography@{num\+\_\+of\+\_\+fails\+\_\+in\+\_\+homography}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{num\+\_\+of\+\_\+fails\+\_\+in\+\_\+homography}{num\_of\_fails\_in\_homography}}]{\setlength{\rightskip}{0pt plus 5cm}int num\+\_\+of\+\_\+fails\+\_\+in\+\_\+homography = 0}\hypertarget{main_8cpp_a99a2ec99e6407a223577226b9715b73b}{}\label{main_8cpp_a99a2ec99e6407a223577226b9715b73b}
+\index{main.\+cpp@{main.\+cpp}!num\+\_\+of\+\_\+good\+\_\+frames@{num\+\_\+of\+\_\+good\+\_\+frames}}
+\index{num\+\_\+of\+\_\+good\+\_\+frames@{num\+\_\+of\+\_\+good\+\_\+frames}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{num\+\_\+of\+\_\+good\+\_\+frames}{num\_of\_good\_frames}}]{\setlength{\rightskip}{0pt plus 5cm}int num\+\_\+of\+\_\+good\+\_\+frames = 0}\hypertarget{main_8cpp_a2daaa9229b3fb806f774d4bcd6a08af5}{}\label{main_8cpp_a2daaa9229b3fb806f774d4bcd6a08af5}
+\index{main.\+cpp@{main.\+cpp}!num\+\_\+of\+\_\+reconstructed\+\_\+frames@{num\+\_\+of\+\_\+reconstructed\+\_\+frames}}
+\index{num\+\_\+of\+\_\+reconstructed\+\_\+frames@{num\+\_\+of\+\_\+reconstructed\+\_\+frames}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{num\+\_\+of\+\_\+reconstructed\+\_\+frames}{num\_of\_reconstructed\_frames}}]{\setlength{\rightskip}{0pt plus 5cm}int num\+\_\+of\+\_\+reconstructed\+\_\+frames = 0}\hypertarget{main_8cpp_a856a15ce171c3df67abaecb8cee8b78e}{}\label{main_8cpp_a856a15ce171c3df67abaecb8cee8b78e}
+\index{main.\+cpp@{main.\+cpp}!saved\+\_\+frames@{saved\+\_\+frames}}
+\index{saved\+\_\+frames@{saved\+\_\+frames}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{saved\+\_\+frames}{saved\_frames}}]{\setlength{\rightskip}{0pt plus 5cm}int saved\+\_\+frames = 0}\hypertarget{main_8cpp_aad35f04e5303062bc8efbfdcc53cd604}{}\label{main_8cpp_aad35f04e5303062bc8efbfdcc53cd604}

@@ -1,0 +1,174 @@
+\hypertarget{execute__commands_8h}{}\section{executables/execute\+\_\+commands.h File Reference}
+\label{execute__commands_8h}\index{executables/execute\+\_\+commands.\+h@{executables/execute\+\_\+commands.\+h}}
+
+
+Macro with specific codes.  
+
+
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for execute\+\_\+commands.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{execute__commands_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{execute__commands_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{execute__commands_8h_a53f1ccb877151aca373061692ce50bf8}{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+N\+FO}
+\item 
+\#define \hyperlink{execute__commands_8h_ab0b8db66688c5a311dc396f1104a563a}{E\+X\+E\+C\+U\+T\+E\+\_\+\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+\_\+\+ID}
+\item 
+\#define \hyperlink{execute__commands_8h_a860f56fe1fc9e103945671f4b7cca16a}{E\+X\+E\+C\+U\+T\+E\+\_\+\+V\+I\+EW}
+\item 
+\#define \hyperlink{execute__commands_8h_a633ebeb13695e1b87a2c65f53df0c836}{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+U\+F\+FS}(string\+\_\+length,  frame)
+\item 
+\#define \hyperlink{execute__commands_8h_a815c984330fd59b9a693211960320727}{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON}
+\item 
+\#define \hyperlink{execute__commands_8h_a44bd5e86ab21468210dbb71424eda082}{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+A\+C\+T\+I\+O\+NS}
+\item 
+\#define \hyperlink{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}{S\+S\+TR}(x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Macro with specific codes. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}!E\+X\+E\+C\+U\+T\+E\+\_\+\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+\_\+\+ID@{E\+X\+E\+C\+U\+T\+E\+\_\+\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+\_\+\+ID}}
+\index{E\+X\+E\+C\+U\+T\+E\+\_\+\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+\_\+\+ID@{E\+X\+E\+C\+U\+T\+E\+\_\+\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+\_\+\+ID}!execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+E\+C\+U\+T\+E\+\_\+\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+\_\+\+ID}{EXECUTE\_EXPERIMENT\_ID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+E\+C\+U\+T\+E\+\_\+\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+\_\+\+ID}\hypertarget{execute__commands_8h_ab0b8db66688c5a311dc396f1104a563a}{}\label{execute__commands_8h_ab0b8db66688c5a311dc396f1104a563a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+std::cout << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" Running exepriment: "} << argv[1] << \textcolor{stringliteral}{" | Experiment ID: "} << 
+      \hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\_settings}.\hyperlink{structEXPERIMENT_af59b6805fe0851b89d1300849db794e4}{id} << std::endl \(\backslash\)
+            << std::endl; \(\backslash\)
+\end{DoxyCode}
+\index{execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}!E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+A\+C\+T\+I\+O\+NS@{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+A\+C\+T\+I\+O\+NS}}
+\index{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+A\+C\+T\+I\+O\+NS@{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+A\+C\+T\+I\+O\+NS}!execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+A\+C\+T\+I\+O\+NS}{EXECUTE\_IMAGE\_CONDITIONAL\_ACTIONS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+A\+C\+T\+I\+O\+NS}\hypertarget{execute__commands_8h_a44bd5e86ab21468210dbb71424eda082}{}\label{execute__commands_8h_a44bd5e86ab21468210dbb71424eda082}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ( \hyperlink{homography_8h_a94196b6d4321a287adf2b3051a5fad83}{getAreaRatio}( current\_frame , homography\_matrix , crop\_area ) > 
+      \hyperlink{define_8h_a249638630837bda97ebb266001f43181}{MAXIMUM\_AREA\_ALLOWED} ) \{ \(\backslash\)
+    if ( \hyperlink{homography_8h_a94196b6d4321a287adf2b3051a5fad83}{getAreaRatio}( current\_frame , homography\_matrix , drop\_area ) > 
+      \hyperlink{define_8h_a249638630837bda97ebb266001f43181}{MAXIMUM\_AREA\_ALLOWED} ) \{ \(\backslash\)
+        log\_file << \textcolor{stringliteral}{" Frame : "} << \hyperlink{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}{SSTR} ( std::setfill(\textcolor{charliteral}{'0'}) << std::setw(
+      \hyperlink{main_8cpp_a6725a70b6f47b0c88de524c592b70856}{log\_number\_length}) << i ) << \textcolor{stringliteral}{" | [D] Dropped, a new one will be selected in the original
+       video."} << std::endl; \(\backslash\)
+        if ( \hyperlink{define_8h_a9b1ee3f8ba0f8b2838f1cf24c44519f4}{DEBUG\_FRAME\_STATUS} ) \(\backslash\)
+            std::cout << \textcolor{stringliteral}{" i : "} << \hyperlink{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}{SSTR} ( std::setfill(\textcolor{charliteral}{'0'}) << std::setw(
+      \hyperlink{main_8cpp_a6725a70b6f47b0c88de524c592b70856}{log\_number\_length}) << i ) << \textcolor{stringliteral}{" | [D] Dropped, a new one will be selected in the original
+       video."} << std::endl; \(\backslash\)
+        num\_of\_dropped\_frames++; \(\backslash\)
+    \} \textcolor{keywordflow}{else} \{ \(\backslash\)
+        log\_file << \textcolor{stringliteral}{" Frame : "} << \hyperlink{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}{SSTR} ( std::setfill(\textcolor{charliteral}{'0'}) << std::setw(
+      \hyperlink{main_8cpp_a6725a70b6f47b0c88de524c592b70856}{log\_number\_length}) << i ) << \textcolor{stringliteral}{" | [R] Reconstructed using the original video."} << std::endl
+      ; \(\backslash\)
+        if ( \hyperlink{define_8h_a9b1ee3f8ba0f8b2838f1cf24c44519f4}{DEBUG\_FRAME\_STATUS} ) \(\backslash\)
+            std::cout << \textcolor{stringliteral}{" i : "} << \hyperlink{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}{SSTR} ( std::setfill(\textcolor{charliteral}{'0'}) << std::setw(
+      \hyperlink{main_8cpp_a6725a70b6f47b0c88de524c592b70856}{log\_number\_length}) << i ) << \textcolor{stringliteral}{" | [R] Reconstructed using the original video."} << std::endl
+      ; \(\backslash\)
+        EXECUTE\_IMAGE\_RECONSTRUCTION \(\backslash\)
+    \} \(\backslash\)
+\} \textcolor{keywordflow}{else} \{ \(\backslash\)
+    log\_file << \textcolor{stringliteral}{" Frame : "} << \hyperlink{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}{SSTR} ( std::setfill(\textcolor{charliteral}{'0'}) << std::setw(
+      \hyperlink{main_8cpp_a6725a70b6f47b0c88de524c592b70856}{log\_number\_length}) << i ) << \textcolor{stringliteral}{" | [K] Kept."} << std::endl; \(\backslash\)
+    if ( \hyperlink{define_8h_a9b1ee3f8ba0f8b2838f1cf24c44519f4}{DEBUG\_FRAME\_STATUS} ) \(\backslash\)
+        std::cout << \textcolor{stringliteral}{" i : "} << \hyperlink{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}{SSTR} ( std::setfill(\textcolor{charliteral}{'0'}) << std::setw(
+      \hyperlink{main_8cpp_a6725a70b6f47b0c88de524c592b70856}{log\_number\_length}) << i ) << \textcolor{stringliteral}{" | [K] Kept."} << std::endl; \(\backslash\)
+    num\_of\_good\_frames++; \(\backslash\)
+\}
+\end{DoxyCode}
+\index{execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}!E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON@{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\index{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON@{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON}!execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON}{EXECUTE\_IMAGE\_RECONSTRUCTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON}\hypertarget{execute__commands_8h_a815c984330fd59b9a693211960320727}{}\label{execute__commands_8h_a815c984330fd59b9a693211960320727}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{comment}{/*if ( ! imageReconstruction(result, selected\_frames[i], experiment\_settings, crop\_area,
+       reconstructed\_frame) )*/} \(\backslash\)
+    if ( ! imageReconstructionMask(current\_frame , homography\_matrix, selected\_frames[i], 
+      \hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\_settings}, crop\_area, reconstructed\_frame) ) \(\backslash\)
+        if ( \hyperlink{define_8h_a9b1ee3f8ba0f8b2838f1cf24c44519f4}{DEBUG\_FRAME\_STATUS} ) \(\backslash\)
+            std::cout << \textcolor{stringliteral}{" [!] Failled in reconstruct the image. "} << std::endl; \(\backslash\)
+    result = reconstructed\_frame.clone(); \(\backslash\)
+    num\_of\_reconstructed\_frames++;
+\end{DoxyCode}
+\index{execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}!E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+U\+F\+FS@{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+U\+F\+FS}}
+\index{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+U\+F\+FS@{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+U\+F\+FS}!execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+U\+F\+FS}{EXECUTE\_IMAGE\_STUFFS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+U\+F\+FS(
+\begin{DoxyParamCaption}
+\item[{}]{string\+\_\+length, }
+\item[{}]{frame}
+\end{DoxyParamCaption}
+)}\hypertarget{execute__commands_8h_a633ebeb13695e1b87a2c65f53df0c836}{}\label{execute__commands_8h_a633ebeb13695e1b87a2c65f53df0c836}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ( \hyperlink{define_8h_a4e7a6f58664fd0a43e3076399b98f08c}{FRAME\_NUMBER\_RESULT} ) \(\backslash\)
+        cv::putText(result, \hyperlink{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}{SSTR}(std::setfill(\textcolor{charliteral}{'0'}) << std::setw(string\_length) << frame), cv::Point(150
+      ,150), cv::FONT\_HERSHEY\_TRIPLEX, 2.5, cv::Scalar(0,0,255)); \(\backslash\)
+    if ( \hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\_settings}.\hyperlink{structEXPERIMENT_aa392d503b8f79c0d0ee6168226245dd1}{save\_video\_in\_disk} )\{ \(\backslash\)
+        result = result( crop\_area ); \(\backslash\)
+        save\_video << result; \(\backslash\)
+        saved\_frames++; \(\backslash\)
+    \} \textcolor{keywordflow}{else} \{ \(\backslash\)
+        cv::rectangle( result , view\_area , cv::Scalar(255,0,0) , 2 ) ; \(\backslash\)
+        cv::rectangle( result , crop\_area , cv::Scalar(0,255,0) , 2 ) ; \(\backslash\)
+        cv::rectangle( result , drop\_area , cv::Scalar(0,0,255) , 2 ) ; \(\backslash\)
+    \}
+\end{DoxyCode}
+\index{execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}!E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+N\+FO@{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+N\+FO}}
+\index{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+N\+FO@{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+N\+FO}!execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+N\+FO}{EXECUTE\_INFO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+E\+C\+U\+T\+E\+\_\+\+I\+N\+FO}\hypertarget{execute__commands_8h_a53f1ccb877151aca373061692ce50bf8}{}\label{execute__commands_8h_a53f1ccb877151aca373061692ce50bf8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+std::cout << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" ------------------------------------------------------------------ "} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{"              Video Stabilization."} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" --> Running Armadillo version: "} << arma::arma\_version::as\_string() << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" --> Running OpenCV version: "} << CV\_VERSION << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" --> Project webpage (database, source code and results): "} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" \(\backslash\)" www.verlab.dcc.ufmg.br/semantic\_hyperlapse\_project \(\backslash\)" "} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" --> If you are using it to academic purposes, please cite: "} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" \(\backslash\)" Autores. Titulo. Conferencia. Ano \(\backslash\)" "} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" --> If you need help feel free to contact us: "} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" \(\backslash\)" michel.silva66@gmail.com \(\backslash\)" and \(\backslash\)" washington.ramos@outlook.com \(\backslash\)" "} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" --> Institution: "} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" VerLab @ Universidade Federal de Minas Gerais (UFMG), Brazil. "} << std::endl \(\backslash\)
+            << \textcolor{stringliteral}{" ------------------------------------------------------------------ "} << std::endl \(\backslash\)
+            << std::endl;
+\end{DoxyCode}
+\index{execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}!E\+X\+E\+C\+U\+T\+E\+\_\+\+V\+I\+EW@{E\+X\+E\+C\+U\+T\+E\+\_\+\+V\+I\+EW}}
+\index{E\+X\+E\+C\+U\+T\+E\+\_\+\+V\+I\+EW@{E\+X\+E\+C\+U\+T\+E\+\_\+\+V\+I\+EW}!execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+E\+C\+U\+T\+E\+\_\+\+V\+I\+EW}{EXECUTE\_VIEW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+E\+C\+U\+T\+E\+\_\+\+V\+I\+EW}\hypertarget{execute__commands_8h_a860f56fe1fc9e103945671f4b7cca16a}{}\label{execute__commands_8h_a860f56fe1fc9e103945671f4b7cca16a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ( \hyperlink{define_8h_a13198beec126efc77778680220fb4a15}{VIEW} ) \{ \(\backslash\)
+        imshow( \textcolor{stringliteral}{"Homography"}, result ); \(\backslash\)
+        cv::waitKey(\hyperlink{define_8h_a8290919fd7f022a7671a9c8ab642514b}{VIEW\_DELAY}); \(\backslash\)
+    \}
+\end{DoxyCode}
+\index{execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}!S\+S\+TR@{S\+S\+TR}}
+\index{S\+S\+TR@{S\+S\+TR}!execute\+\_\+commands.\+h@{execute\+\_\+commands.\+h}}
+\subsubsection[{\texorpdfstring{S\+S\+TR}{SSTR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+TR(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}{}\label{execute__commands_8h_a0d2f37137ee1fd6ff4a0ef803849dd63}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{static\_cast<} std::ostringstream & \textcolor{keyword}{>}( \(\backslash\)
+        ( std::ostringstream() << std::dec << x ) ).str()
+\end{DoxyCode}

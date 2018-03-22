@@ -1,0 +1,145 @@
+\hypertarget{line__and__point__operations_8cpp}{}\section{src/line\+\_\+and\+\_\+point\+\_\+operations.cpp File Reference}
+\label{line__and__point__operations_8cpp}\index{src/line\+\_\+and\+\_\+point\+\_\+operations.\+cpp@{src/line\+\_\+and\+\_\+point\+\_\+operations.\+cpp}}
+
+
+Functions to handle line and point functions.  
+
+
+{\ttfamily \#include \char`\"{}headers/line\+\_\+and\+\_\+point\+\_\+operations.\+h\char`\"{}}\\*
+Include dependency graph for line\+\_\+and\+\_\+point\+\_\+operations.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{line__and__point__operations_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{line__and__point__operations_8cpp_a6263aa9bb1b8d1a66ab24e33b3649668}{line\+Segment\+Intersection} (const cv\+::\+Point2f \&a1, const cv\+::\+Point2f \&b1, const cv\+::\+Point2f \&a2, const cv\+::\+Point2f \&b2)
+\begin{DoxyCompactList}\small\item\em Function that verify if two line segments have intersection point. \end{DoxyCompactList}\item 
+bool \hyperlink{line__and__point__operations_8cpp_aa6722cd85e8b9ffbbeb447c179fd0bae}{line\+Segment\+Intersection} (const cv\+::\+Point2f \&a1, const cv\+::\+Point2f \&b1, const cv\+::\+Point2f \&a2, const cv\+::\+Point2f \&b2, cv\+::\+Point2f \&intersection)
+\begin{DoxyCompactList}\small\item\em Function that calculate the homography matrix that leave the frame\+\_\+i to the intermediate plan between the plans of frame\+\_\+master\+\_\+pre and frame\+\_\+master\+\_\+pre with relation of the distance between them. \end{DoxyCompactList}\item 
+void \hyperlink{line__and__point__operations_8cpp_ae4a4317f4956ee9fa08d3e6445917f4f}{compute\+Angles\+And\+Mags} (const std\+::vector$<$ cv\+::\+Point2f $>$ \&points\+\_\+src, const std\+::vector$<$ cv\+::\+Point2f $>$ \&points\+\_\+dst, std\+::vector$<$ float $>$ \&angles, std\+::vector$<$ float $>$ \&mags)
+\begin{DoxyCompactList}\small\item\em Function that compute the angle and magnitude of the optical flow from the points\+\_\+src to points\+\_\+dst. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to handle line and point functions. 
+
+Functions to find lines and segment line intersection. Compute angle and magnitude of vectors. 
+
+\subsection{Function Documentation}
+\index{line\+\_\+and\+\_\+point\+\_\+operations.\+cpp@{line\+\_\+and\+\_\+point\+\_\+operations.\+cpp}!compute\+Angles\+And\+Mags@{compute\+Angles\+And\+Mags}}
+\index{compute\+Angles\+And\+Mags@{compute\+Angles\+And\+Mags}!line\+\_\+and\+\_\+point\+\_\+operations.\+cpp@{line\+\_\+and\+\_\+point\+\_\+operations.\+cpp}}
+\subsubsection[{\texorpdfstring{compute\+Angles\+And\+Mags(const std\+::vector$<$ cv\+::\+Point2f $>$ \&points\+\_\+src, const std\+::vector$<$ cv\+::\+Point2f $>$ \&points\+\_\+dst, std\+::vector$<$ float $>$ \&angles, std\+::vector$<$ float $>$ \&mags)}{computeAnglesAndMags(const std::vector< cv::Point2f > \&points\_src, const std::vector< cv::Point2f > \&points\_dst, std::vector< float > \&angles, std::vector< float > \&mags)}}]{\setlength{\rightskip}{0pt plus 5cm}void compute\+Angles\+And\+Mags (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{points\+\_\+src, }
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{points\+\_\+dst, }
+\item[{std\+::vector$<$ float $>$ \&}]{angles, }
+\item[{std\+::vector$<$ float $>$ \&}]{mags}
+\end{DoxyParamCaption}
+)}\hypertarget{line__and__point__operations_8cpp_ae4a4317f4956ee9fa08d3e6445917f4f}{}\label{line__and__point__operations_8cpp_ae4a4317f4956ee9fa08d3e6445917f4f}
+
+
+Function that compute the angle and magnitude of the optical flow from the points\+\_\+src to points\+\_\+dst. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+src} & -\/ vector of source points. \\
+\hline
+{\em points\+\_\+dst} & -\/ vector of destination points. \\
+\hline
+{\em angles} & -\/ object to save the angle of the vectors. \\
+\hline
+{\em mags} & -\/ object to save the magnitude of the vectors.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily void} 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/04/2016 
+\end{DoxyDate}
+\index{line\+\_\+and\+\_\+point\+\_\+operations.\+cpp@{line\+\_\+and\+\_\+point\+\_\+operations.\+cpp}!line\+Segment\+Intersection@{line\+Segment\+Intersection}}
+\index{line\+Segment\+Intersection@{line\+Segment\+Intersection}!line\+\_\+and\+\_\+point\+\_\+operations.\+cpp@{line\+\_\+and\+\_\+point\+\_\+operations.\+cpp}}
+\subsubsection[{\texorpdfstring{line\+Segment\+Intersection(const cv\+::\+Point2f \&a1, const cv\+::\+Point2f \&b1, const cv\+::\+Point2f \&a2, const cv\+::\+Point2f \&b2)}{lineSegmentIntersection(const cv::Point2f \&a1, const cv::Point2f \&b1, const cv::Point2f \&a2, const cv::Point2f \&b2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool line\+Segment\+Intersection (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Point2f \&}]{a1, }
+\item[{const cv\+::\+Point2f \&}]{b1, }
+\item[{const cv\+::\+Point2f \&}]{a2, }
+\item[{const cv\+::\+Point2f \&}]{b2}
+\end{DoxyParamCaption}
+)}\hypertarget{line__and__point__operations_8cpp_a6263aa9bb1b8d1a66ab24e33b3649668}{}\label{line__and__point__operations_8cpp_a6263aa9bb1b8d1a66ab24e33b3649668}
+
+
+Function that verify if two line segments have intersection point. 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://github.com/Itseez/opencv/blob/master/modules/imgproc/src/min_enclosing_triangle.cpp}{\tt https\+://github.\+com/\+Itseez/opencv/blob/master/modules/imgproc/src/min\+\_\+enclosing\+\_\+triangle.\+cpp}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em a1} & -\/ first point of the first line segment. \\
+\hline
+{\em b1} & -\/ second point of the first line segment. \\
+\hline
+{\em a2} & -\/ first point of the second line segment. \\
+\hline
+{\em b2} & -\/ second point of the second line segment.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if there is a intersection point. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if there is not a intersection point.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/04/2016 
+\end{DoxyDate}
+\index{line\+\_\+and\+\_\+point\+\_\+operations.\+cpp@{line\+\_\+and\+\_\+point\+\_\+operations.\+cpp}!line\+Segment\+Intersection@{line\+Segment\+Intersection}}
+\index{line\+Segment\+Intersection@{line\+Segment\+Intersection}!line\+\_\+and\+\_\+point\+\_\+operations.\+cpp@{line\+\_\+and\+\_\+point\+\_\+operations.\+cpp}}
+\subsubsection[{\texorpdfstring{line\+Segment\+Intersection(const cv\+::\+Point2f \&a1, const cv\+::\+Point2f \&b1, const cv\+::\+Point2f \&a2, const cv\+::\+Point2f \&b2, cv\+::\+Point2f \&intersection)}{lineSegmentIntersection(const cv::Point2f \&a1, const cv::Point2f \&b1, const cv::Point2f \&a2, const cv::Point2f \&b2, cv::Point2f \&intersection)}}]{\setlength{\rightskip}{0pt plus 5cm}bool line\+Segment\+Intersection (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Point2f \&}]{a1, }
+\item[{const cv\+::\+Point2f \&}]{b1, }
+\item[{const cv\+::\+Point2f \&}]{a2, }
+\item[{const cv\+::\+Point2f \&}]{b2, }
+\item[{cv\+::\+Point2f \&}]{intersection}
+\end{DoxyParamCaption}
+)}\hypertarget{line__and__point__operations_8cpp_aa6722cd85e8b9ffbbeb447c179fd0bae}{}\label{line__and__point__operations_8cpp_aa6722cd85e8b9ffbbeb447c179fd0bae}
+
+
+Function that calculate the homography matrix that leave the frame\+\_\+i to the intermediate plan between the plans of frame\+\_\+master\+\_\+pre and frame\+\_\+master\+\_\+pre with relation of the distance between them. 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://github.com/Itseez/opencv/blob/master/modules/imgproc/src/min_enclosing_triangle.cpp}{\tt https\+://github.\+com/\+Itseez/opencv/blob/master/modules/imgproc/src/min\+\_\+enclosing\+\_\+triangle.\+cpp}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em a1} & -\/ first point of the first line segment. \\
+\hline
+{\em b1} & -\/ second point of the first line segment. \\
+\hline
+{\em a2} & -\/ first point of the second line segment. \\
+\hline
+{\em b2} & -\/ second point of the second line segment. \\
+\hline
+{\em intersection} & -\/ intersection point between the line segments.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if there is a intersection point. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if there is not a intersection point.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/04/2016 
+\end{DoxyDate}

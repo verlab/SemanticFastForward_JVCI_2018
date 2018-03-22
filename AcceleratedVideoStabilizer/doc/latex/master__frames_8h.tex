@@ -1,0 +1,103 @@
+\hypertarget{master__frames_8h}{}\section{headers/master\+\_\+frames.h File Reference}
+\label{master__frames_8h}\index{headers/master\+\_\+frames.\+h@{headers/master\+\_\+frames.\+h}}
+
+
+Header functions for the \hyperlink{master__frames_8cpp}{master\+\_\+frames.\+cpp}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$omp.\+h$>$}\\*
+{\ttfamily \#include $<$armadillo$>$}\\*
+{\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/features2d/features2d.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/nonfree/nonfree.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/calib3d/calib3d.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}definitions/experiment\+\_\+struct.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}homography.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}file\+\_\+operations.\+h\char`\"{}}\\*
+Include dependency graph for master\+\_\+frames.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{master__frames_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{master__frames_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{master__frames_8h_af399de8fc7e31d60cccdf90efa80541c}{get\+Master\+Frames} (const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, const int num\+\_\+frames)
+\begin{DoxyCompactList}\small\item\em Function that return the master frames in a sequence according with experiment settings, by load from a file or calculating them. \end{DoxyCompactList}\item 
+int \hyperlink{master__frames_8h_add63ac6145fd4d298e34df91185136b1}{length} (int number)
+\begin{DoxyCompactList}\small\item\em Function that counts the digits of the number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header functions for the \hyperlink{master__frames_8cpp}{master\+\_\+frames.\+cpp}. 
+
+
+
+\subsection{Function Documentation}
+\index{master\+\_\+frames.\+h@{master\+\_\+frames.\+h}!get\+Master\+Frames@{get\+Master\+Frames}}
+\index{get\+Master\+Frames@{get\+Master\+Frames}!master\+\_\+frames.\+h@{master\+\_\+frames.\+h}}
+\subsubsection[{\texorpdfstring{get\+Master\+Frames(const E\+X\+P\+E\+R\+I\+M\+E\+N\+T experiment\+\_\+settings, const int num\+\_\+frames)}{getMasterFrames(const EXPERIMENT experiment\_settings, const int num\_frames)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ get\+Master\+Frames (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT}}]{experiment\+\_\+settings, }
+\item[{const int}]{num\+\_\+frames}
+\end{DoxyParamCaption}
+)}\hypertarget{master__frames_8h_af399de8fc7e31d60cccdf90efa80541c}{}\label{master__frames_8h_af399de8fc7e31d60cccdf90efa80541c}
+
+
+Function that return the master frames in a sequence according with experiment settings, by load from a file or calculating them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+\_\+settings} & -\/ object with the experiment settings. \\
+\hline
+{\em num\+\_\+frames} & -\/ number of frames of the reduced video.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily std\+::vector$<$int$>$} -\/ vector with the master frames found in the sequence.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/04/2016 
+\end{DoxyDate}
+\index{master\+\_\+frames.\+h@{master\+\_\+frames.\+h}!length@{length}}
+\index{length@{length}!master\+\_\+frames.\+h@{master\+\_\+frames.\+h}}
+\subsubsection[{\texorpdfstring{length(int number)}{length(int number)}}]{\setlength{\rightskip}{0pt plus 5cm}int length (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}\hypertarget{master__frames_8h_add63ac6145fd4d298e34df91185136b1}{}\label{master__frames_8h_add63ac6145fd4d298e34df91185136b1}
+
+
+Function that counts the digits of the number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & -\/ number to calculate the number of digits.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily int} -\/ number of digits of the input number.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/04/2016 
+\end{DoxyDate}

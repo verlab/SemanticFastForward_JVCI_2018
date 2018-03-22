@@ -1,0 +1,54 @@
+<?xml version="1.0" ?> 
+<opencv_storage>
+    
+<!-- [ strings ] File path -->
+    <video_path>
+        /path/to/video/folder/
+    </video_path>
+
+    <video_name>
+        video.avi
+    </video_name>
+
+    <output_path>
+        /path/to/output/folder/
+    </output_path>
+
+    <original_video_filename>
+        /path/to/original/video/original.mp4
+    </original_video_filename>
+
+    <selected_frames_filename>
+        /path/to/file/of/selected_frames_and_speedups.csv
+    </selected_frames_filename>
+
+    <read_masterframes_filename>
+        /set/the/path/if/the/master_frames_file/already/exists.csv <!-- if the master frame file was not generated yet, leave it empty. -->
+    </read_masterframes_filename>
+
+    <semantic_costs_filename>
+        /path/to/the/semantic/costs/csv/file/hyperlapse_video_SemanticCosts.csv
+    </semantic_costs_filename>
+
+<!-- [ int ] Size of the segment used to select the master frames on the fast-forwarded video. -->
+    <segmentSize>
+        4
+    </segmentSize>
+
+<!-- [ boolean ] Flag to running the code in parallel using OpenMP lib. -->
+    <runningParallel>
+        true
+    </runningParallel>
+
+<!-- [ boolean ] Flag to save the master frames in disk. -->
+    <saveMasterFramesInDisk>
+        true
+    </saveMasterFramesInDisk>
+
+<!-- [ boolean ] Flag to save the final video in disk. -->
+    <saveVideoInDisk>
+        true
+    </saveVideoInDisk>
+
+
+</opencv_storage>

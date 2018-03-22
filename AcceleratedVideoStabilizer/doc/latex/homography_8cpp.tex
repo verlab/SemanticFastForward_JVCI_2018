@@ -1,0 +1,391 @@
+\hypertarget{homography_8cpp}{}\section{src/homography.cpp File Reference}
+\label{homography_8cpp}\index{src/homography.\+cpp@{src/homography.\+cpp}}
+
+
+Functions related with homography transformation.  
+
+
+{\ttfamily \#include \char`\"{}definitions/define.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/homography.\+h\char`\"{}}\\*
+Include dependency graph for homography.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{homography_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{homography_8cpp_a1d3798a81d0d3b5e8b24087a7bc60683}{find\+Homography\+Matrix} (const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&image\+\_\+dst, cv\+::\+Mat \&homography\+\_\+matrix, cv\+::\+Mat \&ransac\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Function that find the homography matrix that leaves the image\+Src to the plan of the image\+Dst. \end{DoxyCompactList}\item 
+bool \hyperlink{homography_8cpp_a1bf28b8d881beac4a6deee5cbe7ae4da}{find\+Homography\+Matrix} (const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&image\+\_\+dst, cv\+::\+Mat \&homography\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Function that find the homography matrix that leaves the image\+Src to the plan of the image\+Dst. \end{DoxyCompactList}\item 
+bool \hyperlink{homography_8cpp_a3800765da624f694682f5f1fab7f4c63}{find\+Homography\+Matrix} (const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+image\+\_\+src, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+image\+\_\+dst, const cv\+::\+Mat \&descriptors\+\_\+image\+\_\+src, const cv\+::\+Mat \&descriptors\+\_\+image\+\_\+dst, cv\+::\+Mat \&homography\+\_\+matrix, cv\+::\+Mat \&ransac\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Function that finds the homography matrix given the keypoints and descriptors. \end{DoxyCompactList}\item 
+bool \hyperlink{homography_8cpp_ae3833c553b4d2ea9817440dfc6f9b441}{find\+Homography\+Matrix} (const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+image\+\_\+src, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+image\+\_\+dst, const cv\+::\+Mat \&descriptors\+\_\+image\+\_\+src, const cv\+::\+Mat \&descriptors\+\_\+image\+\_\+dst, cv\+::\+Mat \&homography\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Function that find the homography matrix that leaves the image\+Src to the plan of the image\+Dst. \end{DoxyCompactList}\item 
+bool \hyperlink{homography_8cpp_af396adc4b5a19e8194e5ff96640f16de}{apply\+Homography\+Matrix} (const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&homography\+\_\+matrix, cv\+::\+Mat \&image\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Function that apply homography matrix in a given image. \end{DoxyCompactList}\item 
+bool \hyperlink{homography_8cpp_a67a02c0cff3e126daece706c97c9ba2c}{check\+Homography\+Consistency} (const std\+::vector$<$ cv\+::\+Point2f $>$ img\+\_\+corners, const cv\+::\+Mat \&homography\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Function that checks if after made the homography transformation the corner consistency is maintained. \end{DoxyCompactList}\item 
+bool \hyperlink{homography_8cpp_a3c17440ceb61568f04b508a4336c3402}{check\+Homography\+Consistency} (const std\+::vector$<$ cv\+::\+Point2f $>$ new\+\_\+img\+\_\+corners)
+\begin{DoxyCompactList}\small\item\em Function that checks if after made the homography transformation the corner consistency is maintained. \end{DoxyCompactList}\item 
+double \hyperlink{homography_8cpp_a94196b6d4321a287adf2b3051a5fad83}{get\+Area\+Ratio} (const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&homography\+\_\+matrix, const cv\+::\+Rect \&frame\+\_\+limits)
+\begin{DoxyCompactList}\small\item\em Function that calculates the loss(\%) of the homography transformation in a R\+OI. \end{DoxyCompactList}\item 
+\hyperlink{homography_8h_a340f89166e818e04b9c370262c161789}{Homog\+Coverage} \hyperlink{homography_8cpp_a8007547c4ef0394a46a61a21b6eab88c}{get\+Homog\+Coverage} (const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&homography\+\_\+matrix, const cv\+::\+Rect \&drop\+\_\+area, const cv\+::\+Rect \&crop\+\_\+area)
+\begin{DoxyCompactList}\small\item\em Function that calculates the loss(\%) of the homography transformation in a R\+OI. \end{DoxyCompactList}\item 
+void \hyperlink{homography_8cpp_af766393f5eb33e81f7f77f8ddc17cf03}{get\+Keypoints\+And\+Descriptors} (const cv\+::\+Mat \&image, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, cv\+::\+Mat \&descriptors)
+\begin{DoxyCompactList}\small\item\em Function that gets the keypoints and describe an image in order to avoid unnecessary computations for tasks like finding the homography matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions related with homography transformation. 
+
+Functions find homography matrix between two images. Apply homography matrix. Check if the image corner consistency is held after application of the homography matrix. Check the area ratio between the image after the homography matrix application and the frame boundaries. 
+
+\subsection{Function Documentation}
+\index{homography.\+cpp@{homography.\+cpp}!apply\+Homography\+Matrix@{apply\+Homography\+Matrix}}
+\index{apply\+Homography\+Matrix@{apply\+Homography\+Matrix}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{apply\+Homography\+Matrix(const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&homography\+\_\+matrix, cv\+::\+Mat \&image\+\_\+result)}{applyHomographyMatrix(const cv::Mat \&image\_src, const cv::Mat \&homography\_matrix, cv::Mat \&image\_result)}}]{\setlength{\rightskip}{0pt plus 5cm}bool apply\+Homography\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image\+\_\+src, }
+\item[{const cv\+::\+Mat \&}]{homography\+\_\+matrix, }
+\item[{cv\+::\+Mat \&}]{image\+\_\+result}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_af396adc4b5a19e8194e5ff96640f16de}{}\label{homography_8cpp_af396adc4b5a19e8194e5ff96640f16de}
+
+
+Function that apply homography matrix in a given image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+src} & -\/ image where the homography matrix will be applied. \\
+\hline
+{\em homography\+\_\+matrix} & -\/ homography matrix. \\
+\hline
+{\em image\+\_\+result} & -\/ object to save the image after the application of the homography matrix.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the corner consistency is maintained after application of the homography matrix. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the consistency is not maintained after application of the homography matrix. In this case the image\+Result is a simple copy of the image\+Src.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+25/03/2016 
+\end{DoxyDate}
+\index{homography.\+cpp@{homography.\+cpp}!check\+Homography\+Consistency@{check\+Homography\+Consistency}}
+\index{check\+Homography\+Consistency@{check\+Homography\+Consistency}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{check\+Homography\+Consistency(const std\+::vector$<$ cv\+::\+Point2f $>$ img\+\_\+corners, const cv\+::\+Mat \&homography\+\_\+matrix)}{checkHomographyConsistency(const std::vector< cv::Point2f > img\_corners, const cv::Mat \&homography\_matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}bool check\+Homography\+Consistency (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$}]{img\+\_\+corners, }
+\item[{const cv\+::\+Mat \&}]{homography\+\_\+matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_a67a02c0cff3e126daece706c97c9ba2c}{}\label{homography_8cpp_a67a02c0cff3e126daece706c97c9ba2c}
+
+
+Function that checks if after made the homography transformation the corner consistency is maintained. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+corners} & -\/ image corners in the following order\+: ~\newline
+ {\ttfamily img\+\_\+corners}\mbox{[}0\mbox{]} = 0 , 0 ~\newline
+ {\ttfamily img\+\_\+corners}\mbox{[}1\mbox{]} = cols , 0 ~\newline
+ {\ttfamily img\+\_\+corners}\mbox{[}2\mbox{]} = 0 , rows ~\newline
+ {\ttfamily img\+\_\+corners}\mbox{[}3\mbox{]} = cols , rows \\
+\hline
+{\em homography\+\_\+matrix} & -\/ homography matrix that will be checked the consistency.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the consistency is maintained. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the consistency is not maintained.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/04/2016 
+\end{DoxyDate}
+\index{homography.\+cpp@{homography.\+cpp}!check\+Homography\+Consistency@{check\+Homography\+Consistency}}
+\index{check\+Homography\+Consistency@{check\+Homography\+Consistency}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{check\+Homography\+Consistency(const std\+::vector$<$ cv\+::\+Point2f $>$ new\+\_\+img\+\_\+corners)}{checkHomographyConsistency(const std::vector< cv::Point2f > new\_img\_corners)}}]{\setlength{\rightskip}{0pt plus 5cm}bool check\+Homography\+Consistency (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$}]{new\+\_\+img\+\_\+corners}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_a3c17440ceb61568f04b508a4336c3402}{}\label{homography_8cpp_a3c17440ceb61568f04b508a4336c3402}
+
+
+Function that checks if after made the homography transformation the corner consistency is maintained. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+img\+\_\+corners} & -\/ image corners in the following order\+: ~\newline
+ {\ttfamily img\+\_\+corners}\mbox{[}0\mbox{]} = 0 , 0 ~\newline
+ {\ttfamily img\+\_\+corners}\mbox{[}1\mbox{]} = cols , 0 ~\newline
+ {\ttfamily img\+\_\+corners}\mbox{[}2\mbox{]} = 0 , rows ~\newline
+ {\ttfamily img\+\_\+corners}\mbox{[}3\mbox{]} = cols , rows\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the consistency is maintained. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the consistency is not maintained.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/04/2016 
+\end{DoxyDate}
+\index{homography.\+cpp@{homography.\+cpp}!find\+Homography\+Matrix@{find\+Homography\+Matrix}}
+\index{find\+Homography\+Matrix@{find\+Homography\+Matrix}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Homography\+Matrix(const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&image\+\_\+dst, cv\+::\+Mat \&homography\+\_\+matrix, cv\+::\+Mat \&ransac\+\_\+mask)}{findHomographyMatrix(const cv::Mat \&image\_src, const cv::Mat \&image\_dst, cv::Mat \&homography\_matrix, cv::Mat \&ransac\_mask)}}]{\setlength{\rightskip}{0pt plus 5cm}bool find\+Homography\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image\+\_\+src, }
+\item[{const cv\+::\+Mat \&}]{image\+\_\+dst, }
+\item[{cv\+::\+Mat \&}]{homography\+\_\+matrix, }
+\item[{cv\+::\+Mat \&}]{ransac\+\_\+mask}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_a1d3798a81d0d3b5e8b24087a7bc60683}{}\label{homography_8cpp_a1d3798a81d0d3b5e8b24087a7bc60683}
+
+
+Function that find the homography matrix that leaves the image\+Src to the plan of the image\+Dst. 
+
+Function that find the homography matrix that leave the image\+Src to the plan of the image\+Dst.
+
+Returns the Ransak mask after finding the homography matrix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+src} & -\/ image to where the homography will be calculated. \\
+\hline
+{\em image\+\_\+dst} & -\/ image of the destination of the homography. \\
+\hline
+{\em homography\+\_\+matrix} & -\/ object to homography matrix calculated. \\
+\hline
+{\em ransac\+\_\+mask} & -\/ R\+A\+N\+S\+AC mask of the homography matrix. 1 means inliers and 0 means outliers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if there is enough points in both images and good matches between them to find a homography matrix. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if there is not enough points in both images or good matches between them to find a homography matrix.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/03/2016 
+\end{DoxyDate}
+\index{homography.\+cpp@{homography.\+cpp}!find\+Homography\+Matrix@{find\+Homography\+Matrix}}
+\index{find\+Homography\+Matrix@{find\+Homography\+Matrix}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Homography\+Matrix(const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&image\+\_\+dst, cv\+::\+Mat \&homography\+\_\+matrix)}{findHomographyMatrix(const cv::Mat \&image\_src, const cv::Mat \&image\_dst, cv::Mat \&homography\_matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}bool find\+Homography\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image\+\_\+src, }
+\item[{const cv\+::\+Mat \&}]{image\+\_\+dst, }
+\item[{cv\+::\+Mat \&}]{homography\+\_\+matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_a1bf28b8d881beac4a6deee5cbe7ae4da}{}\label{homography_8cpp_a1bf28b8d881beac4a6deee5cbe7ae4da}
+
+
+Function that find the homography matrix that leaves the image\+Src to the plan of the image\+Dst. 
+
+Function that find the homography matrix that leave the image\+Src to the plan of the image\+Dst.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+src} & -\/ image to where the homography will be calculated. \\
+\hline
+{\em image\+\_\+dst} & -\/ image of the destination of the homography. \\
+\hline
+{\em homography\+\_\+matrix} & -\/ object to save the homography matrix calculated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if there is enough points in both images and good matches between them to find a homography matrix. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if there is not enough points in both images or good matches between them to find a homography matrix.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/03/2016 
+\end{DoxyDate}
+\index{homography.\+cpp@{homography.\+cpp}!find\+Homography\+Matrix@{find\+Homography\+Matrix}}
+\index{find\+Homography\+Matrix@{find\+Homography\+Matrix}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Homography\+Matrix(const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+image\+\_\+src, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+image\+\_\+dst, const cv\+::\+Mat \&descriptors\+\_\+image\+\_\+src, const cv\+::\+Mat \&descriptors\+\_\+image\+\_\+dst, cv\+::\+Mat \&homography\+\_\+matrix, cv\+::\+Mat \&ransac\+\_\+mask)}{findHomographyMatrix(const std::vector< cv::KeyPoint > \&keypoints\_image\_src, const std::vector< cv::KeyPoint > \&keypoints\_image\_dst, const cv::Mat \&descriptors\_image\_src, const cv::Mat \&descriptors\_image\_dst, cv::Mat \&homography\_matrix, cv::Mat \&ransac\_mask)}}]{\setlength{\rightskip}{0pt plus 5cm}bool find\+Homography\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+image\+\_\+src, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+image\+\_\+dst, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+image\+\_\+src, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+image\+\_\+dst, }
+\item[{cv\+::\+Mat \&}]{homography\+\_\+matrix, }
+\item[{cv\+::\+Mat \&}]{ransac\+\_\+mask}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_a3800765da624f694682f5f1fab7f4c63}{}\label{homography_8cpp_a3800765da624f694682f5f1fab7f4c63}
+
+
+Function that finds the homography matrix given the keypoints and descriptors. 
+
+Returns the Ransak mask after finding the homography matrix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em keypoints\+\_\+image\+\_\+src} & -\/ keypoints of the source image. \\
+\hline
+{\em keypoints\+\_\+image\+\_\+dst} & -\/ keypoints of the target image. \\
+\hline
+{\em descriptors\+\_\+image\+\_\+src} & -\/ descriptors of the source image. \\
+\hline
+{\em descriptors\+\_\+image\+\_\+dst} & -\/ descriptors of the target image. \\
+\hline
+{\em homography\+\_\+matrix} & -\/ object to homography matrix calculated. \\
+\hline
+{\em ransac\+\_\+mask} & -\/ R\+A\+N\+S\+AC mask of the homography matrix. 1 means inliers and 0 means outliers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if there is enough points in both images and good matches between them to find a homography matrix. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if there is not enough points in both images or good matches between them to find a homography matrix.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/08/2016 
+\end{DoxyDate}
+\index{homography.\+cpp@{homography.\+cpp}!find\+Homography\+Matrix@{find\+Homography\+Matrix}}
+\index{find\+Homography\+Matrix@{find\+Homography\+Matrix}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Homography\+Matrix(const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+image\+\_\+src, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints\+\_\+image\+\_\+dst, const cv\+::\+Mat \&descriptors\+\_\+image\+\_\+src, const cv\+::\+Mat \&descriptors\+\_\+image\+\_\+dst, cv\+::\+Mat \&homography\+\_\+matrix)}{findHomographyMatrix(const std::vector< cv::KeyPoint > \&keypoints\_image\_src, const std::vector< cv::KeyPoint > \&keypoints\_image\_dst, const cv::Mat \&descriptors\_image\_src, const cv::Mat \&descriptors\_image\_dst, cv::Mat \&homography\_matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}bool find\+Homography\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+image\+\_\+src, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints\+\_\+image\+\_\+dst, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+image\+\_\+src, }
+\item[{const cv\+::\+Mat \&}]{descriptors\+\_\+image\+\_\+dst, }
+\item[{cv\+::\+Mat \&}]{homography\+\_\+matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_ae3833c553b4d2ea9817440dfc6f9b441}{}\label{homography_8cpp_ae3833c553b4d2ea9817440dfc6f9b441}
+
+
+Function that find the homography matrix that leaves the image\+Src to the plan of the image\+Dst. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keypoints\+\_\+image\+\_\+src} & -\/ keypoints of the source image. \\
+\hline
+{\em keypoints\+\_\+image\+\_\+dst} & -\/ keypoints of the target image. \\
+\hline
+{\em descriptors\+\_\+image\+\_\+src} & -\/ descriptors of the source image. \\
+\hline
+{\em descriptors\+\_\+image\+\_\+dst} & -\/ descriptors of the target image. \\
+\hline
+{\em homography\+\_\+matrix} & -\/ object to save the homography matrix calculated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if there is enough points in both images and good matches between them to find a homography matrix. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if there is not enough points in both images or good matches between them to find a homography matrix.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/09/2016 
+\end{DoxyDate}
+\index{homography.\+cpp@{homography.\+cpp}!get\+Area\+Ratio@{get\+Area\+Ratio}}
+\index{get\+Area\+Ratio@{get\+Area\+Ratio}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Area\+Ratio(const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&homography\+\_\+matrix, const cv\+::\+Rect \&frame\+\_\+limits)}{getAreaRatio(const cv::Mat \&image\_src, const cv::Mat \&homography\_matrix, const cv::Rect \&frame\_limits)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+Area\+Ratio (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image\+\_\+src, }
+\item[{const cv\+::\+Mat \&}]{homography\+\_\+matrix, }
+\item[{const cv\+::\+Rect \&}]{frame\+\_\+limits}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_a94196b6d4321a287adf2b3051a5fad83}{}\label{homography_8cpp_a94196b6d4321a287adf2b3051a5fad83}
+
+
+Function that calculates the loss(\%) of the homography transformation in a R\+OI. 
+
+It returns the ratio between the non-\/image area and the frame\+\_\+limits area.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+src} & -\/ The source image. \\
+\hline
+{\em homography\+\_\+matrix} & -\/ The homography matrix. \\
+\hline
+{\em frame\+\_\+limits} & -\/ The region of interest (R\+OI).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily double} -\/ The ratio between non-\/image area and the whole frame area.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/04/2016 
+\end{DoxyDate}
+\index{homography.\+cpp@{homography.\+cpp}!get\+Homog\+Coverage@{get\+Homog\+Coverage}}
+\index{get\+Homog\+Coverage@{get\+Homog\+Coverage}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Homog\+Coverage(const cv\+::\+Mat \&image\+\_\+src, const cv\+::\+Mat \&homography\+\_\+matrix, const cv\+::\+Rect \&drop\+\_\+area, const cv\+::\+Rect \&crop\+\_\+area)}{getHomogCoverage(const cv::Mat \&image\_src, const cv::Mat \&homography\_matrix, const cv::Rect \&drop\_area, const cv::Rect \&crop\_area)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Homog\+Coverage} get\+Homog\+Coverage (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image\+\_\+src, }
+\item[{const cv\+::\+Mat \&}]{homography\+\_\+matrix, }
+\item[{const cv\+::\+Rect \&}]{drop\+\_\+area, }
+\item[{const cv\+::\+Rect \&}]{crop\+\_\+area}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_a8007547c4ef0394a46a61a21b6eab88c}{}\label{homography_8cpp_a8007547c4ef0394a46a61a21b6eab88c}
+
+
+Function that calculates the loss(\%) of the homography transformation in a R\+OI. 
+
+It returns the coverage of a transformation which is N\+O\+NE, D\+R\+O\+P\+\_\+\+A\+R\+EA or C\+R\+O\+P\+\_\+\+A\+R\+EA. 
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+src} & -\/ The source image. \\
+\hline
+{\em homography\+\_\+matrix} & -\/ The homography matrix. \\
+\hline
+{\em drop\+\_\+area} & -\/ The region of interest (R\+OI) for the drop area. \\
+\hline
+{\em crop\+\_\+area} & -\/ The region of interest (R\+OI) for the crop area. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Homog\+Coverage enum value
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/09/2016 
+\end{DoxyDate}
+\index{homography.\+cpp@{homography.\+cpp}!get\+Keypoints\+And\+Descriptors@{get\+Keypoints\+And\+Descriptors}}
+\index{get\+Keypoints\+And\+Descriptors@{get\+Keypoints\+And\+Descriptors}!homography.\+cpp@{homography.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Keypoints\+And\+Descriptors(const cv\+::\+Mat \&image, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, cv\+::\+Mat \&descriptors)}{getKeypointsAndDescriptors(const cv::Mat \&image, std::vector< cv::KeyPoint > \&keypoints, cv::Mat \&descriptors)}}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Keypoints\+And\+Descriptors (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image, }
+\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints, }
+\item[{cv\+::\+Mat \&}]{descriptors}
+\end{DoxyParamCaption}
+)}\hypertarget{homography_8cpp_af766393f5eb33e81f7f77f8ddc17cf03}{}\label{homography_8cpp_af766393f5eb33e81f7f77f8ddc17cf03}
+
+
+Function that gets the keypoints and describe an image in order to avoid unnecessary computations for tasks like finding the homography matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & -\/ image to where the keypoints and descriptors are to be extracted from. \\
+\hline
+{\em keypoints} & -\/ the keypoints found in the image. \\
+\hline
+{\em descriptors} & -\/ the descriptors of the image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Washington Luis de Souza Ramos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/08/2016 
+\end{DoxyDate}

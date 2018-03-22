@@ -1,0 +1,169 @@
+\hypertarget{define_8h}{}\section{definitions/define.h File Reference}
+\label{define_8h}\index{definitions/define.\+h@{definitions/define.\+h}}
+
+
+Macros used in the code relate with debug/view flags and usual values.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{define_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{define_8h_a13198beec126efc77778680220fb4a15}{V\+I\+EW}~1 /$\ast$true$\ast$/    /$\ast$false$\ast$/
+\begin{DoxyCompactList}\small\item\em Show images for each step of processing in a window called \textquotesingle{}Homography\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_a8290919fd7f022a7671a9c8ab642514b}{V\+I\+E\+W\+\_\+\+D\+E\+L\+AY}~0
+\begin{DoxyCompactList}\small\item\em Show images for each step of processing in a window called \textquotesingle{}Homography\textquotesingle{}. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_a4e7a6f58664fd0a43e3076399b98f08c}{F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+R\+E\+S\+U\+LT}~0 /$\ast$true$\ast$/    /$\ast$false$\ast$/
+\begin{DoxyCompactList}\small\item\em Print the frame number in the images before save it. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_a2c78c39688292c571d5953d7e9804ec5}{D\+E\+B\+U\+G\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+F\+R\+A\+ME}~0 /$\ast$true$\ast$/    /$\ast$false$\ast$/
+\begin{DoxyCompactList}\small\item\em Print variable values for each step of processing in the main cpp file. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_a9b1ee3f8ba0f8b2838f1cf24c44519f4}{D\+E\+B\+U\+G\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+T\+A\+T\+US}~1 /$\ast$true$\ast$/    /$\ast$false$\ast$/
+\begin{DoxyCompactList}\small\item\em Print variable values for each step of processing in the main cpp file. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_a9f0d78e00ea067275e3a1e8a0b2a1baa}{D\+E\+B\+U\+G\+\_\+\+H\+O\+M\+O\+G\+R\+A\+P\+HY}~0 /$\ast$true$\ast$/    /$\ast$false$\ast$/
+\begin{DoxyCompactList}\small\item\em Print variable values for each step of processing in the homography cpp file. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_ad9ad2864f6a3064acd18b4aac440108d}{D\+E\+B\+U\+G\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON}~0 /$\ast$true$\ast$/    /$\ast$false$\ast$/
+\begin{DoxyCompactList}\small\item\em Print variable values for each step of processing in the image\+\_\+reconstruciton cpp file. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_aa55124c9e7cbfdf5b234e4f8128618e8}{M\+I\+N\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+O\+O\+D\+\_\+\+M\+A\+T\+C\+H\+ES}~50
+\begin{DoxyCompactList}\small\item\em Minimum number of good matches to calcule the homography matrix. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_a249638630837bda97ebb266001f43181}{M\+A\+X\+I\+M\+U\+M\+\_\+\+A\+R\+E\+A\+\_\+\+A\+L\+L\+O\+W\+ED}~0.\+001d
+\begin{DoxyCompactList}\small\item\em Maximum area allowed to check if an image need to continue on being reconstructed. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_afacb15ef807794c331301421eabbf6c9}{N\+U\+M\+\_\+\+M\+A\+X\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+O\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+CT}~30
+\begin{DoxyCompactList}\small\item\em Number maximum of images that could be used to reconstruct a image in the \hyperlink{image__reconstruction_8cpp}{image\+\_\+reconstruction.\+cpp}. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_aa3f3943af5fdd5551c55e5ae7e9a6abc}{M\+I\+N\+\_\+\+H\+E\+S\+S\+I\+AN}~400
+\begin{DoxyCompactList}\small\item\em The S\+U\+RF Hessian minimum threshold. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_a72de703228ed5e9def19a41d75583717}{M\+A\+T\+C\+H\+E\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+F\+A\+C\+T\+OR}~3
+\begin{DoxyCompactList}\small\item\em Multiplier to the minimum distance from descriptors to set a threshold in matches search. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_aa3058a26bcaae9fc46b648e30e2031a0}{C\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON}~0.\+05f
+\begin{DoxyCompactList}\small\item\em The percentage of the original image that can be lost. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_ad0321d6454b40d9bff133bb1069e2a75}{D\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON}~0.\+2f
+\begin{DoxyCompactList}\small\item\em The percentage of the original image that can be lost. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_a4a206f0b77a48c47af486acc3d3cf1be}{M\+A\+X\+\_\+\+D\+R\+O\+P\+\_\+\+A\+T\+T\+E\+M\+P\+TS}~3
+\begin{DoxyCompactList}\small\item\em Max number of drops if smaller than the drop area. \end{DoxyCompactList}\item 
+\#define \hyperlink{define_8h_aa9342e72f75f6fb967145d9ac545a040}{M\+A\+X\+\_\+\+S\+K\+IP}~100
+\begin{DoxyCompactList}\small\item\em Max number of frames skip from any frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Macros used in the code relate with debug/view flags and usual values. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{define.\+h@{define.\+h}!C\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON@{C\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON}}
+\index{C\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON@{C\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{C\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON}{CROP\_PORTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON~0.\+05f}\hypertarget{define_8h_aa3058a26bcaae9fc46b648e30e2031a0}{}\label{define_8h_aa3058a26bcaae9fc46b648e30e2031a0}
+
+
+The percentage of the original image that can be lost. 
+
+\index{define.\+h@{define.\+h}!D\+E\+B\+U\+G\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+T\+A\+T\+US@{D\+E\+B\+U\+G\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+T\+A\+T\+US}}
+\index{D\+E\+B\+U\+G\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+T\+A\+T\+US@{D\+E\+B\+U\+G\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+T\+A\+T\+US}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+T\+A\+T\+US}{DEBUG\_FRAME\_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+T\+A\+T\+US~1 /$\ast$true$\ast$/    /$\ast$false$\ast$/}\hypertarget{define_8h_a9b1ee3f8ba0f8b2838f1cf24c44519f4}{}\label{define_8h_a9b1ee3f8ba0f8b2838f1cf24c44519f4}
+
+
+Print variable values for each step of processing in the main cpp file. 
+
+\index{define.\+h@{define.\+h}!D\+E\+B\+U\+G\+\_\+\+H\+O\+M\+O\+G\+R\+A\+P\+HY@{D\+E\+B\+U\+G\+\_\+\+H\+O\+M\+O\+G\+R\+A\+P\+HY}}
+\index{D\+E\+B\+U\+G\+\_\+\+H\+O\+M\+O\+G\+R\+A\+P\+HY@{D\+E\+B\+U\+G\+\_\+\+H\+O\+M\+O\+G\+R\+A\+P\+HY}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+H\+O\+M\+O\+G\+R\+A\+P\+HY}{DEBUG\_HOMOGRAPHY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+H\+O\+M\+O\+G\+R\+A\+P\+HY~0 /$\ast$true$\ast$/    /$\ast$false$\ast$/}\hypertarget{define_8h_a9f0d78e00ea067275e3a1e8a0b2a1baa}{}\label{define_8h_a9f0d78e00ea067275e3a1e8a0b2a1baa}
+
+
+Print variable values for each step of processing in the homography cpp file. 
+
+\index{define.\+h@{define.\+h}!D\+E\+B\+U\+G\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+F\+R\+A\+ME@{D\+E\+B\+U\+G\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+F\+R\+A\+ME}}
+\index{D\+E\+B\+U\+G\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+F\+R\+A\+ME@{D\+E\+B\+U\+G\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+F\+R\+A\+ME}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+F\+R\+A\+ME}{DEBUG\_INTERMEDIATE\_FRAME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+F\+R\+A\+ME~0 /$\ast$true$\ast$/    /$\ast$false$\ast$/}\hypertarget{define_8h_a2c78c39688292c571d5953d7e9804ec5}{}\label{define_8h_a2c78c39688292c571d5953d7e9804ec5}
+
+
+Print variable values for each step of processing in the main cpp file. 
+
+\index{define.\+h@{define.\+h}!D\+E\+B\+U\+G\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON@{D\+E\+B\+U\+G\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\index{D\+E\+B\+U\+G\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON@{D\+E\+B\+U\+G\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON}{DEBUG\_RECONSTRUCTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+ON~0 /$\ast$true$\ast$/    /$\ast$false$\ast$/}\hypertarget{define_8h_ad9ad2864f6a3064acd18b4aac440108d}{}\label{define_8h_ad9ad2864f6a3064acd18b4aac440108d}
+
+
+Print variable values for each step of processing in the image\+\_\+reconstruciton cpp file. 
+
+\index{define.\+h@{define.\+h}!D\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON@{D\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON}}
+\index{D\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON@{D\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{D\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON}{DROP\_PORTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+R\+O\+P\+\_\+\+P\+O\+R\+T\+I\+ON~0.\+2f}\hypertarget{define_8h_ad0321d6454b40d9bff133bb1069e2a75}{}\label{define_8h_ad0321d6454b40d9bff133bb1069e2a75}
+
+
+The percentage of the original image that can be lost. 
+
+\index{define.\+h@{define.\+h}!F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+R\+E\+S\+U\+LT@{F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+R\+E\+S\+U\+LT}}
+\index{F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+R\+E\+S\+U\+LT@{F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+R\+E\+S\+U\+LT}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+R\+E\+S\+U\+LT}{FRAME\_NUMBER\_RESULT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+R\+A\+M\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+R\+E\+S\+U\+LT~0 /$\ast$true$\ast$/    /$\ast$false$\ast$/}\hypertarget{define_8h_a4e7a6f58664fd0a43e3076399b98f08c}{}\label{define_8h_a4e7a6f58664fd0a43e3076399b98f08c}
+
+
+Print the frame number in the images before save it. 
+
+\index{define.\+h@{define.\+h}!M\+A\+T\+C\+H\+E\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+F\+A\+C\+T\+OR@{M\+A\+T\+C\+H\+E\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+F\+A\+C\+T\+OR}}
+\index{M\+A\+T\+C\+H\+E\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+F\+A\+C\+T\+OR@{M\+A\+T\+C\+H\+E\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+F\+A\+C\+T\+OR}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+T\+C\+H\+E\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+F\+A\+C\+T\+OR}{MATCHES\_THRESHOLD\_FACTOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+T\+C\+H\+E\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+F\+A\+C\+T\+OR~3}\hypertarget{define_8h_a72de703228ed5e9def19a41d75583717}{}\label{define_8h_a72de703228ed5e9def19a41d75583717}
+
+
+Multiplier to the minimum distance from descriptors to set a threshold in matches search. 
+
+\index{define.\+h@{define.\+h}!M\+A\+X\+\_\+\+D\+R\+O\+P\+\_\+\+A\+T\+T\+E\+M\+P\+TS@{M\+A\+X\+\_\+\+D\+R\+O\+P\+\_\+\+A\+T\+T\+E\+M\+P\+TS}}
+\index{M\+A\+X\+\_\+\+D\+R\+O\+P\+\_\+\+A\+T\+T\+E\+M\+P\+TS@{M\+A\+X\+\_\+\+D\+R\+O\+P\+\_\+\+A\+T\+T\+E\+M\+P\+TS}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+D\+R\+O\+P\+\_\+\+A\+T\+T\+E\+M\+P\+TS}{MAX\_DROP\_ATTEMPTS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+D\+R\+O\+P\+\_\+\+A\+T\+T\+E\+M\+P\+TS~3}\hypertarget{define_8h_a4a206f0b77a48c47af486acc3d3cf1be}{}\label{define_8h_a4a206f0b77a48c47af486acc3d3cf1be}
+
+
+Max number of drops if smaller than the drop area. 
+
+\index{define.\+h@{define.\+h}!M\+A\+X\+\_\+\+S\+K\+IP@{M\+A\+X\+\_\+\+S\+K\+IP}}
+\index{M\+A\+X\+\_\+\+S\+K\+IP@{M\+A\+X\+\_\+\+S\+K\+IP}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+S\+K\+IP}{MAX\_SKIP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+S\+K\+IP~100}\hypertarget{define_8h_aa9342e72f75f6fb967145d9ac545a040}{}\label{define_8h_aa9342e72f75f6fb967145d9ac545a040}
+
+
+Max number of frames skip from any frame. 
+
+Defined by the fast-\/forward algorithm. \index{define.\+h@{define.\+h}!M\+A\+X\+I\+M\+U\+M\+\_\+\+A\+R\+E\+A\+\_\+\+A\+L\+L\+O\+W\+ED@{M\+A\+X\+I\+M\+U\+M\+\_\+\+A\+R\+E\+A\+\_\+\+A\+L\+L\+O\+W\+ED}}
+\index{M\+A\+X\+I\+M\+U\+M\+\_\+\+A\+R\+E\+A\+\_\+\+A\+L\+L\+O\+W\+ED@{M\+A\+X\+I\+M\+U\+M\+\_\+\+A\+R\+E\+A\+\_\+\+A\+L\+L\+O\+W\+ED}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+I\+M\+U\+M\+\_\+\+A\+R\+E\+A\+\_\+\+A\+L\+L\+O\+W\+ED}{MAXIMUM\_AREA\_ALLOWED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+I\+M\+U\+M\+\_\+\+A\+R\+E\+A\+\_\+\+A\+L\+L\+O\+W\+ED~0.\+001d}\hypertarget{define_8h_a249638630837bda97ebb266001f43181}{}\label{define_8h_a249638630837bda97ebb266001f43181}
+
+
+Maximum area allowed to check if an image need to continue on being reconstructed. 
+
+\index{define.\+h@{define.\+h}!M\+I\+N\+\_\+\+H\+E\+S\+S\+I\+AN@{M\+I\+N\+\_\+\+H\+E\+S\+S\+I\+AN}}
+\index{M\+I\+N\+\_\+\+H\+E\+S\+S\+I\+AN@{M\+I\+N\+\_\+\+H\+E\+S\+S\+I\+AN}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+H\+E\+S\+S\+I\+AN}{MIN\_HESSIAN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+\_\+\+H\+E\+S\+S\+I\+AN~400}\hypertarget{define_8h_aa3f3943af5fdd5551c55e5ae7e9a6abc}{}\label{define_8h_aa3f3943af5fdd5551c55e5ae7e9a6abc}
+
+
+The S\+U\+RF Hessian minimum threshold. 
+
+\index{define.\+h@{define.\+h}!M\+I\+N\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+O\+O\+D\+\_\+\+M\+A\+T\+C\+H\+ES@{M\+I\+N\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+O\+O\+D\+\_\+\+M\+A\+T\+C\+H\+ES}}
+\index{M\+I\+N\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+O\+O\+D\+\_\+\+M\+A\+T\+C\+H\+ES@{M\+I\+N\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+O\+O\+D\+\_\+\+M\+A\+T\+C\+H\+ES}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+O\+O\+D\+\_\+\+M\+A\+T\+C\+H\+ES}{MIN\_NUMBER\_OF\_GOOD\_MATCHES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+O\+O\+D\+\_\+\+M\+A\+T\+C\+H\+ES~50}\hypertarget{define_8h_aa55124c9e7cbfdf5b234e4f8128618e8}{}\label{define_8h_aa55124c9e7cbfdf5b234e4f8128618e8}
+
+
+Minimum number of good matches to calcule the homography matrix. 
+
+\index{define.\+h@{define.\+h}!N\+U\+M\+\_\+\+M\+A\+X\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+O\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+CT@{N\+U\+M\+\_\+\+M\+A\+X\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+O\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+CT}}
+\index{N\+U\+M\+\_\+\+M\+A\+X\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+O\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+CT@{N\+U\+M\+\_\+\+M\+A\+X\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+O\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+CT}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{N\+U\+M\+\_\+\+M\+A\+X\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+O\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+CT}{NUM\_MAX\_IMAGES\_TO\_RECONSTRUCT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+M\+A\+X\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+O\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+CT~30}\hypertarget{define_8h_afacb15ef807794c331301421eabbf6c9}{}\label{define_8h_afacb15ef807794c331301421eabbf6c9}
+
+
+Number maximum of images that could be used to reconstruct a image in the \hyperlink{image__reconstruction_8cpp}{image\+\_\+reconstruction.\+cpp}. 
+
+\index{define.\+h@{define.\+h}!V\+I\+EW@{V\+I\+EW}}
+\index{V\+I\+EW@{V\+I\+EW}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{V\+I\+EW}{VIEW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+EW~1 /$\ast$true$\ast$/    /$\ast$false$\ast$/}\hypertarget{define_8h_a13198beec126efc77778680220fb4a15}{}\label{define_8h_a13198beec126efc77778680220fb4a15}
+
+
+Show images for each step of processing in a window called \textquotesingle{}Homography\textquotesingle{}. 
+
+\index{define.\+h@{define.\+h}!V\+I\+E\+W\+\_\+\+D\+E\+L\+AY@{V\+I\+E\+W\+\_\+\+D\+E\+L\+AY}}
+\index{V\+I\+E\+W\+\_\+\+D\+E\+L\+AY@{V\+I\+E\+W\+\_\+\+D\+E\+L\+AY}!define.\+h@{define.\+h}}
+\subsubsection[{\texorpdfstring{V\+I\+E\+W\+\_\+\+D\+E\+L\+AY}{VIEW\_DELAY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+E\+W\+\_\+\+D\+E\+L\+AY~0}\hypertarget{define_8h_a8290919fd7f022a7671a9c8ab642514b}{}\label{define_8h_a8290919fd7f022a7671a9c8ab642514b}
+
+
+Show images for each step of processing in a window called \textquotesingle{}Homography\textquotesingle{}. 
+

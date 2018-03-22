@@ -1,0 +1,92 @@
+This code is based on the paper \href{http://www.verlab.dcc.ufmg.br/wp-content/uploads/2016/10/Final_Draft_ECCVW_2016_Towards_Semantic_Fast_Forward_and_Stabilied_Egocentric_Videos.pdf}{\tt Towards Semantic Fast-\/\+Forward and Stabilized Egocentric Video} on the {\bfseries First International Workshop on Egocentric Perception, Interaction and Computing} at {\bfseries European Conference on Computer Vision} (E\+P\+IC@E\+C\+CV 2016). The goal of the program is to stabilize a fast-\/forward version of a video, using the dropped frames to reconstruct distorted images during the processing.
+
+For more information, acess the link\+: \href{http://www.verlab.dcc.ufmg.br/fast-forward-video-based-on-semantic-extraction}{\tt http\+://www.\+verlab.\+dcc.\+ufmg.\+br/fast-\/forward-\/video-\/based-\/on-\/semantic-\/extraction}.
+
+\subsection*{Contact}
+
+\subsubsection*{Authors}
+
+
+\begin{DoxyItemize}
+\item Michel Melo da Silva -\/ PhD student -\/ U\+F\+MG -\/ \href{mailto:michelms@dcc.ufmg.com}{\tt michelms@dcc.\+ufmg.\+com}
+\item Washington Luis de Souza Ramos -\/ M\+Sc student -\/ U\+F\+MG -\/ \href{mailto:washington.ramos@outlook.com}{\tt washington.\+ramos@outlook.\+com}
+\item João Pedro Klock Ferreira -\/ Undergraduate Student -\/ U\+F\+MG -\/ \href{mailto:jpklock@dcc.ufmg.br}{\tt jpklock@dcc.\+ufmg.\+br}
+\item Mario Fernando Montenegro Campos -\/ Advisor -\/ U\+F\+MG -\/ \href{mailto:mario@dcc.ufmg.br}{\tt mario@dcc.\+ufmg.\+br}
+\item Erickson Rangel do Nascimento -\/ Advisor -\/ U\+F\+MG -\/ \href{mailto:erickson@dcc.ufmg.br}{\tt erickson@dcc.\+ufmg.\+br}
+\end{DoxyItemize}
+
+\subsubsection*{Institution}
+
+Federal University of Minas Gerais (U\+F\+MG) Computer Science Department Belo Horizonte -\/ Minas Gerais -\/\+Brazil
+
+\subsubsection*{Laboratory}
+
+{\bfseries Ve\+R\+Lab\+:} Vison and Robotic Laboratory \href{http://www.verlab.dcc.ufmg.br}{\tt http\+://www.\+verlab.\+dcc.\+ufmg.\+br}
+
+\subsection*{Program}
+
+\subsubsection*{Dependencies}
+
+
+\begin{DoxyItemize}
+\item Open\+CV 2.\+4 \+\_\+(Tested with 2.\+4.\+9 and 2.\+4.\+13)\+\_\+
+\item Armadillo 6 \+\_\+(Tested with 6.\+600.\+5 -- Catabolic Amalgamator)\+\_\+
+\item Boost 1 \+\_\+(Tested with 1.\+54.\+0)\+\_\+
+\item Doxygen 1 \+\_\+(for documentation -\/ Tested with 1.\+8.\+12)\+\_\+
+\end{DoxyItemize}
+
+\subsubsection*{Compiling}
+
+The program can be compiled using either {\ttfamily cmake} or {\ttfamily qmake} tools.
+
+Into the project directory, run the following commands\+: \begin{DoxyVerb}        user@computer:<project_path>: mkdir build 
+        user@computer:<project_path>: cd build
+        user@computer:<project_path/build>: cmake ..
+        user@computer:<project_path/build>: make
+        user@computer:<project_path/build>: ./VideoStabilization < Settings_file > [-h] [Range_min] [Range_max]
+\end{DoxyVerb}
+
+
+\subsubsection*{Exemples of usage}
+
+\begin{DoxyVerb}        user@computer:<project_path/build>: < Program_name > < Settings_file > [-h] [Range_min = 0 ] [Range_max = num_frames ]
+\end{DoxyVerb}
+
+
+Example 1\+: Run Video\+Stabilization using Help option. \begin{DoxyVerb}        user@computer:<project_path/build>: ./VideoStabilization -h 
+\end{DoxyVerb}
+
+
+Example 2\+: Run Video\+Stabilization in the Experiment\+\_\+1 processing the whole video. \begin{DoxyVerb}        user@computer:<project_path/build>: ./VideoStabilization Experiment_1.xml
+\end{DoxyVerb}
+
+
+Example 3\+: Run Video\+Stabilization in the Experiment\+\_\+1 processing from the 150 frame until the last one. \begin{DoxyVerb}        user@computer:<project_path/build>: ./VideoStabilization Experiment_1.xml 150 
+\end{DoxyVerb}
+
+
+Example 4\+: Run Video\+Stabilization in the Experiment\+\_\+1 processing from the 150 frame until the frame 490. \begin{DoxyVerb}        user@computer:<project_path/build>: ./VideoStabilization Experiment_1.xml 150 490
+\end{DoxyVerb}
+
+
+\subsubsection*{Documentation}
+
+To generate the documentation of the project, run the following command into the project folder\+: \begin{DoxyVerb}        user@computer:<project_path>: doxygen doc/doc_conf
+\end{DoxyVerb}
+
+
+The documentation will be generated in the {\ttfamily $<$project\+\_\+path$>$/doc} folder.
+
+\subsection*{Citation}
+
+If you are using it to academic purpose, please cite\+:
+
+M. M. Silva, W. L. S. Ramos, J. P. K. Ferreira, M. F. M. Campos, E. R. Nascimento, {\bfseries Towards semantic fast-\/forward and stabilized egocentric videos}, in\+: European Conference on Computer Vision Workshops, Springer International Publishing, Amsterdam, NL, 2016, pp. 557–571. doi\+:10.\+1007/978-\/3-\/319-\/46604-\/0\+\_\+40.
+
+\subsubsection*{Bibtex entry}
+
+\begin{quote}
+\{Silva2016, Title = \{Towards Semantic Fast-\/\+Forward and Stabilized Egocentric Videos\}, Author = \{Silva, Michel Melo and Ramos, Washington Luis Souza and Ferreira,Joao Pedro Klock and Campos, Mario Fernando Montenegro and Nascimento, Erickson Rangel\}, Editor = \{Hua, Gang and J\{\textbackslash{}\textquotesingle{}e\}gou, Herv\{\textbackslash{}\textquotesingle{}e\}\}, Pages = \{557--571\}, Publisher = \{Springer International Publishing\}, Year = \{2016\}, Address = \{Cham\}, Booktitle = \{Computer Vision -- E\+C\+CV 2016 Workshops\+: Amsterdam, The Netherlands, October 8-\/10 and 15-\/16, 2016, Proceedings, Part I\}, Doi = \{10.\+1007/978-\/3-\/319-\/46604-\/0\+\_\+40\}, I\+S\+BN = \{978-\/3-\/319-\/46604-\/0\}, Url = \{\href{http://dx.doi.org/10.1007/978-3-319-46604-0_40}{\tt http\+://dx.\+doi.\+org/10.\+1007/978-\/3-\/319-\/46604-\/0\+\_\+40}\} \} \end{quote}
+
+
+\subparagraph*{Enjoy it.}

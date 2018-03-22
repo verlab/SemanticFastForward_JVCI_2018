@@ -1,6 +1,6 @@
 # Project #
 
-This project is based on the paper [Making a long story short: A Multi-Importance Semantic for Fast-Forwarding Egocentric Videos](http://www.verlab.dcc.ufmg.br/link_to_the_file.pdf) on the **Special Issue on Egocentric Vision and Lifelogging Tools** at **Journal of Visual Communication and Image Representation** (EVLT@JVCI 2017). It implements a fast-forward method for First-Person videos based on multi-importance approach.
+This project is based on the paper [Making a long story short: A multi-importance fast-forwarding egocentric videos with the emphasis on relevant objects](https://www.verlab.dcc.ufmg.br/semantic-hyperlapse/jvci2018/) on the **Special Issue on Egocentric Vision and Lifelogging Tools** at **Journal of Visual Communication and Image Representation** (JVCI 2018). It implements a fast-forward method for first-person videos based on multi-importance approach.
 
 For more information and visual results, please acess the [project page](http://www.verlab.dcc.ufmg.br/fast-forward-video-based-on-semantic-extraction).
 
@@ -136,7 +136,7 @@ function [videoFile, startInd, endInd, filename, fps] = GetVideoDetails(video_di
 
 If you are using it to academic purpose, please cite: 
 
-M. M. Silva, W. L. S. Ramos, F.C. Chamone, J. P. K. Ferreira, M. F. M. Campos, E. R. Nascimento, __Making a long story short: A Multi-Importance Semantic for Fast-Forwarding Egocentric Videos__, in: Special Issue on Egocentric Vision and Lifelogging Tools at Journal of Visual Communication and Image Representation. doi:XXX/XXX.
+M. M. Silva, W. L. S. Ramos, F.C. Chamone, J. P. K. Ferreira, M. F. M. Campos, E. R. Nascimento, __Making a long story short: A multi-importance fast-forwarding egocentric videos with the emphasis on relevant objects__, in: Special Issue on Egocentric Vision and Lifelogging Tools at Journal of Visual Communication and Image Representation. doi:10.1016/j.jvcir.2018.02.013.
 
 ### Bibtex entry ###
 

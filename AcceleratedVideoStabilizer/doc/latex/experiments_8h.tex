@@ -1,0 +1,75 @@
+\hypertarget{experiments_8h}{}\section{definitions/experiments.h File Reference}
+\label{experiments_8h}\index{definitions/experiments.\+h@{definitions/experiments.\+h}}
+
+
+Definitions of experiment settings.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}definitions/experiment\+\_\+struct.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}executables/execute\+\_\+commands.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}headers/file\+\_\+operations.\+h\char`\"{}}\\*
+Include dependency graph for experiments.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{experiments_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{experiments_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \hyperlink{experiments_8h_ab209a6fbc3cd78cd0cbc131d71243709}{load\+\_\+experiments\+\_\+settings} (std\+::string settings\+Filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definitions of experiment settings. 
+
+
+
+\subsection{Function Documentation}
+\index{experiments.\+h@{experiments.\+h}!load\+\_\+experiments\+\_\+settings@{load\+\_\+experiments\+\_\+settings}}
+\index{load\+\_\+experiments\+\_\+settings@{load\+\_\+experiments\+\_\+settings}!experiments.\+h@{experiments.\+h}}
+\subsubsection[{\texorpdfstring{load\+\_\+experiments\+\_\+settings(std\+::string settings\+Filename)}{load\_experiments\_settings(std::string settingsFilename)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} load\+\_\+experiments\+\_\+settings (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{settings\+Filename}
+\end{DoxyParamCaption}
+)}\hypertarget{experiments_8h_ab209a6fbc3cd78cd0cbc131d71243709}{}\label{experiments_8h_ab209a6fbc3cd78cd0cbc131d71243709}
+{\itshape std\+::string} {\bfseries video\+\_\+path\+:}Complete path to the video.
+
+{\itshape std\+::string} {\bfseries output\+\_\+path\+:} Complete path to the folder where the results will be saved. It is important that the user have permission to write there.
+
+{\itshape std\+::string} {\bfseries video\+\_\+name\+:} Filename of the video with extension.
+
+{\itshape std\+::string} {\bfseries original\+\_\+video\+\_\+filename\+:} Complete path and filename of the original video.
+
+{\itshape std\+::string} {\bfseries read\+\_\+masterframes\+\_\+filename\+:} Complete path and filename of the txt file with the selected master frames.
+
+{\itshape std\+::string} {\bfseries selected\+\_\+frames\+\_\+filename\+:} Complete path and filename of the csv file with the selected master frames that was selected to create the reduced video.
+
+{\itshape std\+::string} {\bfseries semantic\+\_\+costs\+\_\+filename\+:} Complete path and filename of the csv file with the semantic cost of the frame transitions.
+
+{\itshape std\+::string} {\bfseries instability\+\_\+costs\+\_\+filename\+:} Complete path and filename of the csv file with the jitter costs of the transitions.
+
+{\itshape std\+::string} {\bfseries optical\+\_\+flow\+\_\+filename\+:} Complete path and filename of the csv file with the optical flow calculated by Flow\+Net.
+
+{\itshape int} {\bfseries segment\+Size\+:} Size of the segments where the master frames will be calculated. It needs to be a power of two (2, 4, 8, 16, ...).
+
+{\itshape bool} {\bfseries save\+Master\+Frames\+In\+Disk\+:} After calculte the master frames, do you want to save it in a file? After you can load it directly withou calculate again
+
+{\itshape bool} {\bfseries save\+Video\+In\+Disk\+:} Save stabilized video in Disk.
+
+{\itshape bool} {\bfseries running\+Parallel\+:} Running the master frames selection in parallel processors. 

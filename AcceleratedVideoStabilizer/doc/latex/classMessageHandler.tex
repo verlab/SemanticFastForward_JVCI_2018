@@ -1,0 +1,101 @@
+\hypertarget{classMessageHandler}{}\section{Message\+Handler Class Reference}
+\label{classMessageHandler}\index{Message\+Handler@{Message\+Handler}}
+
+
+{\ttfamily \#include $<$message\+\_\+handler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMessageHandler_a5a8ca5b0e6fa1e9293bfc0d972177881}{Message\+Handler} (std\+::string log\+\_\+file\+\_\+name)
+\item 
+\hyperlink{classMessageHandler_a6bee5eb7f64fe5360cada61353516a8b}{$\sim$\+Message\+Handler} (void)
+\item 
+void \hyperlink{classMessageHandler_a10772170f398c739220681f6efbc577b}{report\+Error} (\hyperlink{error__messages_8h_af8d1d72c71dcf239d1bf17fe2a760395}{Error\+Message} error\+\_\+message)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classMessageHandler_a10772170f398c739220681f6efbc577b}{Message\+Handler\+::report\+Error} Report the specified error. \end{DoxyCompactList}\item 
+void \hyperlink{classMessageHandler_a6b28b6a3515af4531583d35bb6bf5a9f}{report\+Error} (\hyperlink{error__messages_8h_af8d1d72c71dcf239d1bf17fe2a760395}{Error\+Message} error\+\_\+message, bool condition)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classMessageHandler_a10772170f398c739220681f6efbc577b}{Message\+Handler\+::report\+Error} Report the specified error if the condition is respected. \end{DoxyCompactList}\item 
+void \hyperlink{classMessageHandler_a3c896ccad36637cb0423a5e11ccfe6a5}{report\+Status} (std\+::string status, \hyperlink{message__handler_8h_a0b8b584f5fb32277059bc4e6b9bcd6f0}{Stream} stream)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classMessageHandler_a3c896ccad36637cb0423a5e11ccfe6a5}{Message\+Handler\+::report\+Status} Reports the given status to the log file, screen, or both. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Message\+Handler@{Message\+Handler}!Message\+Handler@{Message\+Handler}}
+\index{Message\+Handler@{Message\+Handler}!Message\+Handler@{Message\+Handler}}
+\subsubsection[{\texorpdfstring{Message\+Handler(std\+::string log\+\_\+file\+\_\+name)}{MessageHandler(std::string log\_file\_name)}}]{\setlength{\rightskip}{0pt plus 5cm}Message\+Handler\+::\+Message\+Handler (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{log\+\_\+file\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classMessageHandler_a5a8ca5b0e6fa1e9293bfc0d972177881}{}\label{classMessageHandler_a5a8ca5b0e6fa1e9293bfc0d972177881}
+\index{Message\+Handler@{Message\+Handler}!````~Message\+Handler@{$\sim$\+Message\+Handler}}
+\index{````~Message\+Handler@{$\sim$\+Message\+Handler}!Message\+Handler@{Message\+Handler}}
+\subsubsection[{\texorpdfstring{$\sim$\+Message\+Handler(void)}{~MessageHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}Message\+Handler\+::$\sim$\+Message\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMessageHandler_a6bee5eb7f64fe5360cada61353516a8b}{}\label{classMessageHandler_a6bee5eb7f64fe5360cada61353516a8b}
+
+
+\subsection{Member Function Documentation}
+\index{Message\+Handler@{Message\+Handler}!report\+Error@{report\+Error}}
+\index{report\+Error@{report\+Error}!Message\+Handler@{Message\+Handler}}
+\subsubsection[{\texorpdfstring{report\+Error(\+Error\+Message error\+\_\+message)}{reportError(ErrorMessage error\_message)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+Handler\+::report\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\+Message}}]{error\+\_\+message}
+\end{DoxyParamCaption}
+)}\hypertarget{classMessageHandler_a10772170f398c739220681f6efbc577b}{}\label{classMessageHandler_a10772170f398c739220681f6efbc577b}
+
+
+\hyperlink{classMessageHandler_a10772170f398c739220681f6efbc577b}{Message\+Handler\+::report\+Error} Report the specified error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+message} & \\
+\hline
+{\em condition} & \\
+\hline
+\end{DoxyParams}
+\index{Message\+Handler@{Message\+Handler}!report\+Error@{report\+Error}}
+\index{report\+Error@{report\+Error}!Message\+Handler@{Message\+Handler}}
+\subsubsection[{\texorpdfstring{report\+Error(\+Error\+Message error\+\_\+message, bool condition)}{reportError(ErrorMessage error\_message, bool condition)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+Handler\+::report\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\+Message}}]{error\+\_\+message, }
+\item[{bool}]{condition}
+\end{DoxyParamCaption}
+)}\hypertarget{classMessageHandler_a6b28b6a3515af4531583d35bb6bf5a9f}{}\label{classMessageHandler_a6b28b6a3515af4531583d35bb6bf5a9f}
+
+
+\hyperlink{classMessageHandler_a10772170f398c739220681f6efbc577b}{Message\+Handler\+::report\+Error} Report the specified error if the condition is respected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+message} & \\
+\hline
+{\em condition} & \\
+\hline
+\end{DoxyParams}
+\index{Message\+Handler@{Message\+Handler}!report\+Status@{report\+Status}}
+\index{report\+Status@{report\+Status}!Message\+Handler@{Message\+Handler}}
+\subsubsection[{\texorpdfstring{report\+Status(std\+::string status, Stream stream)}{reportStatus(std::string status, Stream stream)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+Handler\+::report\+Status (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{status, }
+\item[{{\bf Stream}}]{stream}
+\end{DoxyParamCaption}
+)}\hypertarget{classMessageHandler_a3c896ccad36637cb0423a5e11ccfe6a5}{}\label{classMessageHandler_a3c896ccad36637cb0423a5e11ccfe6a5}
+
+
+\hyperlink{classMessageHandler_a3c896ccad36637cb0423a5e11ccfe6a5}{Message\+Handler\+::report\+Status} Reports the given status to the log file, screen, or both. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & \\
+\hline
+{\em stream} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\hyperlink{message__handler_8h}{message\+\_\+handler.\+h}\item 
+src/\hyperlink{message__handler_8cpp}{message\+\_\+handler.\+cpp}\end{DoxyCompactItemize}

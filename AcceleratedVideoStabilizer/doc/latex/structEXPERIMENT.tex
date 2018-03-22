@@ -1,0 +1,162 @@
+\hypertarget{structEXPERIMENT}{}\section{E\+X\+P\+E\+R\+I\+M\+E\+NT Struct Reference}
+\label{structEXPERIMENT}\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+
+
+{\ttfamily \#include $<$experiment\+\_\+struct.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{structEXPERIMENT_af59b6805fe0851b89d1300849db794e4}{id}
+\item 
+std\+::string \hyperlink{structEXPERIMENT_a7095f959a6d88f3a5997bcd0f4579609}{video\+\_\+filename}
+\item 
+std\+::string \hyperlink{structEXPERIMENT_a05ae2a5fbc8660bdb535937d4a446698}{output\+\_\+path}
+\begin{DoxyCompactList}\small\item\em Complete path and filename of the video with extension. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structEXPERIMENT_a3ce2700a31e4c1b808caceab4626ff06}{original\+\_\+video\+\_\+filename}
+\begin{DoxyCompactList}\small\item\em Complete path to the folder where the results will be saved. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structEXPERIMENT_a3412818ed24d2c956b01e1d6561d7b50}{read\+\_\+master\+\_\+frames\+\_\+filename}
+\begin{DoxyCompactList}\small\item\em Complete path and filename of the original video. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structEXPERIMENT_af3623d64105d92bec8a761c5318ec534}{save\+\_\+master\+\_\+frames\+\_\+filename}
+\begin{DoxyCompactList}\small\item\em Complete path and filename of the txt file with the selected master frames. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structEXPERIMENT_a867146c43457a82a6b2346d8621d70b6}{save\+\_\+video\+\_\+filename}
+\begin{DoxyCompactList}\small\item\em Complete path and filename to save the txt file with the selected master frames. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structEXPERIMENT_aef88dd45b0ad1db5f6b68b0801f6f630}{selected\+\_\+frames\+\_\+filename}
+\begin{DoxyCompactList}\small\item\em Complete path and filename of the save the stabilized video. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structEXPERIMENT_ab71731194cb1680b25dd9ed253e455aa}{semantic\+\_\+costs\+\_\+filename}
+\begin{DoxyCompactList}\small\item\em Complete path and filename of the csv file with the selected master frames that was selected to create the reduced video. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structEXPERIMENT_a74bd001a4012183b8dacec4e79315a13}{instability\+\_\+costs\+\_\+filename}
+\begin{DoxyCompactList}\small\item\em Complete path and filename of the csv file with the semantic costs of the frame transitions. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structEXPERIMENT_a8b5ca464e785c2b80c16c9e022b7c31a}{optical\+\_\+flow\+\_\+filename}
+\begin{DoxyCompactList}\small\item\em Complete path and filename of the csv file with the jitter costs of the transitions. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structEXPERIMENT_ac3568164588c0366d26fc9cd69b98fe3}{log\+\_\+file\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Complete path and filename of the csv file with the optical flow calculated by the Flow\+Net. \end{DoxyCompactList}\item 
+int \hyperlink{structEXPERIMENT_a004195c9cb30dde7a5cac231381503da}{segment\+\_\+size}
+\begin{DoxyCompactList}\small\item\em Complete path and filename to save the txt file log execution. \end{DoxyCompactList}\item 
+bool \hyperlink{structEXPERIMENT_a665b9063cc9475513a16db5b1c7f10a1}{save\+\_\+master\+\_\+frames\+\_\+in\+\_\+disk}
+\begin{DoxyCompactList}\small\item\em Size of the segments where the master frames will be calculated. \end{DoxyCompactList}\item 
+bool \hyperlink{structEXPERIMENT_aa392d503b8f79c0d0ee6168226245dd1}{save\+\_\+video\+\_\+in\+\_\+disk}
+\begin{DoxyCompactList}\small\item\em After calculte the master frames, do you want to save it in a file? After you can load it directly withou calculate again. \end{DoxyCompactList}\item 
+bool \hyperlink{structEXPERIMENT_a74a95ad0fdb8e786e1555bcb4053af2e}{running\+\_\+parallel}
+\begin{DoxyCompactList}\small\item\em Save stabilized video in Disk. \end{DoxyCompactList}\item 
+bool \hyperlink{structEXPERIMENT_aa8613784c631982322461aff04a6e838}{exist}
+\begin{DoxyCompactList}\small\item\em Running the master frames selection in parallel processors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!exist@{exist}}
+\index{exist@{exist}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{exist}{exist}}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::exist}\hypertarget{structEXPERIMENT_aa8613784c631982322461aff04a6e838}{}\label{structEXPERIMENT_aa8613784c631982322461aff04a6e838}
+
+
+Running the master frames selection in parallel processors. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!id@{id}}
+\index{id@{id}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{id}{id}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::id}\hypertarget{structEXPERIMENT_af59b6805fe0851b89d1300849db794e4}{}\label{structEXPERIMENT_af59b6805fe0851b89d1300849db794e4}
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!instability\+\_\+costs\+\_\+filename@{instability\+\_\+costs\+\_\+filename}}
+\index{instability\+\_\+costs\+\_\+filename@{instability\+\_\+costs\+\_\+filename}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{instability\+\_\+costs\+\_\+filename}{instability\_costs\_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::instability\+\_\+costs\+\_\+filename}\hypertarget{structEXPERIMENT_a74bd001a4012183b8dacec4e79315a13}{}\label{structEXPERIMENT_a74bd001a4012183b8dacec4e79315a13}
+
+
+Complete path and filename of the csv file with the semantic costs of the frame transitions. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!log\+\_\+file\+\_\+name@{log\+\_\+file\+\_\+name}}
+\index{log\+\_\+file\+\_\+name@{log\+\_\+file\+\_\+name}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{log\+\_\+file\+\_\+name}{log\_file\_name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::log\+\_\+file\+\_\+name}\hypertarget{structEXPERIMENT_ac3568164588c0366d26fc9cd69b98fe3}{}\label{structEXPERIMENT_ac3568164588c0366d26fc9cd69b98fe3}
+
+
+Complete path and filename of the csv file with the optical flow calculated by the Flow\+Net. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!optical\+\_\+flow\+\_\+filename@{optical\+\_\+flow\+\_\+filename}}
+\index{optical\+\_\+flow\+\_\+filename@{optical\+\_\+flow\+\_\+filename}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{optical\+\_\+flow\+\_\+filename}{optical\_flow\_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::optical\+\_\+flow\+\_\+filename}\hypertarget{structEXPERIMENT_a8b5ca464e785c2b80c16c9e022b7c31a}{}\label{structEXPERIMENT_a8b5ca464e785c2b80c16c9e022b7c31a}
+
+
+Complete path and filename of the csv file with the jitter costs of the transitions. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!original\+\_\+video\+\_\+filename@{original\+\_\+video\+\_\+filename}}
+\index{original\+\_\+video\+\_\+filename@{original\+\_\+video\+\_\+filename}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{original\+\_\+video\+\_\+filename}{original\_video\_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::original\+\_\+video\+\_\+filename}\hypertarget{structEXPERIMENT_a3ce2700a31e4c1b808caceab4626ff06}{}\label{structEXPERIMENT_a3ce2700a31e4c1b808caceab4626ff06}
+
+
+Complete path to the folder where the results will be saved. 
+
+It is important that the user have permission to write there. \index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!output\+\_\+path@{output\+\_\+path}}
+\index{output\+\_\+path@{output\+\_\+path}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{output\+\_\+path}{output\_path}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::output\+\_\+path}\hypertarget{structEXPERIMENT_a05ae2a5fbc8660bdb535937d4a446698}{}\label{structEXPERIMENT_a05ae2a5fbc8660bdb535937d4a446698}
+
+
+Complete path and filename of the video with extension. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!read\+\_\+master\+\_\+frames\+\_\+filename@{read\+\_\+master\+\_\+frames\+\_\+filename}}
+\index{read\+\_\+master\+\_\+frames\+\_\+filename@{read\+\_\+master\+\_\+frames\+\_\+filename}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{read\+\_\+master\+\_\+frames\+\_\+filename}{read\_master\_frames\_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::read\+\_\+master\+\_\+frames\+\_\+filename}\hypertarget{structEXPERIMENT_a3412818ed24d2c956b01e1d6561d7b50}{}\label{structEXPERIMENT_a3412818ed24d2c956b01e1d6561d7b50}
+
+
+Complete path and filename of the original video. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!running\+\_\+parallel@{running\+\_\+parallel}}
+\index{running\+\_\+parallel@{running\+\_\+parallel}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{running\+\_\+parallel}{running\_parallel}}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::running\+\_\+parallel}\hypertarget{structEXPERIMENT_a74a95ad0fdb8e786e1555bcb4053af2e}{}\label{structEXPERIMENT_a74a95ad0fdb8e786e1555bcb4053af2e}
+
+
+Save stabilized video in Disk. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!save\+\_\+master\+\_\+frames\+\_\+filename@{save\+\_\+master\+\_\+frames\+\_\+filename}}
+\index{save\+\_\+master\+\_\+frames\+\_\+filename@{save\+\_\+master\+\_\+frames\+\_\+filename}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{save\+\_\+master\+\_\+frames\+\_\+filename}{save\_master\_frames\_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::save\+\_\+master\+\_\+frames\+\_\+filename}\hypertarget{structEXPERIMENT_af3623d64105d92bec8a761c5318ec534}{}\label{structEXPERIMENT_af3623d64105d92bec8a761c5318ec534}
+
+
+Complete path and filename of the txt file with the selected master frames. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!save\+\_\+master\+\_\+frames\+\_\+in\+\_\+disk@{save\+\_\+master\+\_\+frames\+\_\+in\+\_\+disk}}
+\index{save\+\_\+master\+\_\+frames\+\_\+in\+\_\+disk@{save\+\_\+master\+\_\+frames\+\_\+in\+\_\+disk}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{save\+\_\+master\+\_\+frames\+\_\+in\+\_\+disk}{save\_master\_frames\_in\_disk}}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::save\+\_\+master\+\_\+frames\+\_\+in\+\_\+disk}\hypertarget{structEXPERIMENT_a665b9063cc9475513a16db5b1c7f10a1}{}\label{structEXPERIMENT_a665b9063cc9475513a16db5b1c7f10a1}
+
+
+Size of the segments where the master frames will be calculated. 
+
+It needs to be a power of two (2, 4, 8, 16, ...). \index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!save\+\_\+video\+\_\+filename@{save\+\_\+video\+\_\+filename}}
+\index{save\+\_\+video\+\_\+filename@{save\+\_\+video\+\_\+filename}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{save\+\_\+video\+\_\+filename}{save\_video\_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::save\+\_\+video\+\_\+filename}\hypertarget{structEXPERIMENT_a867146c43457a82a6b2346d8621d70b6}{}\label{structEXPERIMENT_a867146c43457a82a6b2346d8621d70b6}
+
+
+Complete path and filename to save the txt file with the selected master frames. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!save\+\_\+video\+\_\+in\+\_\+disk@{save\+\_\+video\+\_\+in\+\_\+disk}}
+\index{save\+\_\+video\+\_\+in\+\_\+disk@{save\+\_\+video\+\_\+in\+\_\+disk}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{save\+\_\+video\+\_\+in\+\_\+disk}{save\_video\_in\_disk}}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::save\+\_\+video\+\_\+in\+\_\+disk}\hypertarget{structEXPERIMENT_aa392d503b8f79c0d0ee6168226245dd1}{}\label{structEXPERIMENT_aa392d503b8f79c0d0ee6168226245dd1}
+
+
+After calculte the master frames, do you want to save it in a file? After you can load it directly withou calculate again. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!segment\+\_\+size@{segment\+\_\+size}}
+\index{segment\+\_\+size@{segment\+\_\+size}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{segment\+\_\+size}{segment\_size}}]{\setlength{\rightskip}{0pt plus 5cm}int E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::segment\+\_\+size}\hypertarget{structEXPERIMENT_a004195c9cb30dde7a5cac231381503da}{}\label{structEXPERIMENT_a004195c9cb30dde7a5cac231381503da}
+
+
+Complete path and filename to save the txt file log execution. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!selected\+\_\+frames\+\_\+filename@{selected\+\_\+frames\+\_\+filename}}
+\index{selected\+\_\+frames\+\_\+filename@{selected\+\_\+frames\+\_\+filename}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{selected\+\_\+frames\+\_\+filename}{selected\_frames\_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::selected\+\_\+frames\+\_\+filename}\hypertarget{structEXPERIMENT_aef88dd45b0ad1db5f6b68b0801f6f630}{}\label{structEXPERIMENT_aef88dd45b0ad1db5f6b68b0801f6f630}
+
+
+Complete path and filename of the save the stabilized video. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!semantic\+\_\+costs\+\_\+filename@{semantic\+\_\+costs\+\_\+filename}}
+\index{semantic\+\_\+costs\+\_\+filename@{semantic\+\_\+costs\+\_\+filename}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{semantic\+\_\+costs\+\_\+filename}{semantic\_costs\_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::semantic\+\_\+costs\+\_\+filename}\hypertarget{structEXPERIMENT_ab71731194cb1680b25dd9ed253e455aa}{}\label{structEXPERIMENT_ab71731194cb1680b25dd9ed253e455aa}
+
+
+Complete path and filename of the csv file with the selected master frames that was selected to create the reduced video. 
+
+\index{E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}!video\+\_\+filename@{video\+\_\+filename}}
+\index{video\+\_\+filename@{video\+\_\+filename}!E\+X\+P\+E\+R\+I\+M\+E\+NT@{E\+X\+P\+E\+R\+I\+M\+E\+NT}}
+\subsubsection[{\texorpdfstring{video\+\_\+filename}{video\_filename}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+::video\+\_\+filename}\hypertarget{structEXPERIMENT_a7095f959a6d88f3a5997bcd0f4579609}{}\label{structEXPERIMENT_a7095f959a6d88f3a5997bcd0f4579609}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+definitions/\hyperlink{experiment__struct_8h}{experiment\+\_\+struct.\+h}\end{DoxyCompactItemize}

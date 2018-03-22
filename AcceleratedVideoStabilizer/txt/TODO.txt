@@ -1,0 +1,29 @@
+======================================================================================
+====   This file is part of SemanticFastForward_EPIC@ECCVW.
+==
+==    SemanticFastForward_EPIC@ECCVW is free software: you can redistribute it and/or modify
+==    it under the terms of the GNU General Public License as published by
+==    the Free Software Foundation, either version 3 of the License, or
+==    (at your option) any later version.
+==
+==    SemanticFastForward_JVCI is distributed in the hope that it will be useful,
+==    but WITHOUT ANY WARRANTY; without even the implied warranty of
+==    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+==    GNU General Public License for more details.
+==
+==    You should have received a copy of the GNU General Public License
+==    along with SemanticFastForward_EPIC@ECCVW.  If not, see <http://www.gnu.org/licenses/>.
+==
+======================================================================================
+
+(1) [ ] --> Supress or treat the warning in the imageReconstruction/image_recostruction.cpp when reading .MP4 extension files:
+Non-reference picture received and no reference available
+[h264 @ 0x1385ec0] decode_slice_header error
+
+(2) [X] --> Try a better approach to create image mask without aliasing in the wrap/homography.cpp and wrap (DONE)
+
+(3) [X] --> Remove the black lines in the reconstructed images. (DONE)
+
+(4) [X] --> Fix the wrong homography in the video Walking 4.
+
+(5) [ ] --> Suppress or treat the warning "warning: sqrtmat(): given matrix seems singular; may not have a square root".

@@ -1,0 +1,286 @@
+\hypertarget{image__reconstruction_8cpp}{}\section{src/image\+\_\+reconstruction.cpp File Reference}
+\label{image__reconstruction_8cpp}\index{src/image\+\_\+reconstruction.\+cpp@{src/image\+\_\+reconstruction.\+cpp}}
+
+
+Functions related with reconstruction of the image after application of the homography matrix to fill the whole frame boundaries.  
+
+
+{\ttfamily \#include \char`\"{}headers/image\+\_\+reconstruction.\+h\char`\"{}}\\*
+Include dependency graph for image\+\_\+reconstruction.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{image__reconstruction_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{image__reconstruction_8cpp_a2fc13976a9f1af8bb9040db7de417721}{check\+Image\+Boundaries} (const cv\+::\+Mat \&image, const cv\+::\+Rect \&frame\+\_\+boundaries)
+\begin{DoxyCompactList}\small\item\em Function that verify if the image fill all the frame limite given by the rect boundaries. \end{DoxyCompactList}\item 
+bool \hyperlink{image__reconstruction_8cpp_a95b3fdabdd4482acec2a7f72e82eb58f}{check\+Image\+Boundaries\+Mask} (const cv\+::\+Mat \&image\+\_\+mask, const cv\+::\+Rect \&frame\+\_\+boundaries)
+\begin{DoxyCompactList}\small\item\em Function that verify if the image\+\_\+mask fill all the frame limite given by the rect boundaries. \end{DoxyCompactList}\item 
+bool \hyperlink{image__reconstruction_8cpp_a3808c00f0f1deb7c9669f0d30ffd63ac}{warp\+Mask\+Crop} (const cv\+::\+Mat \&image\+\_\+to\+\_\+warp, const cv\+::\+Mat \&image\+\_\+fixed, const cv\+::\+Mat \&image\+\_\+fixed\+\_\+mask, cv\+::\+Mat \&image\+\_\+result, cv\+::\+Mat \&image\+\_\+result\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Function that warps the image\+\_\+to\+\_\+warp with the image image\+\_\+fixed and save the result into de image\+\_\+result and then the resut is cropped into the original image area. \end{DoxyCompactList}\item 
+bool \hyperlink{image__reconstruction_8cpp_a81ebac71847f40916c2bb033ad2069be}{warp\+Mask} (const cv\+::\+Mat \&image\+\_\+to\+\_\+warp, const cv\+::\+Mat \&image\+\_\+fixed, const cv\+::\+Mat \&image\+\_\+fixed\+\_\+mask, cv\+::\+Mat \&image\+\_\+result, cv\+::\+Mat \&image\+\_\+result\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Function that warps the image\+\_\+to\+\_\+warp with the image image\+\_\+fixed and save the result into de image\+\_\+result. \end{DoxyCompactList}\item 
+bool \hyperlink{image__reconstruction_8cpp_a5ac0e0833abd3cb52b702e15ec99a9c2}{warp} (const cv\+::\+Mat \&image\+\_\+to\+\_\+warp, const cv\+::\+Mat \&image\+\_\+fixed, cv\+::\+Mat \&image\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Function that warps the image\+\_\+to\+\_\+warp with the image image\+\_\+fixed and save the result into de image\+\_\+result. \end{DoxyCompactList}\item 
+bool \hyperlink{image__reconstruction_8cpp_a9e97c5996e454dcb23c2c4be119cbe31}{image\+Reconstruction} (const cv\+::\+Mat \&image, const int index, const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, const cv\+::\+Rect \&frame\+\_\+boundaries, cv\+::\+Mat \&reconstructed\+\_\+image)
+\begin{DoxyCompactList}\small\item\em Function that reconstructs an image using panorama based on homography in a image sequence. \end{DoxyCompactList}\item 
+bool \hyperlink{image__reconstruction_8cpp_ad6b2680d1178aa193da11f5173c40c3c}{reconstruct\+Image} (const cv\+::\+Mat \&image, const cv\+::\+Mat \&homography\+\_\+matrix, const int index, const \hyperlink{structEXPERIMENT}{E\+X\+P\+E\+R\+I\+M\+E\+NT} \&\hyperlink{main_8cpp_a9f5a81402e170475690f371d55cbe623}{experiment\+\_\+settings}, const cv\+::\+Rect \&drop\+\_\+boundaries, const cv\+::\+Rect \&frame\+\_\+boundaries, cv\+::\+Mat \&reconstructed\+\_\+image)
+\begin{DoxyCompactList}\small\item\em Function that reconstructs an image using panorama based on homography in a image sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions related with reconstruction of the image after application of the homography matrix to fill the whole frame boundaries. 
+
+Functions to check the frame boundaries. Warp images to increase the image area. Reconstruction the image using frame from the original video. 
+
+\subsection{Function Documentation}
+\index{image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}!check\+Image\+Boundaries@{check\+Image\+Boundaries}}
+\index{check\+Image\+Boundaries@{check\+Image\+Boundaries}!image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}}
+\subsubsection[{\texorpdfstring{check\+Image\+Boundaries(const cv\+::\+Mat \&image, const cv\+::\+Rect \&frame\+\_\+boundaries)}{checkImageBoundaries(const cv::Mat \&image, const cv::Rect \&frame\_boundaries)}}]{\setlength{\rightskip}{0pt plus 5cm}bool check\+Image\+Boundaries (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image, }
+\item[{const cv\+::\+Rect \&}]{frame\+\_\+boundaries}
+\end{DoxyParamCaption}
+)}\hypertarget{image__reconstruction_8cpp_a2fc13976a9f1af8bb9040db7de417721}{}\label{image__reconstruction_8cpp_a2fc13976a9f1af8bb9040db7de417721}
+
+
+Function that verify if the image fill all the frame limite given by the rect boundaries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & -\/ image that will be checked. \\
+\hline
+{\em frame\+\_\+boundaries} & -\/ area where the image should fill.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the image fill all the frame limit. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the image does not fill all the frame limit.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/04/2016 
+\end{DoxyDate}
+\index{image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}!check\+Image\+Boundaries\+Mask@{check\+Image\+Boundaries\+Mask}}
+\index{check\+Image\+Boundaries\+Mask@{check\+Image\+Boundaries\+Mask}!image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}}
+\subsubsection[{\texorpdfstring{check\+Image\+Boundaries\+Mask(const cv\+::\+Mat \&image\+\_\+mask, const cv\+::\+Rect \&frame\+\_\+boundaries)}{checkImageBoundariesMask(const cv::Mat \&image\_mask, const cv::Rect \&frame\_boundaries)}}]{\setlength{\rightskip}{0pt plus 5cm}bool check\+Image\+Boundaries\+Mask (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image\+\_\+mask, }
+\item[{const cv\+::\+Rect \&}]{frame\+\_\+boundaries}
+\end{DoxyParamCaption}
+)}\hypertarget{image__reconstruction_8cpp_a95b3fdabdd4482acec2a7f72e82eb58f}{}\label{image__reconstruction_8cpp_a95b3fdabdd4482acec2a7f72e82eb58f}
+
+
+Function that verify if the image\+\_\+mask fill all the frame limite given by the rect boundaries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+mask} & -\/ mask of the image to be checked. \\
+\hline
+{\em frame\+\_\+boundaries} & -\/ area where the image should fill.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the image fill all the frame limit. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the image does not fill all the frame limit.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03/05/2016 
+\end{DoxyDate}
+\index{image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}!image\+Reconstruction@{image\+Reconstruction}}
+\index{image\+Reconstruction@{image\+Reconstruction}!image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}}
+\subsubsection[{\texorpdfstring{image\+Reconstruction(const cv\+::\+Mat \&image, const int index, const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings, const cv\+::\+Rect \&frame\+\_\+boundaries, cv\+::\+Mat \&reconstructed\+\_\+image)}{imageReconstruction(const cv::Mat \&image, const int index, const EXPERIMENT \&experiment\_settings, const cv::Rect \&frame\_boundaries, cv::Mat \&reconstructed\_image)}}]{\setlength{\rightskip}{0pt plus 5cm}bool image\+Reconstruction (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image, }
+\item[{const int}]{index, }
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings, }
+\item[{const cv\+::\+Rect \&}]{frame\+\_\+boundaries, }
+\item[{cv\+::\+Mat \&}]{reconstructed\+\_\+image}
+\end{DoxyParamCaption}
+)}\hypertarget{image__reconstruction_8cpp_a9e97c5996e454dcb23c2c4be119cbe31}{}\label{image__reconstruction_8cpp_a9e97c5996e454dcb23c2c4be119cbe31}
+
+
+Function that reconstructs an image using panorama based on homography in a image sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & -\/ image initial with homography transformation. \\
+\hline
+{\em index} & -\/ index of the initial image in the original video. \\
+\hline
+{\em experiment\+\_\+settings} & -\/ object with the experiment settings. \\
+\hline
+{\em frame\+\_\+boundaries} & -\/ limits of the frame that needs to be filled by the reconstructed image. \\
+\hline
+{\em reconstructed\+\_\+image} & -\/ object to save the final reconstructed image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the frame was successful reconstructed filling all the frame limit. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the frame was not successful reconstructed filling all the frame limit.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/04/2016 
+\end{DoxyDate}
+\index{image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}!reconstruct\+Image@{reconstruct\+Image}}
+\index{reconstruct\+Image@{reconstruct\+Image}!image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}}
+\subsubsection[{\texorpdfstring{reconstruct\+Image(const cv\+::\+Mat \&image, const cv\+::\+Mat \&homography\+\_\+matrix, const int index, const E\+X\+P\+E\+R\+I\+M\+E\+N\+T \&experiment\+\_\+settings, const cv\+::\+Rect \&drop\+\_\+boundaries, const cv\+::\+Rect \&frame\+\_\+boundaries, cv\+::\+Mat \&reconstructed\+\_\+image)}{reconstructImage(const cv::Mat \&image, const cv::Mat \&homography\_matrix, const int index, const EXPERIMENT \&experiment\_settings, const cv::Rect \&drop\_boundaries, const cv::Rect \&frame\_boundaries, cv::Mat \&reconstructed\_image)}}]{\setlength{\rightskip}{0pt plus 5cm}bool reconstruct\+Image (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image, }
+\item[{const cv\+::\+Mat \&}]{homography\+\_\+matrix, }
+\item[{const int}]{index, }
+\item[{const {\bf E\+X\+P\+E\+R\+I\+M\+E\+NT} \&}]{experiment\+\_\+settings, }
+\item[{const cv\+::\+Rect \&}]{drop\+\_\+boundaries, }
+\item[{const cv\+::\+Rect \&}]{frame\+\_\+boundaries, }
+\item[{cv\+::\+Mat \&}]{reconstructed\+\_\+image}
+\end{DoxyParamCaption}
+)}\hypertarget{image__reconstruction_8cpp_ad6b2680d1178aa193da11f5173c40c3c}{}\label{image__reconstruction_8cpp_ad6b2680d1178aa193da11f5173c40c3c}
+
+
+Function that reconstructs an image using panorama based on homography in a image sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & -\/ image initial without homography transformation. \\
+\hline
+{\em homography\+\_\+matrix} & -\/ homography matrix that will be applied to the original image where the reconstruct will start. \\
+\hline
+{\em index} & -\/ index of the initial image in the original video. \\
+\hline
+{\em experiment\+\_\+settings} & -\/ object with the experiment settings. \\
+\hline
+{\em frame\+\_\+boundaries} & -\/ limits of the frame that needs to be filled by the reconstructed image. \\
+\hline
+{\em reconstructed\+\_\+image} & -\/ object to save the final reconstructed image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the frame was successful reconstructed filling all the frame limit. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the frame was not successful reconstructed filling all the frame limit.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/04/2016 
+\end{DoxyDate}
+\index{image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}!warp@{warp}}
+\index{warp@{warp}!image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}}
+\subsubsection[{\texorpdfstring{warp(const cv\+::\+Mat \&image\+\_\+to\+\_\+warp, const cv\+::\+Mat \&image\+\_\+fixed, cv\+::\+Mat \&image\+\_\+result)}{warp(const cv::Mat \&image\_to\_warp, const cv::Mat \&image\_fixed, cv::Mat \&image\_result)}}]{\setlength{\rightskip}{0pt plus 5cm}bool warp (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image\+\_\+to\+\_\+warp, }
+\item[{const cv\+::\+Mat \&}]{image\+\_\+fixed, }
+\item[{cv\+::\+Mat \&}]{image\+\_\+result}
+\end{DoxyParamCaption}
+)}\hypertarget{image__reconstruction_8cpp_a5ac0e0833abd3cb52b702e15ec99a9c2}{}\label{image__reconstruction_8cpp_a5ac0e0833abd3cb52b702e15ec99a9c2}
+
+
+Function that warps the image\+\_\+to\+\_\+warp with the image image\+\_\+fixed and save the result into de image\+\_\+result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+to\+\_\+warp} & -\/ image to warp. \\
+\hline
+{\em image\+\_\+fixed} & -\/ image fixed that will be in the first plane. \\
+\hline
+{\em image\+\_\+result} & -\/ object to save the result image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the corner consistency is maintained after application of the homography matrix found to warp the image. It also returns false if is not found a homography matrix between the images. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the consistency is not maintained after application of the homography matrix found to warp the image. In this case the image\+Result is a simple copy of the image\+Fixed.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/11/2015 
+\end{DoxyDate}
+\index{image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}!warp\+Mask@{warp\+Mask}}
+\index{warp\+Mask@{warp\+Mask}!image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}}
+\subsubsection[{\texorpdfstring{warp\+Mask(const cv\+::\+Mat \&image\+\_\+to\+\_\+warp, const cv\+::\+Mat \&image\+\_\+fixed, const cv\+::\+Mat \&image\+\_\+fixed\+\_\+mask, cv\+::\+Mat \&image\+\_\+result, cv\+::\+Mat \&image\+\_\+result\+\_\+mask)}{warpMask(const cv::Mat \&image\_to\_warp, const cv::Mat \&image\_fixed, const cv::Mat \&image\_fixed\_mask, cv::Mat \&image\_result, cv::Mat \&image\_result\_mask)}}]{\setlength{\rightskip}{0pt plus 5cm}bool warp\+Mask (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image\+\_\+to\+\_\+warp, }
+\item[{const cv\+::\+Mat \&}]{image\+\_\+fixed, }
+\item[{const cv\+::\+Mat \&}]{image\+\_\+fixed\+\_\+mask, }
+\item[{cv\+::\+Mat \&}]{image\+\_\+result, }
+\item[{cv\+::\+Mat \&}]{image\+\_\+result\+\_\+mask}
+\end{DoxyParamCaption}
+)}\hypertarget{image__reconstruction_8cpp_a81ebac71847f40916c2bb033ad2069be}{}\label{image__reconstruction_8cpp_a81ebac71847f40916c2bb033ad2069be}
+
+
+Function that warps the image\+\_\+to\+\_\+warp with the image image\+\_\+fixed and save the result into de image\+\_\+result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+to\+\_\+warp} & -\/ image to warp. \\
+\hline
+{\em image\+\_\+fixed} & -\/ image fixed that will be in the first plane. \\
+\hline
+{\em image\+\_\+fixed\+\_\+mask} & -\/ mask of the fixed mask. \\
+\hline
+{\em image\+\_\+result} & -\/ object to save the result image. \\
+\hline
+{\em image\+\_\+result\+\_\+mask} & -\/ objecto to save the mask of the result image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the corner consistency is maintained after application of the homography matrix found to warp the image. It also returns false if is not found a homography matrix between the images. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the consistency is not maintained after application of the homography matrix found to warp the image. In this case the image\+Result is a simple copy of the image\+Fixed. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/04/2016 
+\end{DoxyDate}
+\index{image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}!warp\+Mask\+Crop@{warp\+Mask\+Crop}}
+\index{warp\+Mask\+Crop@{warp\+Mask\+Crop}!image\+\_\+reconstruction.\+cpp@{image\+\_\+reconstruction.\+cpp}}
+\subsubsection[{\texorpdfstring{warp\+Mask\+Crop(const cv\+::\+Mat \&image\+\_\+to\+\_\+warp, const cv\+::\+Mat \&image\+\_\+fixed, const cv\+::\+Mat \&image\+\_\+fixed\+\_\+mask, cv\+::\+Mat \&image\+\_\+result, cv\+::\+Mat \&image\+\_\+result\+\_\+mask)}{warpMaskCrop(const cv::Mat \&image\_to\_warp, const cv::Mat \&image\_fixed, const cv::Mat \&image\_fixed\_mask, cv::Mat \&image\_result, cv::Mat \&image\_result\_mask)}}]{\setlength{\rightskip}{0pt plus 5cm}bool warp\+Mask\+Crop (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image\+\_\+to\+\_\+warp, }
+\item[{const cv\+::\+Mat \&}]{image\+\_\+fixed, }
+\item[{const cv\+::\+Mat \&}]{image\+\_\+fixed\+\_\+mask, }
+\item[{cv\+::\+Mat \&}]{image\+\_\+result, }
+\item[{cv\+::\+Mat \&}]{image\+\_\+result\+\_\+mask}
+\end{DoxyParamCaption}
+)}\hypertarget{image__reconstruction_8cpp_a3808c00f0f1deb7c9669f0d30ffd63ac}{}\label{image__reconstruction_8cpp_a3808c00f0f1deb7c9669f0d30ffd63ac}
+
+
+Function that warps the image\+\_\+to\+\_\+warp with the image image\+\_\+fixed and save the result into de image\+\_\+result and then the resut is cropped into the original image area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+to\+\_\+warp} & -\/ image to warp. \\
+\hline
+{\em image\+\_\+fixed} & -\/ image fixed that will be in the first plane. \\
+\hline
+{\em image\+\_\+fixed\+\_\+mask} & -\/ mask of the fixed mask. \\
+\hline
+{\em image\+\_\+result} & -\/ object to save the result image. \\
+\hline
+{\em image\+\_\+result\+\_\+mask} & -\/ objecto to save the mask of the result image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily bool} {\bfseries true} -\/ if the corner consistency is maintained after application of the homography matrix found to warp the image. It also returns false if is not found a homography matrix between the images. ~\newline
+ {\ttfamily bool} {\bfseries false} -\/ if the consistency is not maintained after application of the homography matrix found to warp the image. In this case the image\+Result is a simple copy of the image\+Fixed.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Michel Melo da Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03/05/2016 
+\end{DoxyDate}
