@@ -122,9 +122,9 @@ classdef SemanticVideoSubSampler < handle
             
             fprintf('%sLoading the input video to memory...\n',log_line_prefix);
             reader = VideoReader(obj.cfg.get('inputVideoFileName'));
-            if max(frame_indices) > reader.NumberOfFrames
-                error('output frame index %d exceded input video size %d',max(frame_indices),reader.NumberOfFrames);
-            end
+            %if max(frame_indices) > reader.NumberOfFrames
+            %    error('output frame index %d exceded input video size %d',max(frame_indices),reader.NumberOfFrames);
+            %end
             
             fprintf('%sStarting to export frames...\n',log_line_prefix);
             
@@ -179,37 +179,44 @@ classdef SemanticVideoSubSampler < handle
                 non_semantic_speedup = Speedups(1,2);
             end
             k = 1;
-            for i = 1:length(frame_indices)
-                
+            
+            %for i = 1:length(frame_indices)
+            i = 1; z = 0;
+            while hasFrame(reader)
+                %frame = read(reader,frame_indices(i));
+                frame = readFrame(reader);
+                z = z + 1;
+                if frame_indices(i) ~= z
+                    continue;
+                end
                 %if read doesn't work, use readframe instead
-                frame = read(reader,frame_indices(i));
-                
+                %fprintf('%sExporting frame #%d..\n',log_line_prefix,i,frame_indices(i));
                 if outputOriginalFrameNum==1 || outputOriginalTimestamp==1 || outputInstabilityValues || outputSemanticWeight
                     embedText  = '';
-                    
+
                     if outputOriginalTimestamp==1
                         embedText = sprintf('[%s]',datestr((frame_indices(i)/reader.FrameRate)/86400,'HH:MM:SS'));
                     end
-                    
+
                     if outputOriginalFrameNum==1
                         embedText = sprintf('%s Frame #%d',embedText,frame_indices(i));
                     end
-                    
+
                     if outputSemanticWeight
                         embedText = sprintf('%s SemanticWeight=%.3f', embedText, FrameSemanticValue(obj.SemanticData{frame_indices(i)}));
                     end
-                    
+
                     if outputInstabilityValues && i > 1
                         embedText = sprintf('%s Frame Instability=%.4f', embedText, instability_array(i-1));
                     end
-                    
+
                     if outputTheoreticalSpeedup
                         if frame_indices(i) >= RangesAndSpeedups(2,k)
                             while k < size(RangesAndSpeedups, 2) && frame_indices(i) > RangesAndSpeedups(2,k)
                                 k = k+1;
                             end
                         end
-                        
+
                         if frame_indices(i) < RangesAndSpeedups(1, k) || frame_indices(i) > RangesAndSpeedups(2, k)
                             speedupText = [num2str(non_semantic_speedup) 'x'];
                             frame = insertObjectAnnotation(frame,'rectangle',[size(frame,2),size(frame,1),5,5],speedupText,'FontSize',40);
@@ -217,12 +224,12 @@ classdef SemanticVideoSubSampler < handle
                             speedupText = [num2str(RangesAndSpeedups(3, k)) 'x'];
                             frame = insertObjectAnnotation(frame,'rectangle',[size(frame,2),size(frame,1),5,5],speedupText,'FontSize',40);
                         end                     
-                        
+
                     end
-                    
+
                     frame = insertObjectAnnotation(frame,'rectangle',[20,20,5,5],embedText,'FontSize',20);
                 end
-                
+
                 if outputSemanticBoxes
                     df_dts_i = obj.SemanticData{frame_indices(i)};
                     for j=1:length(df_dts_i)
@@ -235,34 +242,34 @@ classdef SemanticVideoSubSampler < handle
                             face_score, 'Color', 'r', 'FontSize', 22);
                     end
                 end
-                
+
                 if outputFOEMovements
                     x = floor(base_x + foe_locations(i,2) * amplifier_factor);
                     y = floor(base_y + foe_locations(i,1) * amplifier_factor);
-                    
+
                     %Inserting a line on movements image
                     foe_movements_frame = insertShape(foe_movements_frame, 'line',...
                         [base_x base_y x y], 'LineWidth', 3);
-                    
+
                     composed_frame = frame + foe_movements_frame;
                     writer.writeVideo(composed_frame);
                 else
                     writer.writeVideo(frame);
                 end
-                
+
                 if showOutputWhileDumpling==1
                     if i==1
                         f=figure;
                     end
                     figure(f);
-                    
+
                     if outputSemanticBoxes
                         for j=1:size(obj.SemanticData{frame_indices(i)}, 1)
                             face_id = sprintf('Face %d', j);
                             frame = insertObjectAnnotation(frame, 'rectangle', obj.SemanticData{frame_indices(i)}(j,:), face_id, 'Color', 'r');
                         end
                     end
-                    
+
                     if outputFOEMovements
                         imshow(composed_frame);
                         title(sprintf('FOE = %d --- Frame %d',foe_locations(i), frame_indices(i)));
@@ -272,14 +279,15 @@ classdef SemanticVideoSubSampler < handle
                     end
                     drawnow;
                 end
-                
+
                 if saveFramesWhileDumping==1
                     imwrite(frame, sprintf(baseFileName,frame_indices(i)));
                 end
-                
+
                 if mod(i,50) == 0
                     fprintf('%sExporting frame #%d..\n',log_line_prefix,i);
                 end
+                i = i+1;
             end
             fprintf('%sDone exporting frames..\n',log_line_prefix);
             writer.close();

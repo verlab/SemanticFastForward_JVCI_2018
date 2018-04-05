@@ -17,10 +17,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function [Rects, total_values] = ExtractAndSave(input_filename, extractor)
+
+    addpath(genpath('_EgoSampling_Poleg_CVPR_2015'));
+
     %% File name
-    
     [video_dir, fname, ~] = fileparts(input_filename);
-    if strcmp('video_dir', '') == 0
+    if strcmp(video_dir, '') == 1
         video_dir = '.';
     end
     output_filename = [video_dir, '/', fname, '_', extractor,'_extracted'];
@@ -32,7 +34,6 @@ function [Rects, total_values] = ExtractAndSave(input_filename, extractor)
     end
     
     %% It Saves a .mat file with detected faces
-    addpath(genpath('_EgoSampling_Poleg_CVPR_2015'));
     switch(extractor)
         case 'face'
             %% Face Detector setup (Works with MATLAB 2015a)
