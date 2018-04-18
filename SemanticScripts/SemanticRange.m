@@ -99,6 +99,7 @@ function [Threshold_Ranges, num_frames, frame_rate, Semantic_frames_indexes] = S
     Masked_by_threshold = zeros(range_end-range_start+1, 1);
     Semantic_Value = Semantic_Value(range_start:range_end);%Focusing the video section
     while i > 0
+        Ranges = [];
         if i < num_thresholds
             Masked_by_threshold((Semantic_Value >= thresholds(i)) & ~Masked_by_threshold) = i;% Tagging the frames with labels
         else
@@ -106,36 +107,38 @@ function [Threshold_Ranges, num_frames, frame_rate, Semantic_frames_indexes] = S
         end
 
         Semantic_frames_indexes = find(Masked_by_threshold == i);
-        Semantic_skips = Semantic_frames_indexes(2:end) - Semantic_frames_indexes(1:end-1);
-        gaps = find(Semantic_skips > 1);
-        pre_indexes = Semantic_frames_indexes(gaps);
-        pos_indexes = Semantic_frames_indexes(gaps+1);
+        if ~isempty(Semantic_frames_indexes)
+            Semantic_skips = Semantic_frames_indexes(2:end) - Semantic_frames_indexes(1:end-1);
+            gaps = find(Semantic_skips > 1);
+            pre_indexes = Semantic_frames_indexes(gaps);
+            pos_indexes = Semantic_frames_indexes(gaps+1);
 
-        for j=1:length(pre_indexes)
-            % If we find any non-zero elements this gap is overlapping others
-            if (sum(Masked_by_threshold(pre_indexes(j)+1:pos_indexes(j)-1)))
-                Semantic_skips(gaps(j)) = Inf;% Set to the max value to force a Large skip
+            for j=1:length(pre_indexes)
+                % If we find any non-zero elements this gap is overlapping others
+                if (sum(Masked_by_threshold(pre_indexes(j)+1:pos_indexes(j)-1)))
+                    Semantic_skips(gaps(j)) = Inf;% Set to the max value to force a Large skip
+                end
             end
-        end
 
-        Large_skips = [0; find(Semantic_skips > max_skip_range); length(Semantic_frames_indexes)];
-        Ranges = zeros(2, size(Large_skips,1)-1);
-        for j=1:size(Large_skips,1)-1
-            range_min = Semantic_frames_indexes(Large_skips(j)+1);
-            range_max = Semantic_frames_indexes(Large_skips(j+1));
-            Ranges(:,j) = [range_min; range_max];
-        end
+            Large_skips = [0; find(Semantic_skips > max_skip_range); length(Semantic_frames_indexes)];
+            Ranges = zeros(2, size(Large_skips,1)-1);
+            for j=1:size(Large_skips,1)-1
+                range_min = Semantic_frames_indexes(Large_skips(j)+1);
+                range_max = Semantic_frames_indexes(Large_skips(j+1));
+                Ranges(:,j) = [range_min; range_max];
+            end
 
-        %% Filter ranges with less than 'min_semantic_range' frames.
-        Masked_by_threshold(Masked_by_threshold == i) = 0; % Cleanning up the mess before setting the correct labels
-        for k=size(Ranges,2):-1:1
-            range_min = Ranges(1,k);
-            range_max = Ranges(2,k);
+            %% Filter ranges with less than 'min_semantic_range' frames.
+            Masked_by_threshold(Masked_by_threshold == i) = 0; % Cleanning up the mess before setting the correct labels
+            for k=size(Ranges,2):-1:1
+                range_min = Ranges(1,k);
+                range_max = Ranges(2,k);
 
-            if range_max - range_min < min_semantic_range
-                Ranges(:,k) = [];
-            else
-                Masked_by_threshold(range_min:range_max) = i;% Labeling the semantic regions with id
+                if range_max - range_min < min_semantic_range
+                    Ranges(:,k) = [];
+                else
+                    Masked_by_threshold(range_min:range_max) = i;% Labeling the semantic regions with id
+                end
             end
         end
 

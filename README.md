@@ -141,15 +141,15 @@ M. M. Silva, W. L. S. Ramos, F.C. Chamone, J. P. K. Ferreira, M. F. M. Campos, E
 ### Bibtex entry ###
 
 > @article{Silva2018,
-> title = {Making a long story short: A Multi-Importance fast-forwarding egocentric videos with the emphasis on relevant objects},
-> author = {Michel M. Silva and Washington L. S. Ramos and Felipe C. Chamone and João P. K. Ferreira and Mario F. M. Campos and Erickson R. Nascimento},
-> journal = {Journal of Visual Communication and Image Representation},
-> volume = {53},
-> number = {},
-> pages = {55 – 64},
-> year = {2018},
-> issn = {1047-3203},
-> doi = {10.1016/j.jvcir.2018.02.013}
+> title = {Making a long story short: A Multi-Importance fast-forwarding egocentric videos with the emphasis on relevant objects},  
+> author = {Michel M. Silva and Washington L. S. Ramos and Felipe C. Chamone and João P. K. Ferreira and Mario F. M. Campos and Erickson R. Nascimento},  
+> journal = {Journal of Visual Communication and Image Representation},  
+> volume = {53},  
+> number = {},  
+> pages = {55 – 64},  
+> year = {2018},  
+> issn = {1047-3203},  
+> doi = {10.1016/j.jvcir.2018.02.013}  
 > }
 
 #### Enjoy it. ####
