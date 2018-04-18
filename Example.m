@@ -25,6 +25,46 @@ $ wget www.verlab.dcc.ufmg.br/semantic-hyperlapse/data/video-example/example.mp4
 
 % Vid2OpticalFlowCSV.exe -v < video_file > -c < config_file > -o < output_file >
 
+% 1- Download our example video (in Linux bash) and move it to the project folder
+
+$ wget www.verlab.dcc.ufmg.br/semantic-hyperlapse/data/video-example/example.mp4
+
+
+% 2- Extract the optical flow information (in Windows CMD). The output file name must be the same name of the input video using the extesion ".csv".
+
+% Vid2OpticalFlowCSV.exe -v < video_file > -c < config_file > -o < output_file >
+
+$ ./Vid2OpticalFlowCSV.exe -v example.mp4 -c default-config.xml -o example.csv
+
+
+% 3- Extract semantic information from video with "SemanticScripts/ExtractAndSave.m". Output file will be placed on the input video folder, with video file name, followed by the semantic extractor and the suffix "extracted.mat". Example: "example_face_extracted.mat".
+
+% On MATLAB console, go to the project folder and run the following commands:
+
+% ExtractAndSave(< video_file_path >, < semantic_extractor >);
+
+>> addpath('SemanticScripts');
+>> ExtractAndSave('example.mp4', 'face');
+
+
+% Results for steps 2 (example.csv) and 3 (example_face_extracted.mat) for this example video are available for download using the link:
+
+$ wget www.verlab.dcc.ufmg.br/semantic-hyperlapse/data/video-example/example.csv
+
+$ wget www.verlab.dcc.ufmg.br/semantic-hyperlapse/data/video-example/example_face_extracted.mat
+
+
+% 4- To generate the final hyperlapse video, use the "SpeedupVideo" function. The graph weight tuple are optimized via the PSO algorithm.
+
+%SpeedupVideo(< video_dir >, < experiment_name >, < semantic_extractor >, ['Speedup', < speedup_rate >,] ['ExportOutputVideo', < bool_value>]);
+SpeedupVideo('.', 'Example', 'face', 'Speedup', 10);
+
+% In this script, the example video is inside the project folder, so set the < video_dir > parameter as ''.
+
+% The user may set the optional argument 'ExportOutputVideo' as false to avoid generate the output video during the search.
+
+%SpeedupVideo(< video_dir >, < experiment_name >, < semantic_extractor >, ['Speedup', < speedup_rate >,] ['ExportOutputVideo', < bool_value>]);
+SpeedupVideo('.', 'Example', 'face', 'Speedup', 10, 'ExportOutputVideo', false);
 $ ./Vid2OpticalFlowCSV.exe -v example.mp4 -c default-config.xml -o example.csv
 
 
