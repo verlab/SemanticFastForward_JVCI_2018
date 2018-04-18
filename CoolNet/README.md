@@ -1,19 +1,17 @@
 # Project #
 
-This project is based on the paper [Making a long story short: A Multi-Importance Semantic for Fast-Forwarding Egocentric Videos](http://www.verlab.dcc.ufmg.br/link_to_the_file.pdf) on the __Special Issue on Egocentric Vision and Lifelogging Tools__ at __Journal of Visual Communication and Image Representation
-__ (EVLT@@JVCI 2017).
+This project is based on the paper [Making a long story short: A multi-importance fast-forwarding egocentric videos with the emphasis on relevant objects](https://www.verlab.dcc.ufmg.br/semantic-hyperlapse/jvci2018/) on the **Special Issue on Egocentric Vision and Lifelogging Tools** at **Journal of Visual Communication and Image Representation** (JVCI 2018).
 
-CoolNet, a network model used to rate the frame “coolness” based on web
-video statistics.
+CoolNet, a network model used to rate the frame “coolness” based on web video statistics.
 
-For more information, acess the link: http://www.verlab.dcc.ufmg.br/fast-forward-video-based-on-semantic-extraction.
+For more information and visual results, please acess the [project page](http://www.verlab.dcc.ufmg.br/fast-forward-video-based-on-semantic-extraction).
 
 ## Contact ##
 
 ### Authors ###
 
 * Michel Melo da Silva - PhD student - UFMG - michelms@dcc.ufmg.com
-* Washington Luis de Souza Ramos - MSc student - UFMG - washington.ramos@outlook.com
+* Washington Luis de Souza Ramos - PhD student - UFMG - washington.ramos@dcc.ufmg.br
 * Felipe Cadar Chamone - Undergraduate Student - UFMG - cadar@dcc.ufmg.br
 * João Pedro Klock Ferreira - Undergraduate Student - UFMG - jpklock@ufmg.br
 * Mario Fernando Montenegro Campos - Advisor - UFMG - mario@dcc.ufmg.br
@@ -26,6 +24,8 @@ Computer Science Department
 Belo Horizonte - Minas Gerais -Brazil 
 
 ### Laboratory ###
+
+![VeRLab](https://www.dcc.ufmg.br/dcc/sites/default/files/public/verlab-logo.png)  
 
 __VeRLab:__ Vison and Robotic Laboratory  
 http://www.verlab.dcc.ufmg.br
@@ -78,13 +78,9 @@ frame_number, cool_score
 ...
 ```
 
-
 #### Try it out: ####
 
 ```bash
-$    cd ~
-$    git clone https://radac98@bitbucket.org/semantichyperlapse/semantic_first_person_videos_hyperlapse_jvci-2017.git
-$    cd semantic_first_person_videos_hyperlapse_jvci-2017/CoolNet/
 $    python Scripts/convert_mean.py model/train_mean.binaryproto
 $    python Scripts/classifier.py ../Example/example.mp4 model/coolnet_pretrained.caffemodel  model/coolnet_deploy.prototxt model/train_mean.npy -cpu
 ```
@@ -98,17 +94,20 @@ $    python Scripts/classifier.py ../Example/example.mp4 model/coolnet_pretraine
 
 If you are using it to academic purpose, please cite: 
 
-M. M. Silva, W. L. S. Ramos, F.C. Chamone, J. P. K. Ferreira, M. F. M. Campos, E. R. Nascimento, __Making a long story short: A Multi-Importance Semantic for Fast-Forwarding Egocentric Videos__, in: Special Issue on Egocentric Vision and Lifelogging Tools at Journal of Visual Communication and Image Representation. doi:XXX/XXX.
+M. M. Silva, W. L. S. Ramos, F.C. Chamone, J. P. K. Ferreira, M. F. M. Campos, E. R. Nascimento, __Making a long story short: A multi-importance fast-forwarding egocentric videos with the emphasis on relevant objects__, in: Special Issue on Egocentric Vision and Lifelogging Tools at Journal of Visual Communication and Image Representation. doi:10.1016/j.jvcir.2018.02.013.
 
 ### Bibtex entry ###
 
-> @ article{Silva2017,  
->            Title      = {Making a long story short: A Multi-Importance Semantic for Fast-Forwarding Egocentric Videos},  
->            Author     = {Silva, Michel Melo and Ramos, Washington Luis Souza and Chamone, Felipe Cadar and Ferreira, Joao Pedro Klock and Campos, Mario Fernando Montenegro and Nascimento, Erickson Rangel},  
->            Year       = {2017},  
->            Journal    = {Journal of Visual Communication and Image Representation},
->			 Issuetitle = {Special Issue on Egocentric Vision and Lifelogging Tools},
->            Doi        = {XXX/XXX},    
+> @article{Silva2018,
+> title = {Making a long story short: A Multi-Importance fast-forwarding egocentric videos with the emphasis on relevant objects},  
+> author = {Michel M. Silva and Washington L. S. Ramos and Felipe C. Chamone and João P. K. Ferreira and Mario F. M. Campos and Erickson R. Nascimento},  
+> journal = {Journal of Visual Communication and Image Representation},  
+> volume = {53},  
+> number = {},  
+> pages = {55 – 64},  
+> year = {2018},  
+> issn = {1047-3203},  
+> doi = {10.1016/j.jvcir.2018.02.013}  
 > }
 
-###### Enjoy it. ######
+#### Enjoy it. ####
