@@ -48,7 +48,8 @@ function [Rects, total_values] = ExtractAndSave(input_filename, extractor)
             calModel = load('AcfCaltech+Detector');
             LdcfInriaModel = load('LdcfInriaDetector');
             LdcfCalModel = load('LdcfCaltechDetector');
-        case 'CNN'
+        case 'coolnet'
+        case 'gaze'
             %% Nothing to do
         otherwise
             fprintf('Unknown extractor');
@@ -83,8 +84,8 @@ function [Rects, total_values] = ExtractAndSave(input_filename, extractor)
         case 'pedestrian'
             %% Pedestrian Detector setup
             [Rects, total_values] = DetectPedestrians(norm_h, min_size, reader, num_frames, LdcfInriaModel);
-        case 'CNN'
-            cnn_filename = [video_dir, '/', fname, '_class.txt'];
+        case 'coolnet'
+            cnn_filename = [video_dir, '/', fname, '_coolnet_extracted.csv'];
             [Rects, total_values] = GetCNN(cnn_filename, num_frames);
     end
 
@@ -101,6 +102,8 @@ function [Rects, total_values] = GetCNN(cnn_filename, num_frames)
         rects(1).row = 1;
         rects(1).width = 1;
         rects(1).height = 1;
+	rects(1).gaussianWeight = 1;
+	rects(1).faceSizeValue = 1;
         rects(1).score = cnn_values(i);
         total_frame = rects(1).score;
         

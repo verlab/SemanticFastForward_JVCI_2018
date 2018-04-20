@@ -213,7 +213,7 @@ classdef SemanticFastForward < SemanticSequenceProducer
                     end
                     obj.Shakiness_cost = shakiness_cost_sequence_net;
                 else
-                    obj.Shakiness_cost = shakiness_cost(startInd:endInd,:);
+                    obj.Shakiness_cost = shakiness_cost;
                 end
                 
                 % The velocity term needs to be recalculated if the required speed is different
@@ -236,11 +236,11 @@ classdef SemanticFastForward < SemanticSequenceProducer
                         obj.Velocity_cost(startBatch-startInd+1 : endBatch-startInd+1, :) = Velocity_cost_batch;
                     end
                 else
-                    obj.Velocity_cost = velocity_cost(startInd:endInd,:);
+                    obj.Velocity_cost = velocity_cost;
                 end
                 
-                obj.Appearance_cost = appearance_cost(startInd:endInd,:);
-                obj.Semantic_cost = semantic_cost(startInd:endInd,:);
+                obj.Appearance_cost = appearance_cost;
+                obj.Semantic_cost = semantic_cost;
                 if obj.cfg.get('UseHigherOrder')
                     obj.Forwardness_cost = forwardness_cost(startInd:endInd,:);
                     obj.Higher_order_shakiness_cost = higher_order_shakiness_cost(startInd:endInd,:);
