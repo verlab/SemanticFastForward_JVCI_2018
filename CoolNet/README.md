@@ -38,6 +38,76 @@ http://www.verlab.dcc.ufmg.br
 * OpenCV 2.4 _(Tested with 2.4.9 and 2.4.13)_
 * Caffe 1.0 _(Tested with 1.0.0-rc5)_ 
 
+## Caffe Compilation
+
+* Install general dependencies:
+
+```bash
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install --no-install-recommends libboost-all-dev
+```
+
+* Clone Caffe repository
+
+```bash 
+git clone https://github.com/BVLC/caffe.git
+cd caffe
+```
+
+* Configure the Makefile
+
+
+```bash
+cp Makefile.config.example Makefile.config
+```
+
+Open your text editor to adjust the `Makefile.config` (for example, if using Anaconda Python, or if cuDNN is desired). Notice that for our purpose, the OpenCV option is mandatory, so change the line:
+
+```
+# USE_OPENCV := 0
+```
+for
+
+```
+USE_OPENCV := 1
+```
+In markdown, the `#` marks an comment, so don't forget to remove it  ;)
+
+* Compile the code
+
+```bash
+make all
+make test
+make runtest
+```
+
+Since we used Python to run the classifier, there is an aditional step.
+In the same folder run:
+
+```bash
+
+#Install requirements
+cd python 
+for req in $(cat requirements.txt); do pip install $req; done
+
+#Compile pycaffe module
+cd ..
+make pycaffe
+```
+
+Now, every time you open a new terminal to use `caffe` module in python, you have to run:
+
+```bash
+export PYTHONPATH=</path/to/caffe>/python:$PYTHONPATH
+```
+
+If you prefer to add this command to your `.bashrc` to avoid running it every time, go to your caffe directory and run:
+
+```bash
+cd /path/to/caffe/
+echo "export PYTHONPATH=${PWD}/python:\$PYTHONPATH" >> ~/.bashrc 
+```
+
 ## Classifier ##
 
 * Download our pretrained caffemodel [512MB]
@@ -65,18 +135,24 @@ http://www.verlab.dcc.ufmg.br
 |`<mean>`      | Mean file                        | String | `model/train_mean.npy`|
 |`[flags]`     | Set CPU or GPU prediction        | String | `-cpu` _(default)_ or `-gpu`|
 
+|           Output       | Example                        |
+|-----------------------:|--------------------------------|
+|`<video>_class.txt`     | `../Example/example_class.txt` |
 
 #### Output file ####
 
-The output file from the classifier script contains the probability of each frame to be cool.
+The classifier produces an output file `<video_name>_class.txt` in the video diretory.
+
+The output file contains the probability of each frame to be cool, where the line number is the index of the respective frame.
 
 ```text
-frame_number, cool_score
-frame_number, cool_score
-frame_number, cool_score
-frame_number, cool_score
+cool_score
+cool_score
+cool_score
+cool_score
 ...
 ```
+
 
 #### Try it out: ####
 
