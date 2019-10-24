@@ -183,6 +183,9 @@ classdef SemanticVideoSubSampler < handle
             %for i = 1:length(frame_indices)
             i = 1; z = 0;
             while hasFrame(reader)
+                if (i > size(frame_indices,2))
+                    break;
+                end
                 %frame = read(reader,frame_indices(i));
                 frame = readFrame(reader);
                 z = z + 1;
